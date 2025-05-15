@@ -1,0 +1,35 @@
+.header-top {
+  padding: 12px 0;
+  background-color: var(--bg);
+
+  @include small-tablet {
+    display: none;
+  }
+
+    &__container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+		&__list {
+      @include list-reset;
+		}
+
+		// &__item {}
+
+		&__link {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 120%;
+      color: var(--grey);
+    }
+
+		&__tel {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 140%;
+      color: var(--black);
+		}
+}

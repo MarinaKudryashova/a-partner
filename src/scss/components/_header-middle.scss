@@ -1,0 +1,163 @@
+.header-middle {
+  padding: 16px 0;
+  background-color: var(--white);
+
+  @include small-tablet{
+    padding: 8px 0;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  &__logo {
+    flex-shrink: 0;
+
+    & .logo__img {
+      width: 176px;
+      aspect-ratio: 176/46;
+
+      @include small-tablet {
+        width: 114px;
+        aspect-ratio: 114/30;
+      }
+    }
+
+    @include small-tablet {
+      margin-right: auto;
+    }
+
+
+  }
+
+  &__action {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+
+    @include small-tablet {
+      width: auto;
+    }
+  }
+
+  &__btn  {
+
+    &--catalog {
+      justify-content: flex-start;
+      gap: 4px;
+      padding-left: 20px;
+
+      @include small-tablet {
+        display: none;
+      }
+
+      & .btn__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        fill: currentColor;
+        stroke-width: 1.5px;
+        stroke: currentColor;
+        user-select: none;
+      }
+
+      & .btn__text {
+        user-select: none;
+      }
+    }
+
+    &--phone,
+    &--menu {
+      display: none;
+
+      @include small-tablet {
+        display: flex;
+      }
+    }
+  }
+
+  &__searchbar {
+    flex-grow: 1;
+    width: 100%;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    @include small-tablet {
+      display: none;
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    color: var(--black);
+    transition: color .3s ease-in-out;
+
+    @include hover {
+      color: var(--accent);
+
+      & .header-middle__link-text {
+        color: var(--accent);
+      }
+    }
+
+    &:focus-visible {
+      outline: none;
+      color: var(--accent);
+
+      & .header-middle__link-text {
+        color: var(--accent);
+      }
+    }
+  }
+
+  &__link-icon {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+
+    &--login {
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.5px;
+    }
+  }
+
+  &__link-count {
+    position: absolute;
+    top: -2px;
+    right: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    width: 14px;
+    height: 14px;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 110%;
+    text-align: center;
+    color: var(--white);
+    background: var(--accent);
+  }
+
+  &__link-text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 120%;
+    color: var(--grey);
+    transition: color .3s ease-in-out;
+  }
+}

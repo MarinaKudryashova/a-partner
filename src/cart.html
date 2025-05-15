@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      <div class="page__container container">
+        @include('partials/breadcrumbs-cart.html')
+
+        <!-- Корзина пустая -->
+        @include('partials/cart-empty-content.html')
+        <!-- Дополнительные предложения -->
+        @include('partials/offer-section-cart.html')
+
+        <!-- Корзина c товарами -->
+         @include('partials/cart-content.html')
+      </div>
+    </main>
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

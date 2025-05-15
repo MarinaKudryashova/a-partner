@@ -1,0 +1,30 @@
+.btn-remote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  color: var(--grey);
+  background-color: transparent;
+  cursor: pointer;
+  transition: color .3s ease-in-out;
+
+  &:focus-visible {
+    outline: none;
+    color: var(--accent);
+  }
+
+  @include hover {
+    color: var(--accent);
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.5px;
+  }
+}

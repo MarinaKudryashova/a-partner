@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      <div class="page__container container">
+        @include('partials/breadcrumbs-catalog.html')
+        <h1 class="visually-hidden page__title">Каталог товаров</h1>
+        <div class="catalog-content">
+          <!-- Боковая панель фильтров -->
+          @include('partials/sidebar-catalog.html')
+          <!-- Основная область каталога -->
+          <div class="catalog-content__area">
+            <!-- @include('partials/category-section.html') -->
+            @include('partials/category-section-motoroils.html')
+            @include('partials/category-section-otheroils.html')
+            @include('partials/category-section-technical.html')
+            @include('partials/category-section-filters.html')
+            @include('partials/category-section-chemicals.html')
+            @include('partials/category-section-lubricants.html')
+            @include('partials/category-section-other.html')
+            @include('partials/category-section-batteries.html')
+            @include('partials/category-section-for-home-and-office.html')
+          </div>
+        </div>
+      </div>
+    </main>
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

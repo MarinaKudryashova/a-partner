@@ -1,0 +1,15 @@
+.catalog-content {
+  display: grid;
+  grid-template-columns: 310px minmax(0, 1fr);
+  gap: 24px;
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+  }
+
+  &__area {
+    max-width: 978px;
+  }
+}

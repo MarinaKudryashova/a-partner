@@ -1,0 +1,22 @@
+.cart-empty {
+  margin-bottom: 80px;
+  max-width: 420px;
+
+		&__title {
+      margin-bottom: 16px;
+		}
+
+		&__message {
+      margin: 0 0 24px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      color: var(--grey);
+		}
+
+		&__actions {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+		}
+}

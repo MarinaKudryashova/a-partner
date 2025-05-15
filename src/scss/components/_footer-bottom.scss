@@ -1,0 +1,53 @@
+.footer-bottom {
+  padding: 2px 0;
+  background: var(--black);
+
+  @include small-tablet {
+    padding: 8px 0;
+  }
+
+		&__container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+
+      @include small-tablet {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+		}
+
+		&__made {
+      margin: 0;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 120%;
+      text-align: center;
+      color: var(--grey);
+		}
+
+		&__made-link {
+      color: var(--accent);
+      transition: color .3s ease-in-out;
+
+      @include hover {
+        color: var(--white);
+      }
+
+      &:focus-visible {
+        outline: none;
+        color: var(--white);
+      }
+		}
+
+		&__copyright {
+      margin: 0;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 120%;
+      text-align: center;
+      color: var(--grey);
+		}
+}

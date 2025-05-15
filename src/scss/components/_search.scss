@@ -1,0 +1,90 @@
+.search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  @include small-tablet {
+    display: none;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 11px;
+    left: 16px;
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke-width: 1.5px;
+    stroke: var(--accent);
+  }
+
+  &__input {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 16px;
+    padding-left: 48px;
+    width: 100%;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: var(--black);
+    background: var(--white);
+    transition: border-color .3s ease-in-out;
+
+    @include hover {
+      border-color: var(--light-red);
+    }
+
+    &:focus-visible {
+      outline: none;
+      border-color: var(--light-red);
+
+      &::placeholder {
+        color: transparent;
+      }
+
+      & .search__btn-clear {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+  }
+
+  &__input::placeholder {
+    color: var(--grey);
+    transition: color .3s ease-in-out;
+  }
+
+  &__btn-clear {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+
+    .search__input:focus-visible ~ & {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .search__input:not(:placeholder-shown) ~ & {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+
+  &__icon-clear {
+    width: 16px;
+    height: 16px;
+    stroke-width: 1.5px;
+    stroke: var(--grey);
+  }
+}

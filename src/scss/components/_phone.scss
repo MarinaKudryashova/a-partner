@@ -1,0 +1,52 @@
+.phone {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+
+		&__caption {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 120%;
+      color: var(--black);
+		}
+
+		&__link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 140%;
+      color: var(--accent);
+
+
+      transition: color .3s ease-in-out;
+
+      @include hover {
+        color: var(--dark-red);
+
+        & .phone__icon {
+          stroke: var(--dark-red);
+        }
+      }
+
+      &:focus-visible {
+        outline: none;
+        color: var(--dark-red);
+
+        & .phone__icon {
+          stroke: var(--dark-red);
+        }
+      }
+		}
+
+		&__icon {
+      width: 24px;
+      height: 24px;
+      stroke-width: 1.5px;
+      stroke: var(--black);
+      fill: none;
+      transition: stroke .3s ease-in-out;
+		}
+}

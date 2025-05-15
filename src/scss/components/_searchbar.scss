@@ -1,0 +1,14 @@
+.searchbar {
+  display: flex;
+  align-items: center;
+
+  &__btn {
+    display: none;
+
+    @include small-tablet {
+      display: flex;
+    }
+  }
+
+  // &__form {}
+}

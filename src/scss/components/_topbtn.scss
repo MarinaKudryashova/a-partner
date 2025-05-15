@@ -1,0 +1,32 @@
+.topbtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border: none;
+  padding: 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 120%;
+  text-align: center;
+  color: var(--accent);
+  background-color: transparent;
+  cursor: pointer;
+  transition: color .3s ease-in-out;
+
+  @include hover {
+    color: var(--white);
+  }
+
+  &:focus-visible {
+    outline: none;
+    color: var(--white);
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    stroke-width: 1.5px;
+    stroke: currentColor;
+  }
+}

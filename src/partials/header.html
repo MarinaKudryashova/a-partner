@@ -1,0 +1,95 @@
+<header class="header">
+   <!-- Верхний уровень (контакты, телефон) -->
+   <div class="header__top header-top">
+    <div class="header-top__container container">
+      <ul class="header-top__list">
+        <li class="header-top__item"><a href="contacts.html" class="header-top__link ui-link">Контакты</a></li>
+      </ul>
+      <a href="tel:89183700070" class="header-top__tel ui-link">8(918)370-00-70</a>
+    </div>
+   </div>
+
+   <!-- Средний уровень (лого, каталог, поиск, корзина, войти) -->
+    <div class="header__middle header-middle">
+      <div class="header-middle__container container">
+        <a href="/" class="header-middle__logo logo">
+          <img class="logo__img" src="img/logo-color.svg" alt="Логотип сайта Автопартер" width="176" height="46">
+        </a>
+
+        <div class="header-middle__action">
+          <button class="header-middle__btn header-middle__btn--catalog btn btn--full">
+            <svg class="btn__icon">
+              <use xlink:href="img/sprite.svg#icon-catalog"></use>
+            </svg>
+            <span class="btn__text">Каталог</span>
+          </button>
+
+          <a href="tel:89183700070" class="header-middle__btn header-middle__btn--phone btn-icon" type="button" aria-label="Позвонить нам">
+            <svg class="btn-icon__icon">
+              <use xlink:href="img/sprite.svg#icon-phone"></use>
+            </svg>
+          </a>
+
+          <div class="header-middle__searchbar searchbar">
+            <button class="searchbar__btn btn-icon" type="button" aria-label="открыть форму поиска" aria-expanded="false">
+              <svg class="btn-icon__icon">
+                <use xlink:href="img/sprite.svg#icon-search"></use>
+              </svg>
+            </button>
+            <form action="#" class="searchbar__form search" aria-label="форма поиска по сайту">
+              <svg class="search__icon">
+                <use xlink:href="img/sprite.svg#icon-search"></use>
+              </svg>
+              <input type="search" class="search__input input-reset" placeholder="Поиск по сайту ..." aria-label="Введите поисковый запрос">
+              <button type="reset" class="search__btn-clear btn-reset" aria-label="очистить строку поиска">
+                <svg class="search__icon-clear">
+                  <use xlink:href="img/sprite.svg#icon-clear"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
+
+          <button class="header-middle__btn header-middle__btn--menu btn-icon" type="button" aria-label="открыть меню" aria-expanded="false">
+            <svg class="btn-icon__icon">
+              <use xlink:href="img/sprite.svg#icon-menu"></use>
+            </svg>
+          </button>
+        </div>
+
+        <div class="header-middle__links">
+          <a href="cart.html" class="header-middle__link">
+            <svg class="header-middle__link-icon">
+              <use xlink:href="img/sprite.svg#icon-cart"></use>
+            </svg>
+            <span class="header-middle__link-count">1</span>
+            <span class="header-middle__link-text">Корзина</span>
+          </a>
+          <a href="#" class="header-middle__link">
+            <svg class="header-middle__link-icon header-middle__link-icon--login">
+              <use xlink:href="img/sprite.svg#icon-login"></use>
+            </svg>
+            <span class="header-middle__link-text">Войти</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+  <!-- Нижний уровень (меню) -->
+  <nav class="header__nav" title="main navigation">
+    <div class="container">
+      <ul class="main-menu">
+        <li class="main-menu__item"><a href="#" class="main-menu__link ui-link">Моторные масла</a></li>
+        <li class="main-menu__item"><a href="#" class="main-menu__link ui-link">Другие масла и спецжидкости</a></li>
+        <li class="main-menu__item"><a href="#" class="main-menu__link ui-link">Тех.жидкости </a></li>
+        <li class="main-menu__item"><a href="#" class="main-menu__link ui-link">Фильтры</a></li>
+        <li class="main-menu__item"><a href="#" class="main-menu__link ui-link">Автомобильная химия</a></li>
+        <li class="main-menu__item"><a href="#" class="main-menu__link ui-link">Смазки</a></li>
+        <li class="main-menu__item"><a href="#" class="main-menu__link ui-link">Прочее</a></li>
+        <li class="main-menu__item"><a href="#" class="main-menu__link ui-link">Аккумуляторы</a></li>
+        <li class="main-menu__item"><a href="#" class="main-menu__link ui-link">Для дома и офиса</a></li>
+        <li class="main-menu__item"><a href="#" class="main-menu__link ui-link">POS-материалы</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>

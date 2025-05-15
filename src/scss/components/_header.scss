@@ -1,0 +1,14 @@
+.header {
+  @include small-tablet {
+    border-bottom: 1px solid var(--border);
+  }
+
+  &__nav {
+    padding: 12px 0;
+    background-color: var(--bg);
+
+    @include small-tablet {
+      display: none;
+    }
+  }
+}

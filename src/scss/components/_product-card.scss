@@ -1,0 +1,183 @@
+.product-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  transition: border-color var(--duration) ease-in-out;
+
+  @include mobile {
+    gap: 8px;
+    padding: 8px;
+  }
+
+  &:focus-visible {
+    outline: none;
+    border-color: var(--accent);
+  }
+
+  @include hover {
+    border-color: var(--accent);
+  }
+
+  &__view {
+    position: relative;
+  }
+
+  // &__badges {}
+
+  &__discount {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 4px;
+    padding: 4px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: center;
+    color: var(--white);
+    background: var(--accent);
+
+    @include mobile {
+      padding: 3px;
+      font-weight: 700;
+      font-size: 11px;
+      line-height: 120%;
+    }
+  }
+
+  &__picture {
+    display: flex;
+  }
+
+  &__price {
+    & span:not(:last-child):not(.product-card__discount) {
+      margin-right: 6px;
+
+      @include mobile {
+        margin-right: 4px;
+      }
+    }
+  }
+
+  &__price-current {
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 110%;
+    text-align: center;
+    color: var(--accent);
+
+    @include mobile {
+      font-size: 20px;
+      line-height: 120%;
+    }
+  }
+
+  &__price-unit {
+    .product-card__price-current & {
+      font-size: 16px;
+      line-height: 140%;
+
+      @include mobile {
+        font-size: 12px;
+        line-height: 120%;
+      }
+    }
+  }
+
+  &__price-old {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 110%;
+    text-decoration: line-through;
+    text-align: center;
+    color: var(--grey);
+
+    @include mobile {
+      font-size: 12px;
+      line-height: 110%;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    @include mobile {
+      gap: 4px;
+    }
+  }
+
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: var(--grey);
+
+    @include mobile {
+      gap: 10px;
+      font-size: 10px;
+      line-height: 110%;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--black);
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 120%;
+    }
+  }
+
+  &__descr {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;     /* Количество строк */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 2.4em;             /* Примерная высота 2 строк (1.4em на строку) */
+    margin: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.2em;
+    color: var(--grey);
+
+    @include mobile {
+      font-size: 10px;
+      line-height: 110%;
+    }
+  }
+
+  &__actions {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    @include small-desktop {
+      margin-top: 4px;
+    }
+  }
+
+  &__quantity {
+    flex-grow: 1;
+
+    @include small-desktop {
+      display: none;
+    }
+  }
+}
