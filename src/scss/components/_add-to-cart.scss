@@ -9,6 +9,15 @@
   color: var(--white);
   background: var(--accent);
   cursor: pointer;
+  transition: background-color .3s ease-in-out;
+
+  &:focus-visible {
+    background-color: var(--dark-red);
+  }
+
+  @include hover {
+    background-color: var(--dark-red);
+  }
 
   @include small-desktop {
     padding: 10px;

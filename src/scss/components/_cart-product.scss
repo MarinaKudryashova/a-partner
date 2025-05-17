@@ -4,11 +4,18 @@
   align-items: flex-start;
   gap: 24px;
   border-bottom: 1px solid var(--border);
-  padding: 0 48px 20px 0;
+  padding-bottom: 20px;
 
   @include small-tablet {
     flex-direction: column;
-    padding-right: 0;
+  }
+
+  &--cart {
+    padding-right: 48px;
+
+    @include small-tablet {
+      padding-right: 0;
+    }
   }
 
 		&__info {
@@ -90,13 +97,21 @@
       color: var(--grey);
     }
 
+    &__quantity-value {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 120%;
+      text-align: center;
+      color: var(--grey);
+    }
+
 		// .cart-product__price
 
-		&__price {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-		}
+		// &__price {
+    //   display: flex;
+    //   flex-direction: column;
+    //   align-items: flex-end;
+		// }
 
 		&__price-current {
       font-weight: 700;

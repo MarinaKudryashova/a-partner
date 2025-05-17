@@ -1,0 +1,41 @@
+.checkout-content {
+  margin-bottom: 80px;
+
+  &_title {
+    margin-bottom: 32px;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 2fr minmax(0, 310px);
+    gap: 24px;
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  &__order {
+    position: sticky;
+    top: 64px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 8px;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
+}

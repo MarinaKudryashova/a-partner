@@ -7,7 +7,7 @@
 
 		&__heading {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       gap: 8px;
       margin-bottom: 16px;
 		}
@@ -27,10 +27,20 @@
 		}
 
 		&__link {
+      padding-top: 4px;
       font-weight: 500;
       font-size: 14px;
       line-height: 120%;
       color: var(--accent);
+      transition: color .3s ease-in-out;
+
+        &:focus-visible {
+          color: var(--dark-red);
+        }
+
+        @include hover {
+          color: var(--dark-red);
+        }
 
       @include mobile {
         margin-right: 8px;
