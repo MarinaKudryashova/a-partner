@@ -30,12 +30,12 @@
 // import { enableScroll } from './functions/enable-scroll';
 
 // Реализация модального окна
-// import GraphModal from 'graph-modal';
-// const modal = new GraphModal();
+import GraphModal from 'graph-modal';
+const modal = new GraphModal();
 
 // Реализация табов
-// import GraphTabs from 'graph-tabs';
-// const tabs = new GraphTabs('tab');
+import GraphTabs from 'graph-tabs';
+const tabs = new GraphTabs('account-tabs');
 
 // Получение высоты шапки сайта (не забудьте вызвать функцию)
 // import { getHeaderHeight } from './functions/header-height';
@@ -88,3 +88,13 @@
 // Подключение аккордиона michu2k.github.io/Accordion/
 // import Accordion from 'accordion-js';
 // new Accordion('.we-offer-accordion');
+
+
+// Подключение календаря
+import AirDatepicker from 'air-datepicker';
+import 'air-datepicker/air-datepicker.css';
+
+new AirDatepicker('#my-datepicker', {
+  dateFormat: 'dd.MM.yyyy',
+  position: 'right bottom',
+});

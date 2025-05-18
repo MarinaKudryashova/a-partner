@@ -1,0 +1,16 @@
+.account-purchases {
+  margin: 0 0 24px;
+
+    &__title {
+    margin: 0 0 24px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+  }
+
+  &__swiper-slide {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px 16px;
+  }
+}

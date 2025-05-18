@@ -43,3 +43,10 @@
 @import "./components/cart-content";
 @import "./components/cart-order";
 @import "./components/cart-delivery";
+
+// Подключение компонентов страницы Личный кабинет
+@import "./components/account-content";
+@import "./components/account-exit";
+@import "./components/account-data";
+@import "./components/account-orders";
+@import "./components/account-purchases";

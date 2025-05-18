@@ -1,0 +1,78 @@
+.account-data {
+  &__title {
+    margin: 0 0 24px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+  }
+
+  &__form-wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 477px);
+    gap: 16px 24px;
+    width: 100%;
+    margin: 0 0 24px;
+  }
+
+  &__input {
+    position: relative;
+
+    &--error {
+      .account-data__input-label {
+        color: var(--accent);
+      }
+
+      .account-data__input-error {
+        display: block;
+      }
+    }
+
+    & label {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 4px;
+    }
+  }
+
+  &__input-field {
+    padding: 14.5px 16px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--black);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+
+    &:hover {
+      border: 1px solid var(--light-red);
+    }
+
+    &:focus-visible {
+      border: 1px solid var(--light-red);
+      outline: none;
+    }
+  }
+
+
+  &__input-label {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: var(--grey);
+
+    & span {
+      color: var(--accent);
+    }
+  }
+
+  &__input-error {
+    position: absolute;
+    left: 0;
+    bottom: -12px;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 110%;
+    color: var(--accent);
+    display: none;
+  }
+}

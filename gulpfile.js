@@ -158,6 +158,10 @@ const scripts = () => {
               ]
             }
           }
+        },
+        {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
         }]
       },
       devtool: !isProd ? 'source-map' : false
@@ -198,6 +202,10 @@ const scriptsBackend = () => {
               ]
             }
           }
+        },
+        {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
         }]
       },
       devtool: false
