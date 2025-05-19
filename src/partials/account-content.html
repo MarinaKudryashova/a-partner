@@ -79,12 +79,19 @@
                   <input class="account-data__input-field" type="password" id="password" name="password" required>
                   <span class="account-data__input-label">Пароль<span>*</span></span>
                 </label>
-                <button class="account-data__password-btn" type="button" aria-label="Показать пароль">
-                  <!-- SVG показать пароль -->
+                <button class="account-data__password-btn btn-reset" type="button" aria-label="Показать пароль">
+                  <svg class="account-data__icon-eye account-data__icon-eye--closed">
+                    <use xlink:href="img/sprite.svg#icon-eye-closed"></use>
+                  </svg>
+                  <svg class="account-data__icon-eye">
+                    <use xlink:href="img/sprite.svg#icon-eye"></use>
+                  </svg>
                 </button>
-                <button class="account-data__password-btn account-data__password-btn--edit open-modal-btn" type="button" data-graph-path="changePassword"
+                <button class="account-data__password-btn account-data__password-btn--edit open-modal-btn btn-reset" type="button" data-graph-path="changePassword"
                   aria-label="Изменить пароль">
-                  <!-- SVG карандаша -->
+                  <svg class="account-data__icon-pencil">
+                    <use xlink:href="img/sprite.svg#icon-pencil"></use>
+                  </svg>
                 </button>
                 <span class="account-data__input-error">Неправильно заполнено поле...</span>
               </div>

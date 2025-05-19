@@ -98,10 +98,12 @@ new AirDatepicker('#my-datepicker', {
   classes: 'custom-datepicker',
   dateFormat: 'dd.MM.yyyy',
   position: 'right bottom',
-  // inline: true,
   navTitles: {
     days: 'MMMM yyyy'  // формат без запятой
   }
 })
 
+// Подключение функции показа и скрытия пароля
+import { passwordView } from './functions/show-hide-password';
+passwordView()
 
