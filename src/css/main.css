@@ -802,6 +802,107 @@ a {
   color: var(--black);
 }
 
+:root {
+  --font-family: "Inter", sans-serif;
+  --black: #000404;
+  --grey: #808080;
+  --border: #e1e4e8;
+  --bg: #f3f5f8;
+  --white: #fff;
+  --accent: #e1110e;
+  --dark-red: #b60705;
+  --light-red: #f8c2c1;
+  --green: #2eaf00;
+  --orange: #ff7a00;
+  --border-info: #9dc0ee;
+  --bg-info: #f5f9ff;
+}
+
+.air-datepicker-global-container .custom-datepicker {
+  width: 292px;
+  height: 260px;
+  padding: 16px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 4px 40px 0px rgba(33, 33, 33, 0.1019607843);
+}
+
+.custom-datepicker .air-datepicker--pointer {
+  display: none;
+}
+
+.custom-datepicker .air-datepicker-body {
+  padding: 0;
+}
+
+.custom-datepicker .air-datepicker-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+  padding: 0 0 6px;
+  margin-bottom: 1px;
+}
+.custom-datepicker .air-datepicker-nav--title, .custom-datepicker .air-datepicker-nav i {
+  order: -1;
+  padding: 0;
+  margin-right: 40px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 120%;
+  color: var(--black);
+}
+
+.custom-datepicker .air-datepicker-body--day-names {
+  margin-bottom: 10px;
+  display: grid;
+  grid-template-columns: repeat(7, 32px);
+  gap: 6px;
+}
+
+.custom-datepicker .air-datepicker-body--day-name {
+  font-family: var(--font-family);
+  color: var(--grey);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 120%;
+}
+
+.custom-datepicker .air-datepicker-cell.-day- {
+  width: 24px;
+  height: 24px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 120%;
+}
+.custom-datepicker .air-datepicker-cell.-day-:hover {
+  border-radius: 50%;
+  background-color: var(--bg);
+}
+
+.custom-datepicker .air-datepicker-cell.-weekend- {
+  color: var(--accent);
+}
+
+.custom-datepicker .air-datepicker-cell.-other-month- {
+  color: var(--grey);
+}
+
+.custom-datepicker .air-datepicker-cell.-current- {
+  color: var(--green);
+}
+
+.custom-datepicker .air-datepicker-cell.-selected- {
+  background-color: var(--green);
+  color: white;
+  border-radius: 50%;
+}
+.custom-datepicker .air-datepicker-cell.-selected-:hover {
+  background-color: var(--green);
+}
+
 .footer {
   flex: 0 0 auto;
 }
@@ -1911,14 +2012,6 @@ a {
 .account-content__button--grey {
   color: var(--grey);
 }
-.account-content__date-icon {
-  width: 24px;
-  height: 24px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.5px;
-  stroke: var(--black);
-}
 .account-content__slider, .account-content__slider-wrapper, .account-content__swiper-slide {
   max-width: 100vh;
   box-sizing: border-box;
@@ -2037,6 +2130,14 @@ a {
   line-height: 110%;
   color: var(--accent);
   display: none;
+}
+.account-data__date-icon {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5px;
+  stroke: var(--black);
 }
 
 .account-orders__title {
