@@ -70,4 +70,19 @@
       display: none;
     }
   }
+
+  &--buy {
+    border-radius: 10px;
+    padding: 12px;
+    width: 100%;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: center;
+    color: var(--white);
+
+    & span {
+      display: block;
+    }
+  }
 }

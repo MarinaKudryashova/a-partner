@@ -62,4 +62,24 @@
       color: var(--grey);
 		}
   }
+
+  &--dark {
+    & .price__current {
+      font-weight: 700;
+      color: var(--dark-red);
+    }
+
+    & .price__current > .price__unit {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 120%;
+    }
+
+    & .price__old {
+      font-weight: 400;
+      font-size: 12px;
+      text-decoration: line-through;
+      color: var(--grey);
+    }
+  }
 }
