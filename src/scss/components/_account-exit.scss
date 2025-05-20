@@ -1,0 +1,62 @@
+.account-exit {
+  display: flex;
+  flex-direction: column;
+  width: 550px;
+  padding: 40px;
+  border-radius: 24px;
+
+  &__title {
+    margin: 0 0 16px;
+    padding: 0;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 120%;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--black);
+  }
+
+  &__btn-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  &__btn {
+    width: 100%;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+
+
+    &--grey {
+      background-color: var(--border);
+      color: var(--grey);
+
+      &:hover {
+        color: var(--accent);
+      }
+
+      &:focus-visible {
+        outline: none;
+        color: var(--accent);
+        background-color: var(--light-red);
+      }
+    }
+  }
+
+  &__close {
+    width: 14px;
+    height: 14px;
+    color: var(--grey);
+    top: 12px;
+    right: 12px;
+  }
+}
+
+

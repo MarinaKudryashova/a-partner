@@ -1,10 +1,10 @@
-import Swiper, { Navigation, Pagination, Autoplay, EffectFade, FreeMode, Grid} from 'swiper';
+import Swiper, { Navigation, Pagination, Autoplay, EffectFade, FreeMode, Grid } from 'swiper';
 Swiper.use([Navigation, Pagination, Autoplay, EffectFade, FreeMode, Grid]);
 
-document.addEventListener('DOMContentLoaded', (event)=>{
+document.addEventListener('DOMContentLoaded', (event) => {
   const categorySectionSliders = document.querySelectorAll('.category-section__slider');
 
-  if(categorySectionSliders) {
+  if (categorySectionSliders) {
     categorySectionSliders.forEach((slider) => {
       const btnNextSlider = slider.parentNode.querySelector('.category-section__btn-next');
       const btnPrevSlider = slider.parentNode.querySelector('.category-section__btn-prev');
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', (event)=>{
   }
 
   const offerSectionSliders = document.querySelectorAll('.offer-section__slider');
-  if(offerSectionSliders) {
+  if (offerSectionSliders) {
     offerSectionSliders.forEach((slider) => {
       const btnNextSlider = slider.parentNode.querySelector('.offer-section__btn-next');
       const btnPrevSlider = slider.parentNode.querySelector('.offer-section__btn-prev');
@@ -66,6 +66,47 @@ document.addEventListener('DOMContentLoaded', (event)=>{
           },
 
         }
+      });
+    })
+  }
+
+  const accountContentSLiders = document.querySelectorAll('.account-content__slider');
+  if (accountContentSLiders) {
+    accountContentSLiders.forEach((slider) => {
+      const btnNextSlider = slider.parentNode.querySelector('.account-content__btn-next');
+      const btnPrevSlider = slider.parentNode.querySelector('.account-content__btn-prev');
+
+      const swiper_currentSlider = new Swiper(slider, {
+        loop: false,
+        lazy: true,
+        spaceBetween: 8,
+        slidesPerView: 2.1,
+        navigation: {
+          nextEl: btnNextSlider,
+          prevEl: btnPrevSlider,
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 16,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 16,
+          },
+          1440: {
+            slidesPerView: 1,
+            spaceBetween: 16,
+          }
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+          clickable: true,
+          renderBullet: function (index, className) {
+           return '<span class="' + className + '">' + (index + 1) + "</span>";
+          }
+        },
       });
     })
   }

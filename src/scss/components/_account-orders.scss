@@ -1,0 +1,61 @@
+.account-orders {
+
+  &__title {
+    margin: 0 0 24px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+  }
+
+  &__table {
+    width: 100%;
+    max-width: 100%;
+    table-layout: auto;
+    box-sizing: border-box;
+    border-collapse: collapse;
+
+    & thead {
+      & tr {
+        background-color: var(--bg);
+      }
+
+      & th {
+        width: 245px;
+        padding: 8px 16px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 120%;
+        text-align: left;
+        color: var(--grey);
+
+        &:first-child {
+          border-radius: 4px 0 0 4px;
+        }
+
+        &:last-child {
+          border-radius: 0 4px 4px 0;
+        }
+      }
+    }
+
+    & tr:not(.account-orders__table thead tr) {
+      border-bottom: 1px solid var(--border);
+    }
+
+    & td {
+      padding: 16px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 120%;
+    }
+  }
+
+  &__order-no {
+    font-weight: 500;
+    color: var(--accent);
+  }
+
+  &__status {
+    color: var(--green);
+  }
+}
