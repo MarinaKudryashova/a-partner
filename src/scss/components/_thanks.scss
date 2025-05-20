@@ -1,4 +1,4 @@
-.cart-empty {
+.thanks {
   margin-bottom: 80px;
   max-width: 420px;
 
@@ -12,6 +12,18 @@
       font-size: 16px;
       line-height: 140%;
       color: var(--grey);
+
+      & span {
+        font-weight: 600;
+        color: var(--accent);
+      }
+		}
+
+    &__text--delivery {
+      & span {
+        font-weight: 600;
+        color: var(--black);
+      }
 		}
 
 		&__actions {

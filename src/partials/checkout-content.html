@@ -1,10 +1,123 @@
 <section class="checkout-content">
   <h1 class="checkout-content_title main-title">Оформление заказа</h1>
   <div class="checkout-content__inner">
-    <ul class="checkout-content__list">
-      <li class="checkout-content__item"></li>
-      <li class="checkout-content__item"></li>
-      <li class="checkout-content__item"></li>
+    <ul class="checkout-content__list info-order">
+      <!-- Данные о заказе -->
+      <li class="info-order__item">
+        <h2 class="info-order__title">Данные о заказе</h2>
+        <ul class="info-order__content">
+          <li class="info-order__row">
+            <span class="info-order__param">ID заказ</span>
+            <span class="info-order__bottom"></span>
+            <span class="info-order__value">№4123652365</span>
+          </li>
+          <li class="info-order__row">
+            <span class="info-order__param">Дата оформления</span>
+            <span class="info-order__bottom"></span>
+            <span class="info-order__row-value">27.05.2025</span>
+          </li>
+          <li class="info-order__row">
+            <span class="info-order__param">Дата доставки</span>
+            <span class="info-order__bottom"></span>
+            <span class="info-order__row-value">01.06.2025</span>
+          </li>
+        </ul>
+      </li>
+      <!-- Комментарий к заказу -->
+      <li class="info-order__item">
+        <h2 class="info-order__title">Оставить комментарий</h2>
+        <div class="custom-textarea">
+          <label for="order-comment" class="custom-textarea__label">Ваш комментарий</label>
+          <textarea id="order-comment" class="custom-textarea__field" placeholder="Поле для текста"></textarea>
+        </div>
+      </li>
+      <!-- Список товаров -->
+      <li class="info-order__item">
+        <h2 class="info-order__title">Ваш заказ</h2>
+        <ul class="info-order__products">
+          <li class="info-order__product">
+            <div class="cart-product">
+              <div class="cart-product__info">
+                <a href="#" class="cart-product__thumbnail" title="">
+                  <picture class="cart-product__img">
+                    <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x," type="image/webp">
+                    <img src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x" width="87" height="87" alt="Изображение товара">
+                  </picture>
+                </a>
+                <div class="cart-product__data">
+                  <span class="cart-product__sku">Артикул: 43102</span>
+                  <a href="" class="cart-product__title">Kangaroo Penetrating Lubricant -проникающая смазка (жидкий ключ) 360мл,</a>
+                </div>
+              </div>
+              <div class="cart-product__action">
+                  <!-- Количество -->
+                <div class="cart-product__quantity">
+                  <span class="cart-product__quantity-value">1 шт.</span>
+                </div>
+                <!-- Цены -->
+                <div class="cart-product__price price price--row">
+                  <span class="price__current">4900.00 <span class="price__unit">р.</span></span>
+                  <span class="price__old">1352.00 <span class="price__unit">р.</span></span>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="info-order__product">
+            <div class="cart-product">
+              <div class="cart-product__info">
+                <a href="#" class="cart-product__thumbnail" title="">
+                  <picture class="cart-product__img">
+                    <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x," type="image/webp">
+                    <img src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x" width="87" height="87" alt="Изображение товара">
+                  </picture>
+                </a>
+                <div class="cart-product__data">
+                  <span class="cart-product__sku">Артикул: 43102</span>
+                  <a href="" class="cart-product__title">Kangaroo Penetrating Lubricant -проникающая смазка (жидкий ключ) 360мл,</a>
+                </div>
+              </div>
+              <div class="cart-product__action">
+                  <!-- Количество -->
+                <div class="cart-product__quantity">
+                  <span class="cart-product__quantity-value">2 шт.</span>
+                </div>
+                <!-- Цены -->
+                <div class="cart-product__price price price--row">
+                  <span class="price__current">1900.00 <span class="price__unit">р.</span></span>
+                  <span class="price__old">1352.00 <span class="price__unit">р.</span></span>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="info-order__product">
+            <div class="cart-product">
+              <div class="cart-product__info">
+                <a href="#" class="cart-product__thumbnail" title="">
+                  <picture class="cart-product__img">
+                    <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x," type="image/webp">
+                    <img src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x" width="87" height="87" alt="Изображение товара">
+                  </picture>
+                </a>
+                <div class="cart-product__data">
+                  <span class="cart-product__sku">Артикул: 43102</span>
+                  <a href="" class="cart-product__title">Kangaroo Penetrating Lubricant -проникающая смазка (жидкий ключ) 360мл,</a>
+                </div>
+              </div>
+              <div class="cart-product__action">
+                  <!-- Количество -->
+                <div class="cart-product__quantity">
+                  <span class="cart-product__quantity-value">3 шт.</span>
+                </div>
+                <!-- Цены -->
+                <div class="cart-product__price price price--row">
+                  <span class="price__current">600.00 <span class="price__unit">р.</span></span>
+                  <span class="price__old">1352.00 <span class="price__unit">р.</span></span>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </li>
     </ul>
     <div class="checkout-content__order">
       <div class="cart-order">
@@ -20,7 +133,7 @@
           <span>Итого</span>
           <span>183,80 р.</span>
         </div>
-        <a href="checkout.html" class="cart-order__checkout btn btn--full">Оформить заказ</a>
+        <a href="checkout.html" class="cart-order__checkout btn btn--full">Подтвердить заказ</a>
       </div>
     </div>
   </div>

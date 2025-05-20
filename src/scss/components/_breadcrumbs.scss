@@ -12,6 +12,7 @@
   }
 
   &__item {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -29,6 +30,9 @@
   }
 
   &__link {
+    display: flex;
+    align-items: center;
+    gap: 4px;
     color: currentColor;
     transition: color .3s ease-in-out;
 
@@ -39,6 +43,27 @@
     &:focus-visible {
       outline: none;
       color: var(--black);
+    }
+
+    &.is-open {
+      color: var(--accent);
+    }
+
+    & span {
+      white-space: nowrap;
+    }
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+    transition: transform .3s ease-in-out;
+
+    .breadcrumbs__link:hover.is-open &,
+    .breadcrumbs__link:focus-visible.is-open & {
+      transform: rotate(-180deg);
     }
   }
 

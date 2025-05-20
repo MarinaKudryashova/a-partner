@@ -13,15 +13,16 @@
     line-height: 120%;
     color: var(--black);
 
-    &:not(:last-child) {
-      margin-bottom: 8px;
-    }
-
     & span:last-child {
       text-align: right;
     }
 
+    &--data {
+      margin-bottom: 8px;
+    }
+
     &--discount {
+      margin-bottom: 8px;
       & span:last-child {
         color: var(--accent);
       }

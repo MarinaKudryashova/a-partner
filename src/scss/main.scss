@@ -30,6 +30,7 @@
 @import "./components/slider-nav";
 
 @import "./components/badges";
+@import "./components/price";
 @import "./components/quantity";
 @import "./components/add-to-cart";
 @import "./components/product-card";
@@ -51,4 +52,23 @@
 @import "./components/account-data";
 @import "./components/account-orders";
 @import "./components/account-purchases";
+
+// подключения компонентов страницы Оформление заказа
+@import "./components/checkout-content";
+@import "./components/info-order";
+@import "./components/custom-textarea";
+
+// подключения компонентов страницы Спасибо
+@import "./components/thanks";
+
+// подключения компонентов Главной страницы
+// подключения компонентов страницы Категории
+
+// подключения компонентов страницы Товара
+@import "./components/breadcrumbs-drop";
+@import "./components/product-post";
+@import "./components/params";
+
+// подключения компонентов страницы Акции
+// подключения компонентов страницы Акции-поста
 
