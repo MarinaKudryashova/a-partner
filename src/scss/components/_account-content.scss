@@ -23,7 +23,7 @@
     align-items: center;
     width: 100%;
     padding: 19.5px 16px;
-    border: 1px solid var(--border);
+    outline: 1px solid var(--border);
 
     &:hover, &:focus {
       color: var(--accent);
