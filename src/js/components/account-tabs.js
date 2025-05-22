@@ -1,6 +1,7 @@
 import GraphTabs from 'graph-tabs';
-const tabs = new GraphTabs('account-tabs');
 
 document.addEventListener('DOMContentLoaded', function (e) {
-  const tabs = new GraphTabs('account-tabs');
-});
+  if (document.querySelector('[data-tabs="account-tabs"]')) {
+    const tabs = new GraphTabs('account-tabs');
+  }
+})

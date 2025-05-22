@@ -44,6 +44,8 @@
     font-size: 14px;
     line-height: 120%;
 
+    transition: border 0.3s ease-in;
+
     &:hover {
       border: 1px solid var(--light-red);
     }

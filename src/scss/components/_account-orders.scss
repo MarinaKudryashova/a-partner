@@ -1,5 +1,4 @@
 .account-orders {
-  display: none;
 
   &__title {
     margin: 0 0 24px;
@@ -59,4 +58,11 @@
   &__status {
     color: var(--green);
   }
+}
+
+.account-orders, .order-info {
+  display: none;
+}
+.account-orders.active, .order-info.active {
+  display: block;
 }
