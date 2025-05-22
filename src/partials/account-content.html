@@ -7,23 +7,27 @@
         <button class="btn-reset tabs__nav-btn account-content__button" type="button">
           <span class="account-content__button-text">Мои данные</span>
           <span class="account-content__button-icon">
-            <!-- SVG стрелки -->
+            <svg class="account-content__button-icon">
+              <use xlink:href="img/sprite.svg#chevron-right"></use>
+            </svg>
           </span>
         </button>
       </li>
       <li class="account-content__nav-item tabs__nav-item">
         <button class="btn-reset tabs__nav-btn account-content__button" type="button">
           <span class="account-content__button-text">История заказов</span>
-          <!-- <svg class="account-content__button-icon">
+          <svg class="account-content__button-icon">
             <use xlink:href="img/sprite.svg#chevron-right"></use>
-          </svg> -->
+          </svg>
         </button>
       </li>
       <li class="account-content__nav-item tabs__nav-item">
         <button class="btn-reset tabs__nav-btn account-content__button" type="button">
           <span class="account-content__button-text">Мои покупки</span>
           <span class="account-content__button-icon">
-            <!-- SVG стрелки -->
+            <svg class="account-content__button-icon">
+              <use xlink:href="img/sprite.svg#chevron-right"></use>
+            </svg>
           </span>
         </button>
       </li>
@@ -314,18 +318,46 @@
           </div>
         </div>
         <div class="order-info">
-          <button class="order-info__btn btn btn-reset" type="button">Назад</button>
+          <button class="order-info__btn btn btn-reset" type="button">
+            <svg class="order-info__btn-icon">
+              <use xlink:href="img/sprite.svg#chevron-left"></use>
+            </svg>
+            Назад</button>
           <h2 class="order-info__title">Заказ №1981-01-cl</h2>
-          <ul class="order-info__wrap">
+          <ul class="order-info__wrap list-reset">
             <li class="order-info__wrap-item">
-              <h3 class="order-info__title">Данные о заказе</h3>
-              <div class="order-info__data">
-
-              </div>
+              <h3 class="order-info__wrap-title">Данные о заказе</h3>
+              <ul class="order-info__data list-reset">
+                <li class="order-info__data-item">
+                  <span class="order-info__data-name">ID заказ</span>
+                  <span class="order-info__dashed-line"></span>
+                  <span class="order-info__data-value">№4123652365</span>
+                </li>
+                <li class="order-info__data-item">
+                  <span class="order-info__data-name">Дата оформления</span>
+                  <span class="order-info__dashed-line"></span>
+                  <span class="order-info__data-value">27.05.2025</span>
+                </li>
+                <li class="order-info__data-item">
+                  <span class="order-info__data-name">Дата доставки</span>
+                  <span class="order-info__dashed-line"></span>
+                  <span class="order-info__data-value">01.06.2025</span>
+                </li>
+                <li class="order-info__data-item">
+                  <span class="order-info__data-name">Статус</span>
+                  <span class="order-info__dashed-line"></span>
+                  <span class="order-info__data-value account-orders__status">Принят</span>
+                </li>
+                <li class="order-info__data-item">
+                  <span class="order-info__data-name">К оплате</span>
+                  <span class="order-info__dashed-line"></span>
+                  <span class="order-info__data-value">50 000 ₽</span>
+                </li>
+              </ul>
             </li>
             <li class="order-info__wrap-item">
-              <h3 class="order-info__title">Ваш заказ</h3>
-              <ul class="order-info__contents">
+              <h3 class="order-info__wrap-title">Ваш заказ</h3>
+              <ul class="order-info__contents list-reset">
                 <li class="order-info__product">
                   <div class="cart-product order-info__product-item">
                     <div class="cart-product__info order-info__product-info">
@@ -344,1054 +376,1119 @@
                       </div>
                     </div>
                     <span class="order-info__product-quantity">3 шт.</span>
-                    <span class="cart-product__price order-info__product-price">4900.00 ₽</span>
-                    <span class="cart-product__unit-price order-info__product-unit-price">1200 р./шт.</span>
+                    <div class="order-info__price">
+                      <span class="cart-product__price order-info__product-price">4900.00 ₽</span>
+                      <span class="cart-product__unit-price order-info__product-unit-price">1200 р./шт.</span>
+                    </div>
                   </div>
                 </li>
+                <li class="order-info__product">
+                  <div class="cart-product order-info__product-item">
+                    <div class="cart-product__info order-info__product-info">
+                      <a href="#" class="cart-product__thumbnail" title="">
+                        <picture class="cart-product__img">
+                          <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
+                            type="image/webp">
+                          <img src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x"
+                            width="87" height="87" alt="Изображение товара">
+                        </picture>
+                      </a>
+                      <div class="cart-product__data order-info__product-data">
+                        <span class="cart-product__sku">Артикул: 43102</span>
+                        <a href="" class="cart-product__title">Kangaroo Penetrating Lubricant -проникающая смазка
+                          (жидкий ключ) 360мл,</a>
+                      </div>
+                    </div>
+                    <span class="order-info__product-quantity">3 шт.</span>
+                    <div class="order-info__price">
+                      <span class="cart-product__price order-info__product-price">4900.00 ₽</span>
+                      <span class="cart-product__unit-price order-info__product-unit-price">1200 р./шт.</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="order-info__product">
+                  <div class="cart-product order-info__product-item">
+                    <div class="cart-product__info order-info__product-info">
+                      <a href="#" class="cart-product__thumbnail" title="">
+                        <picture class="cart-product__img">
+                          <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
+                            type="image/webp">
+                          <img src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x"
+                            width="87" height="87" alt="Изображение товара">
+                        </picture>
+                      </a>
+                      <div class="cart-product__data order-info__product-data">
+                        <span class="cart-product__sku">Артикул: 43102</span>
+                        <a href="" class="cart-product__title">Kangaroo Penetrating Lubricant -проникающая смазка
+                          (жидкий ключ) 360мл,</a>
+                      </div>
+                    </div>
+                    <span class="order-info__product-quantity">3 шт.</span>
+                    <div class="order-info__price">
+                      <span class="cart-product__price order-info__product-price">4900.00 ₽</span>
+                      <span class="cart-product__unit-price order-info__product-unit-price">1200 р./шт.</span>
+                    </div>
+                  </div>
+                </li>
+
               </ul>
-            </ul>
+          </ul>
         </div>
       </div>
-    </div>
-  </div>
-  <!-- Мои покупки -->
-  <div class="tabs__panel account-content__tab">
-    <div class="account-purchases">
-      <h2 class="account-purchases__title">Мои покупки</h2>
-      <div class="swiper slider account-content__slider">
-        <div class="swiper-wrapper account-content__swiper-wrapper">
-          <!-- Слайд START -->
-          <div class="swiper-slide account-purchases__swiper-slide account-content__swiper-slide">
-            <!-- Карточка товара -->
-            <a href="#" class="product-card">
-              <div class="product-card__view">
-                <!-- Бейджи -->
-                <ul class="product-card__badges badges">
-                  <li class="badges__item badges__item--hit">хит</li>
-                  <li class="badges__item badges__item--new">новинка</li>
-                </ul>
-                <!-- Скидка -->
-                <span class="product-card__discount">-12%</span>
-                <!-- Изображение -->
-                <picture class="product-card__picture">
-                  <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
-                    type="image/webp">
-                  <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x"
-                    width="211" height="211" alt="Изображение товара">
-                </picture>
-              </div>
-              <!-- Цены -->
-              <div class="product-card__price">
-                <span class="product-card__price-current">4000 <span class="product-card__price-unit">р.</span></span>
-                <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
-              </div>
-              <div class="product-card__info">
-                <div class="product-card__meta">
-                  <!-- Бренд -->
-                  <span class="product-card__brand">VOLGA OIL</span>
-                  <!-- Артикул -->
-                  <span class="product-card__sku">Арт.: 800809</span>
-                </div>
-                <!-- Название -->
-                <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
-                <!-- Описание -->
-                <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
-                  вязкости: 30</p>
-              </div>
-              <div class="product-card__actions">
-                <!-- Количество -->
-                <div class="product-card__quantity quantity">
-                  <div class="quantity__label visually-hidden">Количество:</div>
-                  <div class="quantity__control" aria-label="Выбор количества">
-                    <button class="quantity__btn quantity__btn--minus" disabled aria-label="Уменьшить количество">
-                      <svg class="quantity__icon">
-                        <use xlink:href="img/sprite.svg#icon-minus"></use>
-                      </svg>
-                    </button>
-                    <span class="quantity__value" aria-label="Количество товара">1</span>
-                    <button class="quantity__btn quantity__btn--plus" aria-label="Увеличить количество">
-                      <svg class="quantity__icon">
-                        <use xlink:href="img/sprite.svg#icon-plus"></use>
+      <!-- Мои покупки -->
+      <div class="tabs__panel account-content__tab">
+        <div class="account-purchases">
+          <h2 class="account-purchases__title">Мои покупки</h2>
+          <div class="swiper slider account-content__slider">
+            <div class="swiper-wrapper account-content__swiper-wrapper">
+              <!-- Слайд START -->
+              <div class="swiper-slide account-purchases__swiper-slide account-content__swiper-slide">
+                <!-- Карточка товара -->
+                <a href="#" class="product-card">
+                  <div class="product-card__view">
+                    <!-- Бейджи -->
+                    <ul class="product-card__badges badges">
+                      <li class="badges__item badges__item--hit">хит</li>
+                      <li class="badges__item badges__item--new">новинка</li>
+                    </ul>
+                    <!-- Скидка -->
+                    <span class="product-card__discount">-12%</span>
+                    <!-- Изображение -->
+                    <picture class="product-card__picture">
+                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
+                        type="image/webp">
+                      <img loading="lazy" src="img/catalog/product-thumb.png"
+                        srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
+                    </picture>
+                  </div>
+                  <!-- Цены -->
+                  <div class="product-card__price">
+                    <span class="product-card__price-current">4000 <span
+                        class="product-card__price-unit">р.</span></span>
+                    <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
+                  </div>
+                  <div class="product-card__info">
+                    <div class="product-card__meta">
+                      <!-- Бренд -->
+                      <span class="product-card__brand">VOLGA OIL</span>
+                      <!-- Артикул -->
+                      <span class="product-card__sku">Арт.: 800809</span>
+                    </div>
+                    <!-- Название -->
+                    <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
+                    <!-- Описание -->
+                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
+                      вязкости: 30</p>
+                  </div>
+                  <div class="product-card__actions">
+                    <!-- Количество -->
+                    <div class="product-card__quantity quantity">
+                      <div class="quantity__label visually-hidden">Количество:</div>
+                      <div class="quantity__control" aria-label="Выбор количества">
+                        <button class="quantity__btn quantity__btn--minus" disabled aria-label="Уменьшить количество">
+                          <svg class="quantity__icon">
+                            <use xlink:href="img/sprite.svg#icon-minus"></use>
+                          </svg>
+                        </button>
+                        <span class="quantity__value" aria-label="Количество товара">1</span>
+                        <button class="quantity__btn quantity__btn--plus" aria-label="Увеличить количество">
+                          <svg class="quantity__icon">
+                            <use xlink:href="img/sprite.svg#icon-plus"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <!-- Кнпока Добавить в корзину -->
+                    <button class="product-card__add-to-cart add-to-cart" aria-label="Добавить в корзину">
+                      <span class="add-to-cart__text">Купить</span>
+                      <span class="add-to-cart__count">1</span>
+                      <svg class="add-to-cart__icon">
+                        <use xlink:href="img/sprite.svg#icon-cart"></use>
                       </svg>
                     </button>
                   </div>
-                </div>
-                <!-- Кнпока Добавить в корзину -->
-                <button class="product-card__add-to-cart add-to-cart" aria-label="Добавить в корзину">
-                  <span class="add-to-cart__text">Купить</span>
-                  <span class="add-to-cart__count">1</span>
-                  <svg class="add-to-cart__icon">
-                    <use xlink:href="img/sprite.svg#icon-cart"></use>
-                  </svg>
-                </button>
-              </div>
-            </a>
-            <a href="#" class="product-card">
-              <div class="product-card__view">
-                <!-- Бейджи -->
-                <ul class="product-card__badges badges">
-                  <li class="badges__item badges__item--hit">хит</li>
-                  <li class="badges__item badges__item--new">новинка</li>
-                </ul>
-                <!-- Скидка -->
-                <span class="product-card__discount">-12%</span>
-                <!-- Изображение -->
-                <picture class="product-card__picture">
-                  <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
-                    type="image/webp">
-                  <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x"
-                    width="211" height="211" alt="Изображение товара">
-                </picture>
-              </div>
-              <!-- Цены -->
-              <div class="product-card__price">
-                <span class="product-card__price-current">4000 <span class="product-card__price-unit">р.</span></span>
-                <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
-              </div>
-              <div class="product-card__info">
-                <div class="product-card__meta">
-                  <!-- Бренд -->
-                  <span class="product-card__brand">VOLGA OIL</span>
-                  <!-- Артикул -->
-                  <span class="product-card__sku">Арт.: 800809</span>
-                </div>
-                <!-- Название -->
-                <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
-                <!-- Описание -->
-                <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
-                  вязкости: 30</p>
-              </div>
-              <div class="product-card__actions">
-                <!-- Количество -->
-                <div class="product-card__quantity quantity">
-                  <div class="quantity__label visually-hidden">Количество:</div>
-                  <div class="quantity__control" aria-label="Выбор количества">
-                    <button class="quantity__btn quantity__btn--minus" disabled aria-label="Уменьшить количество">
-                      <svg class="quantity__icon">
-                        <use xlink:href="img/sprite.svg#icon-minus"></use>
-                      </svg>
-                    </button>
-                    <span class="quantity__value" aria-label="Количество товара">1</span>
-                    <button class="quantity__btn quantity__btn--plus" aria-label="Увеличить количество">
-                      <svg class="quantity__icon">
-                        <use xlink:href="img/sprite.svg#icon-plus"></use>
+                </a>
+                <a href="#" class="product-card">
+                  <div class="product-card__view">
+                    <!-- Бейджи -->
+                    <ul class="product-card__badges badges">
+                      <li class="badges__item badges__item--hit">хит</li>
+                      <li class="badges__item badges__item--new">новинка</li>
+                    </ul>
+                    <!-- Скидка -->
+                    <span class="product-card__discount">-12%</span>
+                    <!-- Изображение -->
+                    <picture class="product-card__picture">
+                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
+                        type="image/webp">
+                      <img loading="lazy" src="img/catalog/product-thumb.png"
+                        srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
+                    </picture>
+                  </div>
+                  <!-- Цены -->
+                  <div class="product-card__price">
+                    <span class="product-card__price-current">4000 <span
+                        class="product-card__price-unit">р.</span></span>
+                    <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
+                  </div>
+                  <div class="product-card__info">
+                    <div class="product-card__meta">
+                      <!-- Бренд -->
+                      <span class="product-card__brand">VOLGA OIL</span>
+                      <!-- Артикул -->
+                      <span class="product-card__sku">Арт.: 800809</span>
+                    </div>
+                    <!-- Название -->
+                    <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
+                    <!-- Описание -->
+                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
+                      вязкости: 30</p>
+                  </div>
+                  <div class="product-card__actions">
+                    <!-- Количество -->
+                    <div class="product-card__quantity quantity">
+                      <div class="quantity__label visually-hidden">Количество:</div>
+                      <div class="quantity__control" aria-label="Выбор количества">
+                        <button class="quantity__btn quantity__btn--minus" disabled aria-label="Уменьшить количество">
+                          <svg class="quantity__icon">
+                            <use xlink:href="img/sprite.svg#icon-minus"></use>
+                          </svg>
+                        </button>
+                        <span class="quantity__value" aria-label="Количество товара">1</span>
+                        <button class="quantity__btn quantity__btn--plus" aria-label="Увеличить количество">
+                          <svg class="quantity__icon">
+                            <use xlink:href="img/sprite.svg#icon-plus"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <!-- Кнпока Добавить в корзину -->
+                    <button class="product-card__add-to-cart add-to-cart" aria-label="Добавить в корзину">
+                      <span class="add-to-cart__text">Купить</span>
+                      <span class="add-to-cart__count">1</span>
+                      <svg class="add-to-cart__icon">
+                        <use xlink:href="img/sprite.svg#icon-cart"></use>
                       </svg>
                     </button>
                   </div>
-                </div>
-                <!-- Кнпока Добавить в корзину -->
-                <button class="product-card__add-to-cart add-to-cart" aria-label="Добавить в корзину">
-                  <span class="add-to-cart__text">Купить</span>
-                  <span class="add-to-cart__count">1</span>
-                  <svg class="add-to-cart__icon">
-                    <use xlink:href="img/sprite.svg#icon-cart"></use>
-                  </svg>
-                </button>
-              </div>
-            </a>
-            <a href="#" class="product-card">
-              <div class="product-card__view">
-                <!-- Бейджи -->
-                <ul class="product-card__badges badges">
-                  <li class="badges__item badges__item--hit">хит</li>
-                  <li class="badges__item badges__item--new">новинка</li>
-                </ul>
-                <!-- Скидка -->
-                <span class="product-card__discount">-12%</span>
-                <!-- Изображение -->
-                <picture class="product-card__picture">
-                  <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
-                    type="image/webp">
-                  <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x"
-                    width="211" height="211" alt="Изображение товара">
-                </picture>
-              </div>
-              <!-- Цены -->
-              <div class="product-card__price">
-                <span class="product-card__price-current">4000 <span class="product-card__price-unit">р.</span></span>
-                <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
-              </div>
-              <div class="product-card__info">
-                <div class="product-card__meta">
-                  <!-- Бренд -->
-                  <span class="product-card__brand">VOLGA OIL</span>
-                  <!-- Артикул -->
-                  <span class="product-card__sku">Арт.: 800809</span>
-                </div>
-                <!-- Название -->
-                <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
-                <!-- Описание -->
-                <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
-                  вязкости: 30</p>
-              </div>
-              <div class="product-card__actions">
-                <!-- Количество -->
-                <div class="product-card__quantity quantity">
-                  <div class="quantity__label visually-hidden">Количество:</div>
-                  <div class="quantity__control" aria-label="Выбор количества">
-                    <button class="quantity__btn quantity__btn--minus" disabled aria-label="Уменьшить количество">
-                      <svg class="quantity__icon">
-                        <use xlink:href="img/sprite.svg#icon-minus"></use>
-                      </svg>
-                    </button>
-                    <span class="quantity__value" aria-label="Количество товара">1</span>
-                    <button class="quantity__btn quantity__btn--plus" aria-label="Увеличить количество">
-                      <svg class="quantity__icon">
-                        <use xlink:href="img/sprite.svg#icon-plus"></use>
+                </a>
+                <a href="#" class="product-card">
+                  <div class="product-card__view">
+                    <!-- Бейджи -->
+                    <ul class="product-card__badges badges">
+                      <li class="badges__item badges__item--hit">хит</li>
+                      <li class="badges__item badges__item--new">новинка</li>
+                    </ul>
+                    <!-- Скидка -->
+                    <span class="product-card__discount">-12%</span>
+                    <!-- Изображение -->
+                    <picture class="product-card__picture">
+                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
+                        type="image/webp">
+                      <img loading="lazy" src="img/catalog/product-thumb.png"
+                        srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
+                    </picture>
+                  </div>
+                  <!-- Цены -->
+                  <div class="product-card__price">
+                    <span class="product-card__price-current">4000 <span
+                        class="product-card__price-unit">р.</span></span>
+                    <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
+                  </div>
+                  <div class="product-card__info">
+                    <div class="product-card__meta">
+                      <!-- Бренд -->
+                      <span class="product-card__brand">VOLGA OIL</span>
+                      <!-- Артикул -->
+                      <span class="product-card__sku">Арт.: 800809</span>
+                    </div>
+                    <!-- Название -->
+                    <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
+                    <!-- Описание -->
+                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
+                      вязкости: 30</p>
+                  </div>
+                  <div class="product-card__actions">
+                    <!-- Количество -->
+                    <div class="product-card__quantity quantity">
+                      <div class="quantity__label visually-hidden">Количество:</div>
+                      <div class="quantity__control" aria-label="Выбор количества">
+                        <button class="quantity__btn quantity__btn--minus" disabled aria-label="Уменьшить количество">
+                          <svg class="quantity__icon">
+                            <use xlink:href="img/sprite.svg#icon-minus"></use>
+                          </svg>
+                        </button>
+                        <span class="quantity__value" aria-label="Количество товара">1</span>
+                        <button class="quantity__btn quantity__btn--plus" aria-label="Увеличить количество">
+                          <svg class="quantity__icon">
+                            <use xlink:href="img/sprite.svg#icon-plus"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <!-- Кнпока Добавить в корзину -->
+                    <button class="product-card__add-to-cart add-to-cart" aria-label="Добавить в корзину">
+                      <span class="add-to-cart__text">Купить</span>
+                      <span class="add-to-cart__count">1</span>
+                      <svg class="add-to-cart__icon">
+                        <use xlink:href="img/sprite.svg#icon-cart"></use>
                       </svg>
                     </button>
                   </div>
-                </div>
-                <!-- Кнпока Добавить в корзину -->
-                <button class="product-card__add-to-cart add-to-cart" aria-label="Добавить в корзину">
-                  <span class="add-to-cart__text">Купить</span>
-                  <span class="add-to-cart__count">1</span>
-                  <svg class="add-to-cart__icon">
-                    <use xlink:href="img/sprite.svg#icon-cart"></use>
-                  </svg>
-                </button>
-              </div>
-            </a>
-            <a href="#" class="product-card">
-              <div class="product-card__view">
-                <!-- Бейджи -->
-                <ul class="product-card__badges badges">
-                  <li class="badges__item badges__item--hit">хит</li>
-                  <li class="badges__item badges__item--new">новинка</li>
-                </ul>
-                <!-- Скидка -->
-                <span class="product-card__discount">-12%</span>
-                <!-- Изображение -->
-                <picture class="product-card__picture">
-                  <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
-                    type="image/webp">
-                  <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x"
-                    width="211" height="211" alt="Изображение товара">
-                </picture>
-              </div>
-              <!-- Цены -->
-              <div class="product-card__price">
-                <span class="product-card__price-current">4000 <span class="product-card__price-unit">р.</span></span>
-                <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
-              </div>
-              <div class="product-card__info">
-                <div class="product-card__meta">
-                  <!-- Бренд -->
-                  <span class="product-card__brand">VOLGA OIL</span>
-                  <!-- Артикул -->
-                  <span class="product-card__sku">Арт.: 800809</span>
-                </div>
-                <!-- Название -->
-                <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
-                <!-- Описание -->
-                <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
-                  вязкости: 30</p>
-              </div>
-              <div class="product-card__actions">
-                <!-- Количество -->
-                <div class="product-card__quantity quantity">
-                  <div class="quantity__label visually-hidden">Количество:</div>
-                  <div class="quantity__control" aria-label="Выбор количества">
-                    <button class="quantity__btn quantity__btn--minus" disabled aria-label="Уменьшить количество">
-                      <svg class="quantity__icon">
-                        <use xlink:href="img/sprite.svg#icon-minus"></use>
-                      </svg>
-                    </button>
-                    <span class="quantity__value" aria-label="Количество товара">1</span>
-                    <button class="quantity__btn quantity__btn--plus" aria-label="Увеличить количество">
-                      <svg class="quantity__icon">
-                        <use xlink:href="img/sprite.svg#icon-plus"></use>
+                </a>
+                <a href="#" class="product-card">
+                  <div class="product-card__view">
+                    <!-- Бейджи -->
+                    <ul class="product-card__badges badges">
+                      <li class="badges__item badges__item--hit">хит</li>
+                      <li class="badges__item badges__item--new">новинка</li>
+                    </ul>
+                    <!-- Скидка -->
+                    <span class="product-card__discount">-12%</span>
+                    <!-- Изображение -->
+                    <picture class="product-card__picture">
+                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
+                        type="image/webp">
+                      <img loading="lazy" src="img/catalog/product-thumb.png"
+                        srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
+                    </picture>
+                  </div>
+                  <!-- Цены -->
+                  <div class="product-card__price">
+                    <span class="product-card__price-current">4000 <span
+                        class="product-card__price-unit">р.</span></span>
+                    <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
+                  </div>
+                  <div class="product-card__info">
+                    <div class="product-card__meta">
+                      <!-- Бренд -->
+                      <span class="product-card__brand">VOLGA OIL</span>
+                      <!-- Артикул -->
+                      <span class="product-card__sku">Арт.: 800809</span>
+                    </div>
+                    <!-- Название -->
+                    <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
+                    <!-- Описание -->
+                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
+                      вязкости: 30</p>
+                  </div>
+                  <div class="product-card__actions">
+                    <!-- Количество -->
+                    <div class="product-card__quantity quantity">
+                      <div class="quantity__label visually-hidden">Количество:</div>
+                      <div class="quantity__control" aria-label="Выбор количества">
+                        <button class="quantity__btn quantity__btn--minus" disabled aria-label="Уменьшить количество">
+                          <svg class="quantity__icon">
+                            <use xlink:href="img/sprite.svg#icon-minus"></use>
+                          </svg>
+                        </button>
+                        <span class="quantity__value" aria-label="Количество товара">1</span>
+                        <button class="quantity__btn quantity__btn--plus" aria-label="Увеличить количество">
+                          <svg class="quantity__icon">
+                            <use xlink:href="img/sprite.svg#icon-plus"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <!-- Кнпока Добавить в корзину -->
+                    <button class="product-card__add-to-cart add-to-cart" aria-label="Добавить в корзину">
+                      <span class="add-to-cart__text">Купить</span>
+                      <span class="add-to-cart__count">1</span>
+                      <svg class="add-to-cart__icon">
+                        <use xlink:href="img/sprite.svg#icon-cart"></use>
                       </svg>
                     </button>
                   </div>
-                </div>
-                <!-- Кнпока Добавить в корзину -->
-                <button class="product-card__add-to-cart add-to-cart" aria-label="Добавить в корзину">
-                  <span class="add-to-cart__text">Купить</span>
-                  <span class="add-to-cart__count">1</span>
-                  <svg class="add-to-cart__icon">
-                    <use xlink:href="img/sprite.svg#icon-cart"></use>
-                  </svg>
-                </button>
-              </div>
-            </a>
-            <a href="#" class="product-card">
-              <div class="product-card__view">
-                <!-- Бейджи -->
-                <ul class="product-card__badges badges">
-                  <li class="badges__item badges__item--hit">хит</li>
-                  <li class="badges__item badges__item--new">новинка</li>
-                </ul>
-                <!-- Скидка -->
-                <span class="product-card__discount">-12%</span>
-                <!-- Изображение -->
-                <picture class="product-card__picture">
-                  <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
-                    type="image/webp">
-                  <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x"
-                    width="211" height="211" alt="Изображение товара">
-                </picture>
-              </div>
-              <!-- Цены -->
-              <div class="product-card__price">
-                <span class="product-card__price-current">4000 <span class="product-card__price-unit">р.</span></span>
-                <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
-              </div>
-              <div class="product-card__info">
-                <div class="product-card__meta">
-                  <!-- Бренд -->
-                  <span class="product-card__brand">VOLGA OIL</span>
-                  <!-- Артикул -->
-                  <span class="product-card__sku">Арт.: 800809</span>
-                </div>
-                <!-- Название -->
-                <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
-                <!-- Описание -->
-                <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
-                  вязкости: 30</p>
-              </div>
-              <div class="product-card__actions">
-                <!-- Количество -->
-                <div class="product-card__quantity quantity">
-                  <div class="quantity__label visually-hidden">Количество:</div>
-                  <div class="quantity__control" aria-label="Выбор количества">
-                    <button class="quantity__btn quantity__btn--minus" disabled aria-label="Уменьшить количество">
-                      <svg class="quantity__icon">
-                        <use xlink:href="img/sprite.svg#icon-minus"></use>
-                      </svg>
-                    </button>
-                    <span class="quantity__value" aria-label="Количество товара">1</span>
-                    <button class="quantity__btn quantity__btn--plus" aria-label="Увеличить количество">
-                      <svg class="quantity__icon">
-                        <use xlink:href="img/sprite.svg#icon-plus"></use>
+                </a>
+                <a href="#" class="product-card">
+                  <div class="product-card__view">
+                    <!-- Бейджи -->
+                    <ul class="product-card__badges badges">
+                      <li class="badges__item badges__item--hit">хит</li>
+                      <li class="badges__item badges__item--new">новинка</li>
+                    </ul>
+                    <!-- Скидка -->
+                    <span class="product-card__discount">-12%</span>
+                    <!-- Изображение -->
+                    <picture class="product-card__picture">
+                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
+                        type="image/webp">
+                      <img loading="lazy" src="img/catalog/product-thumb.png"
+                        srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
+                    </picture>
+                  </div>
+                  <!-- Цены -->
+                  <div class="product-card__price">
+                    <span class="product-card__price-current">4000 <span
+                        class="product-card__price-unit">р.</span></span>
+                    <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
+                  </div>
+                  <div class="product-card__info">
+                    <div class="product-card__meta">
+                      <!-- Бренд -->
+                      <span class="product-card__brand">VOLGA OIL</span>
+                      <!-- Артикул -->
+                      <span class="product-card__sku">Арт.: 800809</span>
+                    </div>
+                    <!-- Название -->
+                    <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
+                    <!-- Описание -->
+                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
+                      вязкости: 30</p>
+                  </div>
+                  <div class="product-card__actions">
+                    <!-- Количество -->
+                    <div class="product-card__quantity quantity">
+                      <div class="quantity__label visually-hidden">Количество:</div>
+                      <div class="quantity__control" aria-label="Выбор количества">
+                        <button class="quantity__btn quantity__btn--minus" disabled aria-label="Уменьшить количество">
+                          <svg class="quantity__icon">
+                            <use xlink:href="img/sprite.svg#icon-minus"></use>
+                          </svg>
+                        </button>
+                        <span class="quantity__value" aria-label="Количество товара">1</span>
+                        <button class="quantity__btn quantity__btn--plus" aria-label="Увеличить количество">
+                          <svg class="quantity__icon">
+                            <use xlink:href="img/sprite.svg#icon-plus"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <!-- Кнпока Добавить в корзину -->
+                    <button class="product-card__add-to-cart add-to-cart" aria-label="Добавить в корзину">
+                      <span class="add-to-cart__text">Купить</span>
+                      <span class="add-to-cart__count">1</span>
+                      <svg class="add-to-cart__icon">
+                        <use xlink:href="img/sprite.svg#icon-cart"></use>
                       </svg>
                     </button>
                   </div>
-                </div>
-                <!-- Кнпока Добавить в корзину -->
-                <button class="product-card__add-to-cart add-to-cart" aria-label="Добавить в корзину">
-                  <span class="add-to-cart__text">Купить</span>
-                  <span class="add-to-cart__count">1</span>
-                  <svg class="add-to-cart__icon">
-                    <use xlink:href="img/sprite.svg#icon-cart"></use>
-                  </svg>
-                </button>
-              </div>
-            </a>
-            <a href="#" class="product-card">
-              <div class="product-card__view">
-                <!-- Бейджи -->
-                <ul class="product-card__badges badges">
-                  <li class="badges__item badges__item--hit">хит</li>
-                  <li class="badges__item badges__item--new">новинка</li>
-                </ul>
-                <!-- Скидка -->
-                <span class="product-card__discount">-12%</span>
-                <!-- Изображение -->
-                <picture class="product-card__picture">
-                  <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
-                    type="image/webp">
-                  <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x"
-                    width="211" height="211" alt="Изображение товара">
-                </picture>
-              </div>
-              <!-- Цены -->
-              <div class="product-card__price">
-                <span class="product-card__price-current">4000 <span class="product-card__price-unit">р.</span></span>
-                <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
-              </div>
-              <div class="product-card__info">
-                <div class="product-card__meta">
-                  <!-- Бренд -->
-                  <span class="product-card__brand">VOLGA OIL</span>
-                  <!-- Артикул -->
-                  <span class="product-card__sku">Арт.: 800809</span>
-                </div>
-                <!-- Название -->
-                <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
-                <!-- Описание -->
-                <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
-                  вязкости: 30</p>
-              </div>
-              <div class="product-card__actions">
-                <!-- Количество -->
-                <div class="product-card__quantity quantity">
-                  <div class="quantity__label visually-hidden">Количество:</div>
-                  <div class="quantity__control" aria-label="Выбор количества">
-                    <button class="quantity__btn quantity__btn--minus" disabled aria-label="Уменьшить количество">
-                      <svg class="quantity__icon">
-                        <use xlink:href="img/sprite.svg#icon-minus"></use>
-                      </svg>
-                    </button>
-                    <span class="quantity__value" aria-label="Количество товара">1</span>
-                    <button class="quantity__btn quantity__btn--plus" aria-label="Увеличить количество">
-                      <svg class="quantity__icon">
-                        <use xlink:href="img/sprite.svg#icon-plus"></use>
+                </a>
+                <a href="#" class="product-card">
+                  <div class="product-card__view">
+                    <!-- Бейджи -->
+                    <ul class="product-card__badges badges">
+                      <li class="badges__item badges__item--hit">хит</li>
+                      <li class="badges__item badges__item--new">новинка</li>
+                    </ul>
+                    <!-- Скидка -->
+                    <span class="product-card__discount">-12%</span>
+                    <!-- Изображение -->
+                    <picture class="product-card__picture">
+                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
+                        type="image/webp">
+                      <img loading="lazy" src="img/catalog/product-thumb.png"
+                        srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
+                    </picture>
+                  </div>
+                  <!-- Цены -->
+                  <div class="product-card__price">
+                    <span class="product-card__price-current">4000 <span
+                        class="product-card__price-unit">р.</span></span>
+                    <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
+                  </div>
+                  <div class="product-card__info">
+                    <div class="product-card__meta">
+                      <!-- Бренд -->
+                      <span class="product-card__brand">VOLGA OIL</span>
+                      <!-- Артикул -->
+                      <span class="product-card__sku">Арт.: 800809</span>
+                    </div>
+                    <!-- Название -->
+                    <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
+                    <!-- Описание -->
+                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
+                      вязкости: 30</p>
+                  </div>
+                  <div class="product-card__actions">
+                    <!-- Количество -->
+                    <div class="product-card__quantity quantity">
+                      <div class="quantity__label visually-hidden">Количество:</div>
+                      <div class="quantity__control" aria-label="Выбор количества">
+                        <button class="quantity__btn quantity__btn--minus" disabled aria-label="Уменьшить количество">
+                          <svg class="quantity__icon">
+                            <use xlink:href="img/sprite.svg#icon-minus"></use>
+                          </svg>
+                        </button>
+                        <span class="quantity__value" aria-label="Количество товара">1</span>
+                        <button class="quantity__btn quantity__btn--plus" aria-label="Увеличить количество">
+                          <svg class="quantity__icon">
+                            <use xlink:href="img/sprite.svg#icon-plus"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <!-- Кнпока Добавить в корзину -->
+                    <button class="product-card__add-to-cart add-to-cart" aria-label="Добавить в корзину">
+                      <span class="add-to-cart__text">Купить</span>
+                      <span class="add-to-cart__count">1</span>
+                      <svg class="add-to-cart__icon">
+                        <use xlink:href="img/sprite.svg#icon-cart"></use>
                       </svg>
                     </button>
                   </div>
-                </div>
-                <!-- Кнпока Добавить в корзину -->
-                <button class="product-card__add-to-cart add-to-cart" aria-label="Добавить в корзину">
-                  <span class="add-to-cart__text">Купить</span>
-                  <span class="add-to-cart__count">1</span>
-                  <svg class="add-to-cart__icon">
-                    <use xlink:href="img/sprite.svg#icon-cart"></use>
-                  </svg>
-                </button>
-              </div>
-            </a>
-            <a href="#" class="product-card">
-              <div class="product-card__view">
-                <!-- Бейджи -->
-                <ul class="product-card__badges badges">
-                  <li class="badges__item badges__item--hit">хит</li>
-                  <li class="badges__item badges__item--new">новинка</li>
-                </ul>
-                <!-- Скидка -->
-                <span class="product-card__discount">-12%</span>
-                <!-- Изображение -->
-                <picture class="product-card__picture">
-                  <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
-                    type="image/webp">
-                  <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x"
-                    width="211" height="211" alt="Изображение товара">
-                </picture>
-              </div>
-              <!-- Цены -->
-              <div class="product-card__price">
-                <span class="product-card__price-current">4000 <span class="product-card__price-unit">р.</span></span>
-                <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
-              </div>
-              <div class="product-card__info">
-                <div class="product-card__meta">
-                  <!-- Бренд -->
-                  <span class="product-card__brand">VOLGA OIL</span>
-                  <!-- Артикул -->
-                  <span class="product-card__sku">Арт.: 800809</span>
-                </div>
-                <!-- Название -->
-                <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
-                <!-- Описание -->
-                <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
-                  вязкости: 30</p>
-              </div>
-              <div class="product-card__actions">
-                <!-- Количество -->
-                <div class="product-card__quantity quantity">
-                  <div class="quantity__label visually-hidden">Количество:</div>
-                  <div class="quantity__control" aria-label="Выбор количества">
-                    <button class="quantity__btn quantity__btn--minus" disabled aria-label="Уменьшить количество">
-                      <svg class="quantity__icon">
-                        <use xlink:href="img/sprite.svg#icon-minus"></use>
-                      </svg>
-                    </button>
-                    <span class="quantity__value" aria-label="Количество товара">1</span>
-                    <button class="quantity__btn quantity__btn--plus" aria-label="Увеличить количество">
-                      <svg class="quantity__icon">
-                        <use xlink:href="img/sprite.svg#icon-plus"></use>
+                </a>
+                <a href="#" class="product-card">
+                  <div class="product-card__view">
+                    <!-- Бейджи -->
+                    <ul class="product-card__badges badges">
+                      <li class="badges__item badges__item--hit">хит</li>
+                      <li class="badges__item badges__item--new">новинка</li>
+                    </ul>
+                    <!-- Скидка -->
+                    <span class="product-card__discount">-12%</span>
+                    <!-- Изображение -->
+                    <picture class="product-card__picture">
+                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
+                        type="image/webp">
+                      <img loading="lazy" src="img/catalog/product-thumb.png"
+                        srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
+                    </picture>
+                  </div>
+                  <!-- Цены -->
+                  <div class="product-card__price">
+                    <span class="product-card__price-current">4000 <span
+                        class="product-card__price-unit">р.</span></span>
+                    <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
+                  </div>
+                  <div class="product-card__info">
+                    <div class="product-card__meta">
+                      <!-- Бренд -->
+                      <span class="product-card__brand">VOLGA OIL</span>
+                      <!-- Артикул -->
+                      <span class="product-card__sku">Арт.: 800809</span>
+                    </div>
+                    <!-- Название -->
+                    <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
+                    <!-- Описание -->
+                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
+                      вязкости: 30</p>
+                  </div>
+                  <div class="product-card__actions">
+                    <!-- Количество -->
+                    <div class="product-card__quantity quantity">
+                      <div class="quantity__label visually-hidden">Количество:</div>
+                      <div class="quantity__control" aria-label="Выбор количества">
+                        <button class="quantity__btn quantity__btn--minus" disabled aria-label="Уменьшить количество">
+                          <svg class="quantity__icon">
+                            <use xlink:href="img/sprite.svg#icon-minus"></use>
+                          </svg>
+                        </button>
+                        <span class="quantity__value" aria-label="Количество товара">1</span>
+                        <button class="quantity__btn quantity__btn--plus" aria-label="Увеличить количество">
+                          <svg class="quantity__icon">
+                            <use xlink:href="img/sprite.svg#icon-plus"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <!-- Кнпока Добавить в корзину -->
+                    <button class="product-card__add-to-cart add-to-cart" aria-label="Добавить в корзину">
+                      <span class="add-to-cart__text">Купить</span>
+                      <span class="add-to-cart__count">1</span>
+                      <svg class="add-to-cart__icon">
+                        <use xlink:href="img/sprite.svg#icon-cart"></use>
                       </svg>
                     </button>
                   </div>
-                </div>
-                <!-- Кнпока Добавить в корзину -->
-                <button class="product-card__add-to-cart add-to-cart" aria-label="Добавить в корзину">
-                  <span class="add-to-cart__text">Купить</span>
-                  <span class="add-to-cart__count">1</span>
-                  <svg class="add-to-cart__icon">
-                    <use xlink:href="img/sprite.svg#icon-cart"></use>
-                  </svg>
-                </button>
-              </div>
-            </a>
-            <a href="#" class="product-card">
-              <div class="product-card__view">
-                <!-- Бейджи -->
-                <ul class="product-card__badges badges">
-                  <li class="badges__item badges__item--hit">хит</li>
-                  <li class="badges__item badges__item--new">новинка</li>
-                </ul>
-                <!-- Скидка -->
-                <span class="product-card__discount">-12%</span>
-                <!-- Изображение -->
-                <picture class="product-card__picture">
-                  <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
-                    type="image/webp">
-                  <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x"
-                    width="211" height="211" alt="Изображение товара">
-                </picture>
-              </div>
-              <!-- Цены -->
-              <div class="product-card__price">
-                <span class="product-card__price-current">4000 <span class="product-card__price-unit">р.</span></span>
-                <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
-              </div>
-              <div class="product-card__info">
-                <div class="product-card__meta">
-                  <!-- Бренд -->
-                  <span class="product-card__brand">VOLGA OIL</span>
-                  <!-- Артикул -->
-                  <span class="product-card__sku">Арт.: 800809</span>
-                </div>
-                <!-- Название -->
-                <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
-                <!-- Описание -->
-                <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
-                  вязкости: 30</p>
-              </div>
-              <div class="product-card__actions">
-                <!-- Количество -->
-                <div class="product-card__quantity quantity">
-                  <div class="quantity__label visually-hidden">Количество:</div>
-                  <div class="quantity__control" aria-label="Выбор количества">
-                    <button class="quantity__btn quantity__btn--minus" disabled aria-label="Уменьшить количество">
-                      <svg class="quantity__icon">
-                        <use xlink:href="img/sprite.svg#icon-minus"></use>
-                      </svg>
-                    </button>
-                    <span class="quantity__value" aria-label="Количество товара">1</span>
-                    <button class="quantity__btn quantity__btn--plus" aria-label="Увеличить количество">
-                      <svg class="quantity__icon">
-                        <use xlink:href="img/sprite.svg#icon-plus"></use>
+                </a>
+                <a href="#" class="product-card">
+                  <div class="product-card__view">
+                    <!-- Бейджи -->
+                    <ul class="product-card__badges badges">
+                      <li class="badges__item badges__item--hit">хит</li>
+                      <li class="badges__item badges__item--new">новинка</li>
+                    </ul>
+                    <!-- Скидка -->
+                    <span class="product-card__discount">-12%</span>
+                    <!-- Изображение -->
+                    <picture class="product-card__picture">
+                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
+                        type="image/webp">
+                      <img loading="lazy" src="img/catalog/product-thumb.png"
+                        srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
+                    </picture>
+                  </div>
+                  <!-- Цены -->
+                  <div class="product-card__price">
+                    <span class="product-card__price-current">4000 <span
+                        class="product-card__price-unit">р.</span></span>
+                    <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
+                  </div>
+                  <div class="product-card__info">
+                    <div class="product-card__meta">
+                      <!-- Бренд -->
+                      <span class="product-card__brand">VOLGA OIL</span>
+                      <!-- Артикул -->
+                      <span class="product-card__sku">Арт.: 800809</span>
+                    </div>
+                    <!-- Название -->
+                    <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
+                    <!-- Описание -->
+                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
+                      вязкости: 30</p>
+                  </div>
+                  <div class="product-card__actions">
+                    <!-- Количество -->
+                    <div class="product-card__quantity quantity">
+                      <div class="quantity__label visually-hidden">Количество:</div>
+                      <div class="quantity__control" aria-label="Выбор количества">
+                        <button class="quantity__btn quantity__btn--minus" disabled aria-label="Уменьшить количество">
+                          <svg class="quantity__icon">
+                            <use xlink:href="img/sprite.svg#icon-minus"></use>
+                          </svg>
+                        </button>
+                        <span class="quantity__value" aria-label="Количество товара">1</span>
+                        <button class="quantity__btn quantity__btn--plus" aria-label="Увеличить количество">
+                          <svg class="quantity__icon">
+                            <use xlink:href="img/sprite.svg#icon-plus"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <!-- Кнпока Добавить в корзину -->
+                    <button class="product-card__add-to-cart add-to-cart" aria-label="Добавить в корзину">
+                      <span class="add-to-cart__text">Купить</span>
+                      <span class="add-to-cart__count">1</span>
+                      <svg class="add-to-cart__icon">
+                        <use xlink:href="img/sprite.svg#icon-cart"></use>
                       </svg>
                     </button>
                   </div>
-                </div>
-                <!-- Кнпока Добавить в корзину -->
-                <button class="product-card__add-to-cart add-to-cart" aria-label="Добавить в корзину">
-                  <span class="add-to-cart__text">Купить</span>
-                  <span class="add-to-cart__count">1</span>
-                  <svg class="add-to-cart__icon">
-                    <use xlink:href="img/sprite.svg#icon-cart"></use>
-                  </svg>
-                </button>
-              </div>
-            </a>
-            <a href="#" class="product-card">
-              <div class="product-card__view">
-                <!-- Бейджи -->
-                <ul class="product-card__badges badges">
-                  <li class="badges__item badges__item--hit">хит</li>
-                  <li class="badges__item badges__item--new">новинка</li>
-                </ul>
-                <!-- Скидка -->
-                <span class="product-card__discount">-12%</span>
-                <!-- Изображение -->
-                <picture class="product-card__picture">
-                  <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
-                    type="image/webp">
-                  <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x"
-                    width="211" height="211" alt="Изображение товара">
-                </picture>
-              </div>
-              <!-- Цены -->
-              <div class="product-card__price">
-                <span class="product-card__price-current">4000 <span class="product-card__price-unit">р.</span></span>
-                <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
-              </div>
-              <div class="product-card__info">
-                <div class="product-card__meta">
-                  <!-- Бренд -->
-                  <span class="product-card__brand">VOLGA OIL</span>
-                  <!-- Артикул -->
-                  <span class="product-card__sku">Арт.: 800809</span>
-                </div>
-                <!-- Название -->
-                <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
-                <!-- Описание -->
-                <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
-                  вязкости: 30</p>
-              </div>
-              <div class="product-card__actions">
-                <!-- Количество -->
-                <div class="product-card__quantity quantity">
-                  <div class="quantity__label visually-hidden">Количество:</div>
-                  <div class="quantity__control" aria-label="Выбор количества">
-                    <button class="quantity__btn quantity__btn--minus" disabled aria-label="Уменьшить количество">
-                      <svg class="quantity__icon">
-                        <use xlink:href="img/sprite.svg#icon-minus"></use>
-                      </svg>
-                    </button>
-                    <span class="quantity__value" aria-label="Количество товара">1</span>
-                    <button class="quantity__btn quantity__btn--plus" aria-label="Увеличить количество">
-                      <svg class="quantity__icon">
-                        <use xlink:href="img/sprite.svg#icon-plus"></use>
+                </a>
+                <a href="#" class="product-card">
+                  <div class="product-card__view">
+                    <!-- Бейджи -->
+                    <ul class="product-card__badges badges">
+                      <li class="badges__item badges__item--hit">хит</li>
+                      <li class="badges__item badges__item--new">новинка</li>
+                    </ul>
+                    <!-- Скидка -->
+                    <span class="product-card__discount">-12%</span>
+                    <!-- Изображение -->
+                    <picture class="product-card__picture">
+                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
+                        type="image/webp">
+                      <img loading="lazy" src="img/catalog/product-thumb.png"
+                        srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
+                    </picture>
+                  </div>
+                  <!-- Цены -->
+                  <div class="product-card__price">
+                    <span class="product-card__price-current">4000 <span
+                        class="product-card__price-unit">р.</span></span>
+                    <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
+                  </div>
+                  <div class="product-card__info">
+                    <div class="product-card__meta">
+                      <!-- Бренд -->
+                      <span class="product-card__brand">VOLGA OIL</span>
+                      <!-- Артикул -->
+                      <span class="product-card__sku">Арт.: 800809</span>
+                    </div>
+                    <!-- Название -->
+                    <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
+                    <!-- Описание -->
+                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
+                      вязкости: 30</p>
+                  </div>
+                  <div class="product-card__actions">
+                    <!-- Количество -->
+                    <div class="product-card__quantity quantity">
+                      <div class="quantity__label visually-hidden">Количество:</div>
+                      <div class="quantity__control" aria-label="Выбор количества">
+                        <button class="quantity__btn quantity__btn--minus" disabled aria-label="Уменьшить количество">
+                          <svg class="quantity__icon">
+                            <use xlink:href="img/sprite.svg#icon-minus"></use>
+                          </svg>
+                        </button>
+                        <span class="quantity__value" aria-label="Количество товара">1</span>
+                        <button class="quantity__btn quantity__btn--plus" aria-label="Увеличить количество">
+                          <svg class="quantity__icon">
+                            <use xlink:href="img/sprite.svg#icon-plus"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <!-- Кнпока Добавить в корзину -->
+                    <button class="product-card__add-to-cart add-to-cart" aria-label="Добавить в корзину">
+                      <span class="add-to-cart__text">Купить</span>
+                      <span class="add-to-cart__count">1</span>
+                      <svg class="add-to-cart__icon">
+                        <use xlink:href="img/sprite.svg#icon-cart"></use>
                       </svg>
                     </button>
                   </div>
-                </div>
-                <!-- Кнпока Добавить в корзину -->
-                <button class="product-card__add-to-cart add-to-cart" aria-label="Добавить в корзину">
-                  <span class="add-to-cart__text">Купить</span>
-                  <span class="add-to-cart__count">1</span>
-                  <svg class="add-to-cart__icon">
-                    <use xlink:href="img/sprite.svg#icon-cart"></use>
-                  </svg>
-                </button>
-              </div>
-            </a>
-            <a href="#" class="product-card">
-              <div class="product-card__view">
-                <!-- Бейджи -->
-                <ul class="product-card__badges badges">
-                  <li class="badges__item badges__item--hit">хит</li>
-                  <li class="badges__item badges__item--new">новинка</li>
-                </ul>
-                <!-- Скидка -->
-                <span class="product-card__discount">-12%</span>
-                <!-- Изображение -->
-                <picture class="product-card__picture">
-                  <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
-                    type="image/webp">
-                  <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x"
-                    width="211" height="211" alt="Изображение товара">
-                </picture>
-              </div>
-              <!-- Цены -->
-              <div class="product-card__price">
-                <span class="product-card__price-current">4000 <span class="product-card__price-unit">р.</span></span>
-                <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
-              </div>
-              <div class="product-card__info">
-                <div class="product-card__meta">
-                  <!-- Бренд -->
-                  <span class="product-card__brand">VOLGA OIL</span>
-                  <!-- Артикул -->
-                  <span class="product-card__sku">Арт.: 800809</span>
-                </div>
-                <!-- Название -->
-                <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
-                <!-- Описание -->
-                <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
-                  вязкости: 30</p>
-              </div>
-              <div class="product-card__actions">
-                <!-- Количество -->
-                <div class="product-card__quantity quantity">
-                  <div class="quantity__label visually-hidden">Количество:</div>
-                  <div class="quantity__control" aria-label="Выбор количества">
-                    <button class="quantity__btn quantity__btn--minus" disabled aria-label="Уменьшить количество">
-                      <svg class="quantity__icon">
-                        <use xlink:href="img/sprite.svg#icon-minus"></use>
-                      </svg>
-                    </button>
-                    <span class="quantity__value" aria-label="Количество товара">1</span>
-                    <button class="quantity__btn quantity__btn--plus" aria-label="Увеличить количество">
-                      <svg class="quantity__icon">
-                        <use xlink:href="img/sprite.svg#icon-plus"></use>
+                </a>
+                <a href="#" class="product-card">
+                  <div class="product-card__view">
+                    <!-- Бейджи -->
+                    <ul class="product-card__badges badges">
+                      <li class="badges__item badges__item--hit">хит</li>
+                      <li class="badges__item badges__item--new">новинка</li>
+                    </ul>
+                    <!-- Скидка -->
+                    <span class="product-card__discount">-12%</span>
+                    <!-- Изображение -->
+                    <picture class="product-card__picture">
+                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
+                        type="image/webp">
+                      <img loading="lazy" src="img/catalog/product-thumb.png"
+                        srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
+                    </picture>
+                  </div>
+                  <!-- Цены -->
+                  <div class="product-card__price">
+                    <span class="product-card__price-current">4000 <span
+                        class="product-card__price-unit">р.</span></span>
+                    <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
+                  </div>
+                  <div class="product-card__info">
+                    <div class="product-card__meta">
+                      <!-- Бренд -->
+                      <span class="product-card__brand">VOLGA OIL</span>
+                      <!-- Артикул -->
+                      <span class="product-card__sku">Арт.: 800809</span>
+                    </div>
+                    <!-- Название -->
+                    <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
+                    <!-- Описание -->
+                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
+                      вязкости: 30</p>
+                  </div>
+                  <div class="product-card__actions">
+                    <!-- Количество -->
+                    <div class="product-card__quantity quantity">
+                      <div class="quantity__label visually-hidden">Количество:</div>
+                      <div class="quantity__control" aria-label="Выбор количества">
+                        <button class="quantity__btn quantity__btn--minus" disabled aria-label="Уменьшить количество">
+                          <svg class="quantity__icon">
+                            <use xlink:href="img/sprite.svg#icon-minus"></use>
+                          </svg>
+                        </button>
+                        <span class="quantity__value" aria-label="Количество товара">1</span>
+                        <button class="quantity__btn quantity__btn--plus" aria-label="Увеличить количество">
+                          <svg class="quantity__icon">
+                            <use xlink:href="img/sprite.svg#icon-plus"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <!-- Кнпока Добавить в корзину -->
+                    <button class="product-card__add-to-cart add-to-cart" aria-label="Добавить в корзину">
+                      <span class="add-to-cart__text">Купить</span>
+                      <span class="add-to-cart__count">1</span>
+                      <svg class="add-to-cart__icon">
+                        <use xlink:href="img/sprite.svg#icon-cart"></use>
                       </svg>
                     </button>
                   </div>
-                </div>
-                <!-- Кнпока Добавить в корзину -->
-                <button class="product-card__add-to-cart add-to-cart" aria-label="Добавить в корзину">
-                  <span class="add-to-cart__text">Купить</span>
-                  <span class="add-to-cart__count">1</span>
-                  <svg class="add-to-cart__icon">
-                    <use xlink:href="img/sprite.svg#icon-cart"></use>
-                  </svg>
-                </button>
-              </div>
-            </a>
-            <a href="#" class="product-card">
-              <div class="product-card__view">
-                <!-- Бейджи -->
-                <ul class="product-card__badges badges">
-                  <li class="badges__item badges__item--hit">хит</li>
-                  <li class="badges__item badges__item--new">новинка</li>
-                </ul>
-                <!-- Скидка -->
-                <span class="product-card__discount">-12%</span>
-                <!-- Изображение -->
-                <picture class="product-card__picture">
-                  <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
-                    type="image/webp">
-                  <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x"
-                    width="211" height="211" alt="Изображение товара">
-                </picture>
-              </div>
-              <!-- Цены -->
-              <div class="product-card__price">
-                <span class="product-card__price-current">4000 <span class="product-card__price-unit">р.</span></span>
-                <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
-              </div>
-              <div class="product-card__info">
-                <div class="product-card__meta">
-                  <!-- Бренд -->
-                  <span class="product-card__brand">VOLGA OIL</span>
-                  <!-- Артикул -->
-                  <span class="product-card__sku">Арт.: 800809</span>
-                </div>
-                <!-- Название -->
-                <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
-                <!-- Описание -->
-                <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
-                  вязкости: 30</p>
-              </div>
-              <div class="product-card__actions">
-                <!-- Количество -->
-                <div class="product-card__quantity quantity">
-                  <div class="quantity__label visually-hidden">Количество:</div>
-                  <div class="quantity__control" aria-label="Выбор количества">
-                    <button class="quantity__btn quantity__btn--minus" disabled aria-label="Уменьшить количество">
-                      <svg class="quantity__icon">
-                        <use xlink:href="img/sprite.svg#icon-minus"></use>
-                      </svg>
-                    </button>
-                    <span class="quantity__value" aria-label="Количество товара">1</span>
-                    <button class="quantity__btn quantity__btn--plus" aria-label="Увеличить количество">
-                      <svg class="quantity__icon">
-                        <use xlink:href="img/sprite.svg#icon-plus"></use>
+                </a>
+                <a href="#" class="product-card">
+                  <div class="product-card__view">
+                    <!-- Бейджи -->
+                    <ul class="product-card__badges badges">
+                      <li class="badges__item badges__item--hit">хит</li>
+                      <li class="badges__item badges__item--new">новинка</li>
+                    </ul>
+                    <!-- Скидка -->
+                    <span class="product-card__discount">-12%</span>
+                    <!-- Изображение -->
+                    <picture class="product-card__picture">
+                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
+                        type="image/webp">
+                      <img loading="lazy" src="img/catalog/product-thumb.png"
+                        srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
+                    </picture>
+                  </div>
+                  <!-- Цены -->
+                  <div class="product-card__price">
+                    <span class="product-card__price-current">4000 <span
+                        class="product-card__price-unit">р.</span></span>
+                    <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
+                  </div>
+                  <div class="product-card__info">
+                    <div class="product-card__meta">
+                      <!-- Бренд -->
+                      <span class="product-card__brand">VOLGA OIL</span>
+                      <!-- Артикул -->
+                      <span class="product-card__sku">Арт.: 800809</span>
+                    </div>
+                    <!-- Название -->
+                    <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
+                    <!-- Описание -->
+                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
+                      вязкости: 30</p>
+                  </div>
+                  <div class="product-card__actions">
+                    <!-- Количество -->
+                    <div class="product-card__quantity quantity">
+                      <div class="quantity__label visually-hidden">Количество:</div>
+                      <div class="quantity__control" aria-label="Выбор количества">
+                        <button class="quantity__btn quantity__btn--minus" disabled aria-label="Уменьшить количество">
+                          <svg class="quantity__icon">
+                            <use xlink:href="img/sprite.svg#icon-minus"></use>
+                          </svg>
+                        </button>
+                        <span class="quantity__value" aria-label="Количество товара">1</span>
+                        <button class="quantity__btn quantity__btn--plus" aria-label="Увеличить количество">
+                          <svg class="quantity__icon">
+                            <use xlink:href="img/sprite.svg#icon-plus"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <!-- Кнпока Добавить в корзину -->
+                    <button class="product-card__add-to-cart add-to-cart" aria-label="Добавить в корзину">
+                      <span class="add-to-cart__text">Купить</span>
+                      <span class="add-to-cart__count">1</span>
+                      <svg class="add-to-cart__icon">
+                        <use xlink:href="img/sprite.svg#icon-cart"></use>
                       </svg>
                     </button>
                   </div>
-                </div>
-                <!-- Кнпока Добавить в корзину -->
-                <button class="product-card__add-to-cart add-to-cart" aria-label="Добавить в корзину">
-                  <span class="add-to-cart__text">Купить</span>
-                  <span class="add-to-cart__count">1</span>
-                  <svg class="add-to-cart__icon">
-                    <use xlink:href="img/sprite.svg#icon-cart"></use>
-                  </svg>
-                </button>
-              </div>
-            </a>
-            <a href="#" class="product-card">
-              <div class="product-card__view">
-                <!-- Бейджи -->
-                <ul class="product-card__badges badges">
-                  <li class="badges__item badges__item--hit">хит</li>
-                  <li class="badges__item badges__item--new">новинка</li>
-                </ul>
-                <!-- Скидка -->
-                <span class="product-card__discount">-12%</span>
-                <!-- Изображение -->
-                <picture class="product-card__picture">
-                  <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
-                    type="image/webp">
-                  <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x"
-                    width="211" height="211" alt="Изображение товара">
-                </picture>
-              </div>
-              <!-- Цены -->
-              <div class="product-card__price">
-                <span class="product-card__price-current">4000 <span class="product-card__price-unit">р.</span></span>
-                <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
-              </div>
-              <div class="product-card__info">
-                <div class="product-card__meta">
-                  <!-- Бренд -->
-                  <span class="product-card__brand">VOLGA OIL</span>
-                  <!-- Артикул -->
-                  <span class="product-card__sku">Арт.: 800809</span>
-                </div>
-                <!-- Название -->
-                <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
-                <!-- Описание -->
-                <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
-                  вязкости: 30</p>
-              </div>
-              <div class="product-card__actions">
-                <!-- Количество -->
-                <div class="product-card__quantity quantity">
-                  <div class="quantity__label visually-hidden">Количество:</div>
-                  <div class="quantity__control" aria-label="Выбор количества">
-                    <button class="quantity__btn quantity__btn--minus" disabled aria-label="Уменьшить количество">
-                      <svg class="quantity__icon">
-                        <use xlink:href="img/sprite.svg#icon-minus"></use>
-                      </svg>
-                    </button>
-                    <span class="quantity__value" aria-label="Количество товара">1</span>
-                    <button class="quantity__btn quantity__btn--plus" aria-label="Увеличить количество">
-                      <svg class="quantity__icon">
-                        <use xlink:href="img/sprite.svg#icon-plus"></use>
+                </a>
+                <a href="#" class="product-card">
+                  <div class="product-card__view">
+                    <!-- Бейджи -->
+                    <ul class="product-card__badges badges">
+                      <li class="badges__item badges__item--hit">хит</li>
+                      <li class="badges__item badges__item--new">новинка</li>
+                    </ul>
+                    <!-- Скидка -->
+                    <span class="product-card__discount">-12%</span>
+                    <!-- Изображение -->
+                    <picture class="product-card__picture">
+                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
+                        type="image/webp">
+                      <img loading="lazy" src="img/catalog/product-thumb.png"
+                        srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
+                    </picture>
+                  </div>
+                  <!-- Цены -->
+                  <div class="product-card__price">
+                    <span class="product-card__price-current">4000 <span
+                        class="product-card__price-unit">р.</span></span>
+                    <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
+                  </div>
+                  <div class="product-card__info">
+                    <div class="product-card__meta">
+                      <!-- Бренд -->
+                      <span class="product-card__brand">VOLGA OIL</span>
+                      <!-- Артикул -->
+                      <span class="product-card__sku">Арт.: 800809</span>
+                    </div>
+                    <!-- Название -->
+                    <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
+                    <!-- Описание -->
+                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
+                      вязкости: 30</p>
+                  </div>
+                  <div class="product-card__actions">
+                    <!-- Количество -->
+                    <div class="product-card__quantity quantity">
+                      <div class="quantity__label visually-hidden">Количество:</div>
+                      <div class="quantity__control" aria-label="Выбор количества">
+                        <button class="quantity__btn quantity__btn--minus" disabled aria-label="Уменьшить количество">
+                          <svg class="quantity__icon">
+                            <use xlink:href="img/sprite.svg#icon-minus"></use>
+                          </svg>
+                        </button>
+                        <span class="quantity__value" aria-label="Количество товара">1</span>
+                        <button class="quantity__btn quantity__btn--plus" aria-label="Увеличить количество">
+                          <svg class="quantity__icon">
+                            <use xlink:href="img/sprite.svg#icon-plus"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <!-- Кнпока Добавить в корзину -->
+                    <button class="product-card__add-to-cart add-to-cart" aria-label="Добавить в корзину">
+                      <span class="add-to-cart__text">Купить</span>
+                      <span class="add-to-cart__count">1</span>
+                      <svg class="add-to-cart__icon">
+                        <use xlink:href="img/sprite.svg#icon-cart"></use>
                       </svg>
                     </button>
                   </div>
-                </div>
-                <!-- Кнпока Добавить в корзину -->
-                <button class="product-card__add-to-cart add-to-cart" aria-label="Добавить в корзину">
-                  <span class="add-to-cart__text">Купить</span>
-                  <span class="add-to-cart__count">1</span>
-                  <svg class="add-to-cart__icon">
-                    <use xlink:href="img/sprite.svg#icon-cart"></use>
-                  </svg>
-                </button>
-              </div>
-            </a>
-            <a href="#" class="product-card">
-              <div class="product-card__view">
-                <!-- Бейджи -->
-                <ul class="product-card__badges badges">
-                  <li class="badges__item badges__item--hit">хит</li>
-                  <li class="badges__item badges__item--new">новинка</li>
-                </ul>
-                <!-- Скидка -->
-                <span class="product-card__discount">-12%</span>
-                <!-- Изображение -->
-                <picture class="product-card__picture">
-                  <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
-                    type="image/webp">
-                  <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x"
-                    width="211" height="211" alt="Изображение товара">
-                </picture>
-              </div>
-              <!-- Цены -->
-              <div class="product-card__price">
-                <span class="product-card__price-current">4000 <span class="product-card__price-unit">р.</span></span>
-                <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
-              </div>
-              <div class="product-card__info">
-                <div class="product-card__meta">
-                  <!-- Бренд -->
-                  <span class="product-card__brand">VOLGA OIL</span>
-                  <!-- Артикул -->
-                  <span class="product-card__sku">Арт.: 800809</span>
-                </div>
-                <!-- Название -->
-                <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
-                <!-- Описание -->
-                <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
-                  вязкости: 30</p>
-              </div>
-              <div class="product-card__actions">
-                <!-- Количество -->
-                <div class="product-card__quantity quantity">
-                  <div class="quantity__label visually-hidden">Количество:</div>
-                  <div class="quantity__control" aria-label="Выбор количества">
-                    <button class="quantity__btn quantity__btn--minus" disabled aria-label="Уменьшить количество">
-                      <svg class="quantity__icon">
-                        <use xlink:href="img/sprite.svg#icon-minus"></use>
-                      </svg>
-                    </button>
-                    <span class="quantity__value" aria-label="Количество товара">1</span>
-                    <button class="quantity__btn quantity__btn--plus" aria-label="Увеличить количество">
-                      <svg class="quantity__icon">
-                        <use xlink:href="img/sprite.svg#icon-plus"></use>
+                </a>
+                <a href="#" class="product-card">
+                  <div class="product-card__view">
+                    <!-- Бейджи -->
+                    <ul class="product-card__badges badges">
+                      <li class="badges__item badges__item--hit">хит</li>
+                      <li class="badges__item badges__item--new">новинка</li>
+                    </ul>
+                    <!-- Скидка -->
+                    <span class="product-card__discount">-12%</span>
+                    <!-- Изображение -->
+                    <picture class="product-card__picture">
+                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
+                        type="image/webp">
+                      <img loading="lazy" src="img/catalog/product-thumb.png"
+                        srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
+                    </picture>
+                  </div>
+                  <!-- Цены -->
+                  <div class="product-card__price">
+                    <span class="product-card__price-current">4000 <span
+                        class="product-card__price-unit">р.</span></span>
+                    <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
+                  </div>
+                  <div class="product-card__info">
+                    <div class="product-card__meta">
+                      <!-- Бренд -->
+                      <span class="product-card__brand">VOLGA OIL</span>
+                      <!-- Артикул -->
+                      <span class="product-card__sku">Арт.: 800809</span>
+                    </div>
+                    <!-- Название -->
+                    <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
+                    <!-- Описание -->
+                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
+                      вязкости: 30</p>
+                  </div>
+                  <div class="product-card__actions">
+                    <!-- Количество -->
+                    <div class="product-card__quantity quantity">
+                      <div class="quantity__label visually-hidden">Количество:</div>
+                      <div class="quantity__control" aria-label="Выбор количества">
+                        <button class="quantity__btn quantity__btn--minus" disabled aria-label="Уменьшить количество">
+                          <svg class="quantity__icon">
+                            <use xlink:href="img/sprite.svg#icon-minus"></use>
+                          </svg>
+                        </button>
+                        <span class="quantity__value" aria-label="Количество товара">1</span>
+                        <button class="quantity__btn quantity__btn--plus" aria-label="Увеличить количество">
+                          <svg class="quantity__icon">
+                            <use xlink:href="img/sprite.svg#icon-plus"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <!-- Кнпока Добавить в корзину -->
+                    <button class="product-card__add-to-cart add-to-cart" aria-label="Добавить в корзину">
+                      <span class="add-to-cart__text">Купить</span>
+                      <span class="add-to-cart__count">1</span>
+                      <svg class="add-to-cart__icon">
+                        <use xlink:href="img/sprite.svg#icon-cart"></use>
                       </svg>
                     </button>
                   </div>
-                </div>
-                <!-- Кнпока Добавить в корзину -->
-                <button class="product-card__add-to-cart add-to-cart" aria-label="Добавить в корзину">
-                  <span class="add-to-cart__text">Купить</span>
-                  <span class="add-to-cart__count">1</span>
-                  <svg class="add-to-cart__icon">
-                    <use xlink:href="img/sprite.svg#icon-cart"></use>
-                  </svg>
-                </button>
-              </div>
-            </a>
-            <a href="#" class="product-card">
-              <div class="product-card__view">
-                <!-- Бейджи -->
-                <ul class="product-card__badges badges">
-                  <li class="badges__item badges__item--hit">хит</li>
-                  <li class="badges__item badges__item--new">новинка</li>
-                </ul>
-                <!-- Скидка -->
-                <span class="product-card__discount">-12%</span>
-                <!-- Изображение -->
-                <picture class="product-card__picture">
-                  <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
-                    type="image/webp">
-                  <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x"
-                    width="211" height="211" alt="Изображение товара">
-                </picture>
-              </div>
-              <!-- Цены -->
-              <div class="product-card__price">
-                <span class="product-card__price-current">4000 <span class="product-card__price-unit">р.</span></span>
-                <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
-              </div>
-              <div class="product-card__info">
-                <div class="product-card__meta">
-                  <!-- Бренд -->
-                  <span class="product-card__brand">VOLGA OIL</span>
-                  <!-- Артикул -->
-                  <span class="product-card__sku">Арт.: 800809</span>
-                </div>
-                <!-- Название -->
-                <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
-                <!-- Описание -->
-                <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
-                  вязкости: 30</p>
-              </div>
-              <div class="product-card__actions">
-                <!-- Количество -->
-                <div class="product-card__quantity quantity">
-                  <div class="quantity__label visually-hidden">Количество:</div>
-                  <div class="quantity__control" aria-label="Выбор количества">
-                    <button class="quantity__btn quantity__btn--minus" disabled aria-label="Уменьшить количество">
-                      <svg class="quantity__icon">
-                        <use xlink:href="img/sprite.svg#icon-minus"></use>
-                      </svg>
-                    </button>
-                    <span class="quantity__value" aria-label="Количество товара">1</span>
-                    <button class="quantity__btn quantity__btn--plus" aria-label="Увеличить количество">
-                      <svg class="quantity__icon">
-                        <use xlink:href="img/sprite.svg#icon-plus"></use>
+                </a>
+                <a href="#" class="product-card">
+                  <div class="product-card__view">
+                    <!-- Бейджи -->
+                    <ul class="product-card__badges badges">
+                      <li class="badges__item badges__item--hit">хит</li>
+                      <li class="badges__item badges__item--new">новинка</li>
+                    </ul>
+                    <!-- Скидка -->
+                    <span class="product-card__discount">-12%</span>
+                    <!-- Изображение -->
+                    <picture class="product-card__picture">
+                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
+                        type="image/webp">
+                      <img loading="lazy" src="img/catalog/product-thumb.png"
+                        srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
+                    </picture>
+                  </div>
+                  <!-- Цены -->
+                  <div class="product-card__price">
+                    <span class="product-card__price-current">4000 <span
+                        class="product-card__price-unit">р.</span></span>
+                    <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
+                  </div>
+                  <div class="product-card__info">
+                    <div class="product-card__meta">
+                      <!-- Бренд -->
+                      <span class="product-card__brand">VOLGA OIL</span>
+                      <!-- Артикул -->
+                      <span class="product-card__sku">Арт.: 800809</span>
+                    </div>
+                    <!-- Название -->
+                    <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
+                    <!-- Описание -->
+                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
+                      вязкости: 30</p>
+                  </div>
+                  <div class="product-card__actions">
+                    <!-- Количество -->
+                    <div class="product-card__quantity quantity">
+                      <div class="quantity__label visually-hidden">Количество:</div>
+                      <div class="quantity__control" aria-label="Выбор количества">
+                        <button class="quantity__btn quantity__btn--minus" disabled aria-label="Уменьшить количество">
+                          <svg class="quantity__icon">
+                            <use xlink:href="img/sprite.svg#icon-minus"></use>
+                          </svg>
+                        </button>
+                        <span class="quantity__value" aria-label="Количество товара">1</span>
+                        <button class="quantity__btn quantity__btn--plus" aria-label="Увеличить количество">
+                          <svg class="quantity__icon">
+                            <use xlink:href="img/sprite.svg#icon-plus"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <!-- Кнпока Добавить в корзину -->
+                    <button class="product-card__add-to-cart add-to-cart" aria-label="Добавить в корзину">
+                      <span class="add-to-cart__text">Купить</span>
+                      <span class="add-to-cart__count">1</span>
+                      <svg class="add-to-cart__icon">
+                        <use xlink:href="img/sprite.svg#icon-cart"></use>
                       </svg>
                     </button>
                   </div>
-                </div>
-                <!-- Кнпока Добавить в корзину -->
-                <button class="product-card__add-to-cart add-to-cart" aria-label="Добавить в корзину">
-                  <span class="add-to-cart__text">Купить</span>
-                  <span class="add-to-cart__count">1</span>
-                  <svg class="add-to-cart__icon">
-                    <use xlink:href="img/sprite.svg#icon-cart"></use>
-                  </svg>
-                </button>
-              </div>
-            </a>
-            <a href="#" class="product-card">
-              <div class="product-card__view">
-                <!-- Бейджи -->
-                <ul class="product-card__badges badges">
-                  <li class="badges__item badges__item--hit">хит</li>
-                  <li class="badges__item badges__item--new">новинка</li>
-                </ul>
-                <!-- Скидка -->
-                <span class="product-card__discount">-12%</span>
-                <!-- Изображение -->
-                <picture class="product-card__picture">
-                  <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
-                    type="image/webp">
-                  <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x"
-                    width="211" height="211" alt="Изображение товара">
-                </picture>
-              </div>
-              <!-- Цены -->
-              <div class="product-card__price">
-                <span class="product-card__price-current">4000 <span class="product-card__price-unit">р.</span></span>
-                <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
-              </div>
-              <div class="product-card__info">
-                <div class="product-card__meta">
-                  <!-- Бренд -->
-                  <span class="product-card__brand">VOLGA OIL</span>
-                  <!-- Артикул -->
-                  <span class="product-card__sku">Арт.: 800809</span>
-                </div>
-                <!-- Название -->
-                <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
-                <!-- Описание -->
-                <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
-                  вязкости: 30</p>
-              </div>
-              <div class="product-card__actions">
-                <!-- Количество -->
-                <div class="product-card__quantity quantity">
-                  <div class="quantity__label visually-hidden">Количество:</div>
-                  <div class="quantity__control" aria-label="Выбор количества">
-                    <button class="quantity__btn quantity__btn--minus" disabled aria-label="Уменьшить количество">
-                      <svg class="quantity__icon">
-                        <use xlink:href="img/sprite.svg#icon-minus"></use>
-                      </svg>
-                    </button>
-                    <span class="quantity__value" aria-label="Количество товара">1</span>
-                    <button class="quantity__btn quantity__btn--plus" aria-label="Увеличить количество">
-                      <svg class="quantity__icon">
-                        <use xlink:href="img/sprite.svg#icon-plus"></use>
+                </a>
+                <a href="#" class="product-card">
+                  <div class="product-card__view">
+                    <!-- Бейджи -->
+                    <ul class="product-card__badges badges">
+                      <li class="badges__item badges__item--hit">хит</li>
+                      <li class="badges__item badges__item--new">новинка</li>
+                    </ul>
+                    <!-- Скидка -->
+                    <span class="product-card__discount">-12%</span>
+                    <!-- Изображение -->
+                    <picture class="product-card__picture">
+                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
+                        type="image/webp">
+                      <img loading="lazy" src="img/catalog/product-thumb.png"
+                        srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
+                    </picture>
+                  </div>
+                  <!-- Цены -->
+                  <div class="product-card__price">
+                    <span class="product-card__price-current">4000 <span
+                        class="product-card__price-unit">р.</span></span>
+                    <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
+                  </div>
+                  <div class="product-card__info">
+                    <div class="product-card__meta">
+                      <!-- Бренд -->
+                      <span class="product-card__brand">VOLGA OIL</span>
+                      <!-- Артикул -->
+                      <span class="product-card__sku">Арт.: 800809</span>
+                    </div>
+                    <!-- Название -->
+                    <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
+                    <!-- Описание -->
+                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
+                      вязкости: 30</p>
+                  </div>
+                  <div class="product-card__actions">
+                    <!-- Количество -->
+                    <div class="product-card__quantity quantity">
+                      <div class="quantity__label visually-hidden">Количество:</div>
+                      <div class="quantity__control" aria-label="Выбор количества">
+                        <button class="quantity__btn quantity__btn--minus" disabled aria-label="Уменьшить количество">
+                          <svg class="quantity__icon">
+                            <use xlink:href="img/sprite.svg#icon-minus"></use>
+                          </svg>
+                        </button>
+                        <span class="quantity__value" aria-label="Количество товара">1</span>
+                        <button class="quantity__btn quantity__btn--plus" aria-label="Увеличить количество">
+                          <svg class="quantity__icon">
+                            <use xlink:href="img/sprite.svg#icon-plus"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <!-- Кнпока Добавить в корзину -->
+                    <button class="product-card__add-to-cart add-to-cart" aria-label="Добавить в корзину">
+                      <span class="add-to-cart__text">Купить</span>
+                      <span class="add-to-cart__count">1</span>
+                      <svg class="add-to-cart__icon">
+                        <use xlink:href="img/sprite.svg#icon-cart"></use>
                       </svg>
                     </button>
                   </div>
-                </div>
-                <!-- Кнпока Добавить в корзину -->
-                <button class="product-card__add-to-cart add-to-cart" aria-label="Добавить в корзину">
-                  <span class="add-to-cart__text">Купить</span>
-                  <span class="add-to-cart__count">1</span>
-                  <svg class="add-to-cart__icon">
-                    <use xlink:href="img/sprite.svg#icon-cart"></use>
-                  </svg>
-                </button>
-              </div>
-            </a>
-            <a href="#" class="product-card">
-              <div class="product-card__view">
-                <!-- Бейджи -->
-                <ul class="product-card__badges badges">
-                  <li class="badges__item badges__item--hit">хит</li>
-                  <li class="badges__item badges__item--new">новинка</li>
-                </ul>
-                <!-- Скидка -->
-                <span class="product-card__discount">-12%</span>
-                <!-- Изображение -->
-                <picture class="product-card__picture">
-                  <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
-                    type="image/webp">
-                  <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x"
-                    width="211" height="211" alt="Изображение товара">
-                </picture>
-              </div>
-              <!-- Цены -->
-              <div class="product-card__price">
-                <span class="product-card__price-current">4000 <span class="product-card__price-unit">р.</span></span>
-                <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
-              </div>
-              <div class="product-card__info">
-                <div class="product-card__meta">
-                  <!-- Бренд -->
-                  <span class="product-card__brand">VOLGA OIL</span>
-                  <!-- Артикул -->
-                  <span class="product-card__sku">Арт.: 800809</span>
-                </div>
-                <!-- Название -->
-                <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
-                <!-- Описание -->
-                <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
-                  вязкости: 30</p>
-              </div>
-              <div class="product-card__actions">
-                <!-- Количество -->
-                <div class="product-card__quantity quantity">
-                  <div class="quantity__label visually-hidden">Количество:</div>
-                  <div class="quantity__control" aria-label="Выбор количества">
-                    <button class="quantity__btn quantity__btn--minus" disabled aria-label="Уменьшить количество">
-                      <svg class="quantity__icon">
-                        <use xlink:href="img/sprite.svg#icon-minus"></use>
-                      </svg>
-                    </button>
-                    <span class="quantity__value" aria-label="Количество товара">1</span>
-                    <button class="quantity__btn quantity__btn--plus" aria-label="Увеличить количество">
-                      <svg class="quantity__icon">
-                        <use xlink:href="img/sprite.svg#icon-plus"></use>
+                </a>
+                <a href="#" class="product-card">
+                  <div class="product-card__view">
+                    <!-- Бейджи -->
+                    <ul class="product-card__badges badges">
+                      <li class="badges__item badges__item--hit">хит</li>
+                      <li class="badges__item badges__item--new">новинка</li>
+                    </ul>
+                    <!-- Скидка -->
+                    <span class="product-card__discount">-12%</span>
+                    <!-- Изображение -->
+                    <picture class="product-card__picture">
+                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
+                        type="image/webp">
+                      <img loading="lazy" src="img/catalog/product-thumb.png"
+                        srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
+                    </picture>
+                  </div>
+                  <!-- Цены -->
+                  <div class="product-card__price">
+                    <span class="product-card__price-current">4000 <span
+                        class="product-card__price-unit">р.</span></span>
+                    <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
+                  </div>
+                  <div class="product-card__info">
+                    <div class="product-card__meta">
+                      <!-- Бренд -->
+                      <span class="product-card__brand">VOLGA OIL</span>
+                      <!-- Артикул -->
+                      <span class="product-card__sku">Арт.: 800809</span>
+                    </div>
+                    <!-- Название -->
+                    <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
+                    <!-- Описание -->
+                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
+                      вязкости: 30</p>
+                  </div>
+                  <div class="product-card__actions">
+                    <!-- Количество -->
+                    <div class="product-card__quantity quantity">
+                      <div class="quantity__label visually-hidden">Количество:</div>
+                      <div class="quantity__control" aria-label="Выбор количества">
+                        <button class="quantity__btn quantity__btn--minus" disabled aria-label="Уменьшить количество">
+                          <svg class="quantity__icon">
+                            <use xlink:href="img/sprite.svg#icon-minus"></use>
+                          </svg>
+                        </button>
+                        <span class="quantity__value" aria-label="Количество товара">1</span>
+                        <button class="quantity__btn quantity__btn--plus" aria-label="Увеличить количество">
+                          <svg class="quantity__icon">
+                            <use xlink:href="img/sprite.svg#icon-plus"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <!-- Кнпока Добавить в корзину -->
+                    <button class="product-card__add-to-cart add-to-cart" aria-label="Добавить в корзину">
+                      <span class="add-to-cart__text">Купить</span>
+                      <span class="add-to-cart__count">1</span>
+                      <svg class="add-to-cart__icon">
+                        <use xlink:href="img/sprite.svg#icon-cart"></use>
                       </svg>
                     </button>
                   </div>
-                </div>
-                <!-- Кнпока Добавить в корзину -->
-                <button class="product-card__add-to-cart add-to-cart" aria-label="Добавить в корзину">
-                  <span class="add-to-cart__text">Купить</span>
-                  <span class="add-to-cart__count">1</span>
-                  <svg class="add-to-cart__icon">
-                    <use xlink:href="img/sprite.svg#icon-cart"></use>
-                  </svg>
-                </button>
+                </a>
               </div>
-            </a>
+              <div class="swiper-slide account-purchases__swiper-slide account-content__swiper-slide"></div>
+            </div>
+            <!-- Слайд END -->
           </div>
-          <div class="swiper-slide account-purchases__swiper-slide account-content__swiper-slide"></div>
+          <div class="account-orders__nav slider-nav">
+            <button class="account-content__btn-prev slider-nav__btn account-content__btn--prev">
+              <svg class="slider-nav__icon">
+                <use xlink:href="img/sprite.svg#chevron-down"></use>
+              </svg>
+            </button>
+            <button class="account-content__btn-next slider-nav__btn account-content__btn--next">
+              <svg class="slider-nav__icon">
+                <use xlink:href="img/sprite.svg#chevron-down"></use>
+              </svg>
+            </button>
+            <div class="swiper-pagination"></div>
+          </div>
         </div>
-        <!-- Слайд END -->
-      </div>
-      <div class="account-orders__nav slider-nav">
-        <button class="account-content__btn-prev slider-nav__btn account-content__btn--prev">
-          <svg class="slider-nav__icon">
-            <use xlink:href="img/sprite.svg#chevron-down"></use>
-          </svg>
-        </button>
-        <button class="account-content__btn-next slider-nav__btn account-content__btn--next">
-          <svg class="slider-nav__icon">
-            <use xlink:href="img/sprite.svg#chevron-down"></use>
-          </svg>
-        </button>
-        <div class="swiper-pagination"></div>
       </div>
     </div>
-  </div>
-  </div>
   </div>
 
   <div class="graph-modal">
@@ -1401,33 +1498,62 @@
       <p class="account-exit__text">Вы уверены, что хотите выйти из аккаунта?</p>
       <div class="account-exit__btn-wrap modal__btn-wrap">
         <button class="modal__btn account-exit__btn account-exit__btn--grey btn" type="button">Выйти</button>
-        <button class="modal__btn account-exit__btn btn btn--full btn-reset" type="button"
-          data-graph-modal-close>Отмена</button>
+        <button class="modal__btn account-exit__btn btn btn--full btn-reset js-modal-close"
+          type="button">Отмена</button>
       </div>
       <button class="btn-reset graph-modal__close js-modal-close account-exit__close"
         aria-label="Закрыть модальное окно" type="button"></button>
     </div>
     <!-- Модальное окно смены пароля -->
-    <div class="graph-modal__container password-change"  role="dialog" aria-modal="true"
+    <div class="graph-modal__container password-change" role="dialog" aria-modal="true"
       data-graph-target="changePassword">
       <h2 class="modal__title password-change__title">Изменить пароль</h2>
-      <form action="#" method="post" class="change-password__form">
+      <form action="#" method="post" class="password-change__form">
+        <!-- Новый пароль -->
         <div class="account-data__input">
           <label for="newPassword">
             <input class="account-data__input-field" type="password" id="newPassword" name="newPassword" required>
             <span class="account-data__input-label">Новый пароль<span>*</span></span>
           </label>
+          <button class="account-data__password-btn btn-reset" type="button" aria-label="Показать пароль">
+            <svg class="account-data__icon-eye account-data__icon-eye--closed">
+              <use xlink:href="img/sprite.svg#icon-eye-closed"></use>
+            </svg>
+            <svg class="account-data__icon-eye">
+              <use xlink:href="img/sprite.svg#icon-eye"></use>
+            </svg>
+          </button>
         </div>
+        <!-- Повторить пароль -->
         <div class="account-data__input">
           <label for="repeatPassword">
             <input class="account-data__input-field" type="password" id="repeatPassword" name="repeatPassword" required>
             <span class="account-data__input-label">Повторите пароль<span>*</span></span>
           </label>
+          <button class="account-data__password-btn btn-reset" type="button" aria-label="Показать пароль">
+            <svg class="account-data__icon-eye account-data__icon-eye--closed">
+              <use xlink:href="img/sprite.svg#icon-eye-closed"></use>
+            </svg>
+            <svg class="account-data__icon-eye">
+              <use xlink:href="img/sprite.svg#icon-eye"></use>
+            </svg>
+          </button>
+        </div>
+        <!-- Сложность пароля -->
+        <div class="password-change__difficulty">
+          <span class="password-change__difficulty-text account-data__input-label">Сложность пароля:</span>
+          <ul class="password-change__difficulty-visual">
+            <span class="password-change__difficulty-tab password-change__difficulty-tab--active"></span>
+            <span class="password-change__difficulty-tab password-change__difficulty-tab--active"></span>
+            <span class="password-change__difficulty-tab password-change__difficulty-tab--active"></span>
+            <span class="password-change__difficulty-tab"></span>
+            <span class="password-change__difficulty-tab"></span>
+          </ul>
         </div>
         <button class="modal__btn btn btn--full">Сохранить</button>
       </form>
-      <button class="btn-reset graph-modal__close js-modal-close"
-        aria-label="Закрыть модальное окно" type="button"></button>
+      <button class="btn-reset graph-modal__close js-modal-close password-change__close" aria-label="Закрыть модальное окно"
+        type="button"></button>
     </div>
   </div>
 

@@ -1,0 +1,122 @@
+.order-info {
+  width: 100%;
+
+  &__btn {
+    gap: 4px;
+    justify-content: space-between;
+    width: 95px;
+    margin: 0 0 16px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background-color: var(--border);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 120%;
+    color: var(--grey);
+    text-align: center;
+  }
+
+  &__btn-icon {
+    width: 7px;
+    height: 25px;
+    fill: none;
+    stroke-width: 1.5px;
+    stroke: var(--grey);
+  }
+
+  &__title {
+    margin: 0 0 24px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__wrap-title {
+    padding: 0;
+    margin: 0 0 18px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+  }
+
+  &__data {
+    width: 100%;
+    padding: 17px 24px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+  }
+
+  &__data-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+
+    & span {
+      display: block;
+    }
+  }
+
+  &__data-value {
+    font-weight: 600;
+  }
+
+  &__dashed-line {
+    flex-grow: 1;
+    margin: 0 10px;
+    padding: 12px 0 0;
+    height: 0;
+    border-bottom: 1px dashed var(--border);
+  }
+
+  &__product:not(:first-child) {
+    padding-top: 20px;
+  }
+
+  &__product-item {
+    display: grid;
+    grid-template-columns: 496px 1fr 1fr;
+    align-items: start;
+    padding: 0 0 20px;
+  }
+
+  &__product-quantity {
+    text-align: center;
+    color: var(--grey);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 120%;
+  }
+
+  &__price {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 5px;
+  }
+
+  &__product-price {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+  }
+
+  &__product-unit-price {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 120%;
+  }
+
+  .cart-product__title:hover {
+    color: var(--accent);
+  }
+}
