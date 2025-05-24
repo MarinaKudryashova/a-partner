@@ -81,6 +81,9 @@
                   <span class="account-data__input-label">E-mail<span>*</span></span>
                 </label>
                 <span class="account-data__input-error">Неправильно заполнено поле...</span>
+                <svg class="account-data__email-icon">
+                  <use xlink:href="img/sprite.svg#icon-info"></use>
+                </svg>
               </div>
               <!-- Пароль -->
               <div class="account-data__input">
@@ -111,9 +114,11 @@
         </div>
       </div>
       <!-- История заказов -->
-      <div class="tabs__panel tabs__panel--active account-content__tab">
+      <div class="tabs__panel account-content__tab">
         <div class="account-orders">
           <h2 class="account-orders__title">История заказов</h2>
+
+
           <div class="swiper slider account-content__slider">
             <div class="swiper-wrapper account-content__slider-wrapper">
               <div class="swiper-slide account-content__swiper-slide">
@@ -303,6 +308,10 @@
               <!-- <div class="swiper-slide account-content__swiper-slide"></div> -->
             </div>
           </div>
+
+
+
+
           <div class="account-orders__nav slider-nav">
             <button class="account-content__btn-prev slider-nav__btn account-content__btn--prev">
               <svg class="slider-nav__icon">
@@ -828,7 +837,7 @@
                     </button>
                   </div>
                 </a>
-                <a href="#" class="product-card">
+                <a href="#" class="product-card account-purchases__product-card">
                   <div class="product-card__view">
                     <!-- Бейджи -->
                     <ul class="product-card__badges badges">

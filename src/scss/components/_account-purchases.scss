@@ -12,5 +12,12 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 24px 16px;
+    max-width: 978px
+  }
+
+  &__product-card {
+    .quantity {
+      max-width: 152px;
+    }
   }
 }
