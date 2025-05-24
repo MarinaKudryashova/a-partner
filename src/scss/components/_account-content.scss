@@ -2,6 +2,9 @@
   margin-bottom: 120px;
 
   @include small-mobile {
+
+    margin-bottom: 40px;
+
       .tabs__panel {
         display: none;
       }
@@ -16,6 +19,7 @@
     grid-template-columns: 310px 1fr;
     gap: 24px;
     align-items: start;
+    justify-items: start;
     width: 100%;
 
     @include small-mobile {
