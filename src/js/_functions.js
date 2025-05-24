@@ -91,17 +91,8 @@ export const modal = new GraphModal();
 
 
 // Подключение календаря
-import AirDatepicker from 'air-datepicker';
-import 'air-datepicker/air-datepicker.css';
-
-new AirDatepicker('#my-datepicker', {
-  classes: 'custom-datepicker',
-  dateFormat: 'dd.MM.yyyy',
-  position: 'right bottom',
-  navTitles: {
-    days: 'MMMM yyyy'  // формат без запятой
-  }
-})
+// import AirDatepicker from 'air-datepicker';
+// import 'air-datepicker/air-datepicker.css';
 
 // Подключение функции показа и скрытия пароля
 import { passwordView } from './functions/show-hide-password';
