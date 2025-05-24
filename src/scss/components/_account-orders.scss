@@ -58,6 +58,79 @@
   &__status {
     color: var(--green);
   }
+
+  //скрываем на мобилке
+  @include small-mobile {
+    .account-content__slider {
+      display: none;
+    }
+
+    .account-orders__nav {
+      display: none;
+    }
+  }
+}
+
+.account-orders-mobile {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  &__list-item {
+    width: 100%;
+  }
+
+  &__order-card {
+    display: grid;
+    grid-template-columns: 128px 215px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 8px 16px;
+    background-color: var(--bg);
+
+    & span {
+      display: block;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 120%;
+      color: var(--grey);
+    }
+  }
+
+  &__values {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 8px 16px;
+
+    & span {
+      display: block;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 120%;
+      color: var(--black);
+    }
+
+    & a {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 120%;
+    }
+  }
+
+  @include for-desktop {
+    display: none;
+  }
 }
 
 .account-orders, .order-info {
@@ -66,3 +139,5 @@
 .account-orders.active, .order-info.active {
   display: block;
 }
+
+

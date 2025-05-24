@@ -87,6 +87,17 @@
     grid-template-columns: 496px 1fr 1fr;
     align-items: start;
     padding: 0 0 20px;
+
+    @include small-mobile {
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: space-between;
+    }
+  }
+
+  &__product-info {
+    @include small-mobile {
+      grid-column: span 2;
+    }
   }
 
   &__product-quantity {
@@ -95,6 +106,10 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 120%;
+
+    @include small-mobile {
+      text-align: left;
+    }
   }
 
   &__price {
@@ -108,12 +123,23 @@
     font-weight: 600;
     font-size: 16px;
     line-height: 140%;
+
+    @include small-mobile {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 120%;
+      color: var(--accent);
+    }
   }
 
   &__product-unit-price {
     font-size: 12px;
     font-weight: 400;
     line-height: 120%;
+
+    @include small-mobile {
+      text-decoration: line-through;
+    }
   }
 
   .cart-product__title:hover {

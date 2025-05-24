@@ -12,12 +12,34 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 24px 16px;
-    max-width: 978px
+    max-width: 978px;
   }
 
   &__product-card {
     .quantity {
       max-width: 152px;
     }
+  }
+
+  @include small-mobile {
+    .account-content__slider {
+      display: none;
+    }
+
+    .account-orders__nav {
+      display: none;
+    }
+  }
+}
+
+.account-purchases-mobile {
+  .account-purchases__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px 8px;
+  }
+
+  @include for-desktop {
+    display: none;
   }
 }
