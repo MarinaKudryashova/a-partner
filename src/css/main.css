@@ -2143,12 +2143,14 @@ a {
   grid-template-columns: 310px 1fr;
   gap: 24px;
   align-items: start;
-  justify-items: start;
+  justify-items: stretch;
   width: 100%;
 }
-@media (max-width: 380px) {
+@media screen and (max-width: 650px) {
   .account-content__wrap {
-    display: block;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
   }
 }
 .account-content__nav {
@@ -2264,12 +2266,11 @@ a {
 }
 .account-data__form-wrap {
   display: grid;
-  grid-template-columns: repeat(2, 477px);
+  grid-template-columns: repeat(2, 1fr);
   gap: 16px 24px;
-  width: 100%;
   margin: 0 0 24px;
 }
-@media (max-width: 380px) {
+@media screen and (max-width: 950px) {
   .account-data__form-wrap {
     display: flex;
     flex-direction: column;
@@ -2307,6 +2308,11 @@ a {
 .account-data__input-field:focus-visible {
   border: 1px solid var(--light-red);
   outline: none;
+}
+@media (max-width: 380px) {
+  .account-data__input-field {
+    width: 100%;
+  }
 }
 .account-data__input-label {
   font-weight: 400;
@@ -2373,6 +2379,19 @@ a {
   stroke-width: 1.5px;
   stroke: var(--grey);
 }
+.account-data__clear-btn {
+  position: absolute;
+  top: 37px;
+  right: 16px;
+  cursor: pointer;
+}
+.account-data__fill-icon {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke-width: 1.5px;
+  stroke: var(--grey);
+}
 
 .account-orders__title {
   margin: 0 0 24px;
@@ -2398,6 +2417,12 @@ a {
   line-height: 120%;
   text-align: left;
   color: var(--grey);
+}
+@media screen and (max-width: 1439px) {
+  .account-orders__table thead th {
+    width: auto;
+    max-width: 245px;
+  }
 }
 .account-orders__table thead th:first-child {
   border-radius: 4px 0 0 4px;
@@ -2478,6 +2503,9 @@ a {
   font-size: 14px;
   line-height: 120%;
 }
+.account-orders-mobile__values .account-orders__status {
+  color: var(--green);
+}
 @media (min-width: 1025px) {
   .account-orders-mobile {
     display: none;
@@ -2526,9 +2554,28 @@ a {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  counter-reset: number;
+}
+.order-info__wrap-item {
+  counter-increment: number;
+}
+.order-info__wrap-item::before {
+  position: absolute;
+  content: counter(number) "";
+  width: 24px;
+  height: 24px;
+  padding: 2px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 140%;
+  color: var(--black);
+  border-radius: 50%;
+  background-color: var(--bg);
 }
 .order-info__wrap-title {
-  padding: 0;
+  position: relative;
+  padding-left: 32px;
   margin: 0 0 18px;
   font-weight: 600;
   font-size: 16px;

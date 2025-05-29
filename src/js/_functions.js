@@ -98,3 +98,6 @@ export const modal = new GraphModal();
 import { passwordView } from './functions/show-hide-password';
 passwordView()
 
+// Очищение полей ввода
+import { clearInput } from './functions/clear-input';
+clearInput()

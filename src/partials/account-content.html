@@ -39,6 +39,7 @@
       </li>
     </ul>
     <div class="tabs__content">
+      <!-- Мои данные -->
       <div class="tabs__panel account-content__tab">
         <!-- Мои данные -->
         <div class="account-data">
@@ -52,6 +53,11 @@
                   <input class="account-data__input-field" type="text" id="company" name="company" required>
                   <span class="account-data__input-label">Компания<span>*</span></span>
                 </label>
+                <button class="account-data__clear-btn btn-reset clear-btn" type="button" aria-label="Очистить поле ввода">
+                    <svg class="account-data__fill-icon">
+                      <use xlink:href="img/sprite.svg#icon-clear"></use>
+                    </svg>
+                </button>
                 <span class="account-data__input-error">Неправильно заполнено поле...</span>
               </div>
               <!-- ФИО -->
@@ -61,6 +67,11 @@
                     placeholder="ФИО менеджера">
                   <span class="account-data__input-label">ФИО менеджера</span>
                 </label>
+                <button class="account-data__clear-btn btn-reset clear-btn" type="button" aria-label="Очистить поле ввода">
+                    <svg class="account-data__fill-icon">
+                      <use xlink:href="img/sprite.svg#icon-clear"></use>
+                    </svg>
+                </button>
                 <span class="account-data__input-error">Неправильно заполнено поле...</span>
               </div>
               <!-- Дата рождения с air-datepicker -->
@@ -464,7 +475,7 @@
             </svg>
             Назад</button>
           <h2 class="order-info__title">Заказ №1981-01-cl</h2>
-          <ul class="order-info__wrap list-reset">
+          <ol class="order-info__wrap list-reset">
             <li class="order-info__wrap-item">
               <h3 class="order-info__wrap-title">Данные о заказе</h3>
               <ul class="order-info__data list-reset">
@@ -570,9 +581,8 @@
                     </div>
                   </div>
                 </li>
-
               </ul>
-          </ul>
+          </ol>
         </div>
       </div>
       <!-- Мои покупки -->
