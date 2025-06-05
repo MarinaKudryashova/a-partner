@@ -1,0 +1,79 @@
+.popular {
+  margin-bottom: 80px;
+
+  @include small-tablet {
+    margin-bottom: 64px;
+  }
+
+  &__category {
+    @include list-reset;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(6, 38px);
+    gap: 24px;
+
+    @include small-desktop {
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(10, 38px);
+      grid-auto-flow: dense;
+    }
+
+    @include small-tablet {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      margin-right: -16px;
+      padding-right: 16px;
+      padding-bottom: 15px;
+      grid-template-columns: unset;
+      grid-template-rows: unset;
+
+      &::-webkit-scrollbar {
+          display: none;
+      }
+    }
+  }
+
+  &__item {
+    grid-column: 2 span;
+    grid-row: 2 span;
+    display: flex;
+  }
+
+  &__item--l {
+    grid-column: 2 span;
+    grid-row: 4 span;
+  }
+
+  &__item--xl {
+    grid-column: 4 span;
+    grid-row: 4 span;
+  }
+
+  &__item--m {
+    grid-column: 2 span;
+    grid-row: 3 span;
+
+    @include small-desktop {
+      grid-column: 2 span;
+      grid-row: 4 span;
+    }
+  }
+
+  &__item--tablet-s {
+    @include small-desktop {
+      grid-column: 2 span;
+      grid-row: 2 span;
+    }
+  }
+
+  &__item, &__item--l, &__item--xl, &__item--m, &__item--tablet-s {
+    @include small-tablet {
+      flex: 0 0 140px;
+      scroll-snap-align: start;
+      height: 140px;
+    }
+  }
+}

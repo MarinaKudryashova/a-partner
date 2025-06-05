@@ -42,9 +42,9 @@ a {
   flex: 1 0 auto;
 }
 
-.is-hidden {
-  display: none !important; /* stylelint-disable-line declaration-no-important */
-}
+// .is-hidden {
+//   display: none !important; /* stylelint-disable-line declaration-no-important */
+// }
 
 .btn-reset {
   border: none;
@@ -100,11 +100,11 @@ a {
 }
 
 .dis-scroll {
-  position: fixed;
+  position: fixed; /* Фиксируем позицию */
   left: 0;
   top: 0;
   overflow: hidden;
-  width: 100%;
+  width: 100%; /* Чтобы не было смещения */
   height: 100vh;
   overscroll-behavior: none;
 }
@@ -152,6 +152,23 @@ a {
       outline: none;
       background-color: var(--dark-red);
     }
+  }
+
+  &--grey {
+    color: var(--grey);
+    background-color: var(--border);
+    transition: background-color .3s ease-in-out, color .3s ease-in-out;
+
+    @include hover {
+      color: var(--accent);
+    }
+
+    &:focus-visible {
+      outline: none;
+      color: var(--accent);
+      background-color: var(--light-red);
+    }
+
   }
 
   &--stroke {

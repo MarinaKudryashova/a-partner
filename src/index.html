@@ -7,9 +7,16 @@
   <div class="site-container">
     @include('partials/header.html')
     <main class="main">
-      <!-- @include('partials/promo.html') -->
+      <div class="page__container page__container--main container">
+        @include('partials/promo-promotion.html')
+        @include('partials/popular-products.html')
+        @include('partials/brand-slider.html')
+        @include('partials/tabs-products.html')
+      </div>
     </main>
     @include('partials/footer.html')
+    @include('partials/modal.html')
+    <!-- @include('partials/message.html') -->
   </div>
 </body>
 

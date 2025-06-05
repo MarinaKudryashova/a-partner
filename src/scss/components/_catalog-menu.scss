@@ -1,0 +1,212 @@
+.catalog-menu {
+  position: absolute;
+  --header-height: 127px;
+  top: var(--header-height);
+  left: 0;
+  z-index: 30;
+  display: flex;
+  width: 100%;
+  height: calc(100vh - var(--header-height));
+  background: rgb(0, 4, 4, .3);
+  opacity: 0;
+  visibility: hidden;
+  transform: scaleY(0.8);
+  transform-origin: top;
+  transition: opacity .3s ease-in-out, transform .3s ease-in-out, visibility .3s ease-in-out;
+
+  @include tablet {
+    --header-height: 82px;
+  }
+
+  @include small-tablet {
+    --header-height: 56px;
+    height: calc(100vh - var(--header-height) - 74px);
+  }
+
+  &.is-open {
+    opacity: 1;
+    visibility: visible;
+    transform: scaleY(1);
+  }
+
+		&__container {
+      width: 100%;
+      height: fit-content;
+      background: var(--bg);
+
+      @include tablet {
+        height: 100%;
+      }
+		}
+
+		&__list {
+      position: relative;
+      @include list-reset;
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      padding: 24px var(--container-offset);
+      max-width: var(--container-width);
+
+      // @include tablet {
+      //   transform: translateX(0);
+      //   transition: all 0.3s;
+      // }
+		}
+
+		&__item {
+      display: flex;
+      align-items: center;
+      min-width: 353px;
+      width: max-content;
+      cursor: pointer;
+      transition: color .3s ease-in-out;
+
+      &:has(.catalog-menu__link--sale) {
+        cursor: default;
+      }
+
+      @include hover {
+        color: var(--accent);
+
+        & .catalog-menu__link,
+        & .catalog-menu__btn-drop {
+          color: var(--accent);
+        }
+
+        & .catalog-menu__link--sale {
+          color: var(--dark-red);
+        }
+      }
+
+      &:focus-visible {
+        & .catalog-menu__link,
+        & .catalog-menu__btn-drop {
+          outline: none;
+          color: var(--black);
+        }
+
+        & .catalog-menu__link--sale {
+          color: var(--dark-red);
+        }
+
+      }
+		}
+
+		&__link {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-grow: 0;
+      flex-shrink: 0;
+      width: 100%;
+      max-width: 329px;
+      padding: 8px 0;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 120%;
+      color: var(--black);
+      transition: color .3s ease-in-out;
+
+      &:focus-visible {
+        outline: none;
+      }
+		}
+
+    &__icon {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+      pointer-events: none;
+		}
+
+		&__link--sale {
+      width: fit-content;
+      color: var(--accent);
+      transition: color .3s ease-in-out;
+
+      &:focus-visible {
+        outline: none;
+      }
+
+      & .catalog-menu__icon {
+        width: 18px;
+        height: 18px;
+      }
+		}
+
+		&__text {
+      user-select: none;
+      pointer-events: none;
+		}
+
+		&__btn-drop {
+      border: none;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      background-color: transparent;
+      cursor: pointer;
+      transition: color .3s ease-in-out;
+
+      &:focus-visible {
+        outline: none;
+      }
+		}
+
+		&__arrow {
+      margin-left: auto;
+      width: 24px;
+      height: 24px;
+      fill: none;
+      stroke-width: 1.5px;
+      stroke: currentColor;
+      transform: rotate(90deg);
+      user-select: none;
+      pointer-events: none;
+		}
+
+    &__dropdown {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+
+      // @include small-tablet {
+      //   display: none;
+
+      //   .is-open > & {
+      //     display: flex;
+      //     opacity: 1;
+      //     visibility: visible
+      //   }
+      // }
+
+      .is-open > &{
+        opacity: 1;
+        visibility: visible
+      }
+    }
+}
+
+.catalog-menu__list.transformation {
+  @include tablet {
+    transform: translateX(-100%);
+    transition: all 0.3s;
+  }
+}
+
+.dropdown.transformation {
+  @include tablet {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition: all 0.3s;
+    left: calc(100% + 16px);
+  }
+}
+

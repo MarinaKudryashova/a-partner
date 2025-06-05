@@ -1,0 +1,50 @@
+.tabs-products {
+  position: relative;
+  margin-bottom: 80px;
+
+  @include small-tablet {
+    margin-bottom: 64px;
+  }
+
+		&__tabs {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+		}
+
+		&__btns {
+      @include list-reset;
+      display: flex;
+      gap: 16px;
+		}
+
+    & .tabs__nav-btn {
+      @include small-tablet {
+        border-radius: 8px;
+        padding: 10px 16px;
+        white-space: nowrap;
+      }
+    }
+
+    & .tabs__nav-btn:focus {
+      outline: none;
+      color: var(--accent);
+      background-color: var(--light-red);
+    }
+
+    & .tabs__nav-btn--active {
+      color: var(--accent);
+      background-color: var(--light-red);
+    }
+
+		&__nav {
+      position: absolute;
+      top: 3px;
+      right: 0;
+      width: 88px;
+
+      @include tablet {
+        display: none;
+      }
+		}
+}

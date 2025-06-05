@@ -19,20 +19,12 @@
     grid-template-columns: 310px 1fr;
     gap: 24px;
     align-items: start;
-    justify-items: stretch;
+    justify-items: start;
     width: 100%;
 
-    @media screen and (max-width: 650px) {
-      display: flex;
-      align-items: stretch;
-      flex-direction: column;
+    @include small-mobile {
+      display: block;
     }
-
-    // @include small-mobile {
-    //   display: flex;
-    //   align-items: stretch;
-    //   flex-direction: column;
-    // }
   }
 
   &__nav {
@@ -47,7 +39,6 @@
 
     @include small-mobile {
       width: 100%;
-      // display: none;
     }
   }
 

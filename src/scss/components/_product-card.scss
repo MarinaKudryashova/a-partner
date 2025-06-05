@@ -27,26 +27,26 @@
 
   // &__badges {}
 
-  &__discount {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    border-radius: 4px;
-    padding: 4px;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 140%;
-    text-align: center;
-    color: var(--white);
-    background: var(--accent);
+  // &__discount {
+  //   position: absolute;
+  //   left: 0;
+  //   bottom: 0;
+  //   border-radius: 4px;
+  //   padding: 4px;
+  //   font-weight: 600;
+  //   font-size: 16px;
+  //   line-height: 140%;
+  //   text-align: center;
+  //   color: var(--white);
+  //   background: var(--accent);
 
-    @include mobile {
-      padding: 3px;
-      font-weight: 700;
-      font-size: 11px;
-      line-height: 120%;
-    }
-  }
+  //   @include mobile {
+  //     padding: 3px;
+  //     font-weight: 700;
+  //     font-size: 11px;
+  //     line-height: 120%;
+  //   }
+  // }
 
   &__picture {
     display: flex;
@@ -164,7 +164,7 @@
   &__actions {
     position: relative;
     z-index: 2;
-    display: flex;
+    display: none;
     align-items: center;
     gap: 8px;
     margin-top: 8px;
@@ -172,6 +172,10 @@
 
     @include small-desktop {
       margin-top: 4px;
+    }
+
+    .site-container--auth & {
+      display: flex;
     }
   }
 

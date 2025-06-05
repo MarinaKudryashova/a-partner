@@ -8,6 +8,10 @@
 @import "./components/header";
 @import "./components/header-top";
 @import "./components/header-middle";
+@import "./components/catalog-menu";
+@import "./components/dropdown";
+@import "./components/burger";
+@import "./components/auth";
 @import "./components/searchbar";
 @import "./components/search";
 @import "./components/main-menu";
@@ -21,6 +25,9 @@
 @import "./components/footer-menu";
 @import "./components/footer-bottom";
 @import "./components/topbtn";
+@import "./components/modal";
+// @import "./components/form";
+@import "./components/form-field";
 
 // подключения компонентов страницы Каталог
 @import "./components/catalog-content";
@@ -33,6 +40,7 @@
 @import "./components/price";
 @import "./components/quantity";
 @import "./components/add-to-cart";
+@import "./components/discount";
 @import "./components/product-card";
 
 // подключения компонентов страницы Каталог
@@ -64,6 +72,13 @@
 @import "./components/thanks";
 
 // подключения компонентов Главной страницы
+@import "./components/promo-promotion";
+@import "./components/popular";
+@import "./components/category-card";
+@import "./components/brand-slider";
+@import "./components/brand-card";
+@import "./components/tabs-products";
+
 // подключения компонентов страницы Категории
 
 // подключения компонентов страницы Товара
@@ -72,5 +87,12 @@
 @import "./components/params";
 
 // подключения компонентов страницы Акции
-// подключения компонентов страницы Акции-поста
+@import "./components/promotion";
+@import "./components/layout";
+@import "./components/promotion-card";
+@import "./components/promotion-date";
 
+// подключения компонентов страницы Акции-поста
+@import "./components/post-promotion";
+@import "./components/conditions";
+@import "./components/post-promotion-products";

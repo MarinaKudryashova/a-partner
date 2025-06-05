@@ -67,12 +67,22 @@
     & .price__current {
       font-weight: 700;
       color: var(--dark-red);
+
+      @include mobile {
+        font-size: 32px;
+        line-height: 110%;
+      }
     }
 
     & .price__current > .price__unit {
       font-weight: 600;
       font-size: 20px;
       line-height: 120%;
+
+      @include mobile {
+        font-size: 20px;
+        line-height: 120%;
+      }
     }
 
     & .price__old {
