@@ -1,0 +1,53 @@
+.layout {
+  --offset: 24px;
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--offset);
+  width: 100%;
+
+  & &__item {
+    &.is-hidden {
+      display: none;
+    }
+  }
+
+  &--3 {
+    --numer-elem: 3;
+
+    @include tablet {
+      --numer-elem: 2;
+    }
+  }
+
+  &--3 &__item {
+    width: calc(100% / var(--numer-elem) - var(--offset)*(var(--numer-elem) - 1) / var(--numer-elem));
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  &--5 {
+    --numer-elem: 5;
+
+    @include small-desktop {
+      --numer-elem: 4;
+    }
+
+    @include tablet {
+      --numer-elem: 3;
+    }
+
+    @include small-tablet {
+      --offset: 8px;
+      --offset-row: 16px;
+      gap: var(--offset-row) var(--offset);
+      --numer-elem: 2;
+    }
+  }
+
+  &--5 &__item {
+    width: calc(100% / var(--numer-elem) - var(--offset)*(var(--numer-elem) - 1) / var(--numer-elem));
+  }
+}

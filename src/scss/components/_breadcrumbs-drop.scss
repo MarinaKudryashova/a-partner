@@ -29,5 +29,15 @@
       font-size: 12px;
       line-height: 120%;
       color: var(--black);
+      transition: color .3s ease-in-out;
+
+      &:focus-visible {
+        outline: none;
+        color: var(--accent);
+      }
+
+      @include hover {
+        color: var(--accent);
+      }
 		}
 }

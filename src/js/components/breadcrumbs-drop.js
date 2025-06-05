@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     dropsArr.forEach((drop) => {
       const link = drop.parentNode.querySelector('.breadcrumbs__link');
-      console.log(link);
 
       link.addEventListener('focus', () => {
         link.classList.add('is-open');

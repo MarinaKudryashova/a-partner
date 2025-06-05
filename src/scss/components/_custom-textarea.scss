@@ -19,6 +19,16 @@
     font-size: 14px;
     line-height: 120%;
     resize: none;
+    transition: border-color .3s ease-in-out;
+
+    &:focus-visible {
+      outline: none;
+      border-color: var(--light-red);
+    }
+
+    @include hover {
+      border-color: var(--light-red);
+    }
 
     &::placeholder {
       font-weight: 400;

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container site-container--auth">
+    @include('partials/header.html')
+    <main class="main">
+      <div class="page__container container">
+        @include('partials/breadcrumbs-post-promotion.html')
+        @include('partials/post-promotion-container.html')
+        @include('partials/post-promotion-products.html')
+      </div>
+    </main>
+    @include('partials/footer.html')
+    @include('partials/modal.html')
+  </div>
+</body>
+
+</html>

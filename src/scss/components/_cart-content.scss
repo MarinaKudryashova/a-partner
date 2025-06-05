@@ -9,6 +9,12 @@
 
 		&__title {
       margin: 0;
+
+      @include small-tablet {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
 		}
 
 		&__counter {
@@ -17,6 +23,10 @@
       font-size: 14px;
       line-height: 120%;
       color: var(--grey);
+
+      @include small-tablet {
+        margin-left: 0;
+      }
 		}
 
 		&__btn-clear {

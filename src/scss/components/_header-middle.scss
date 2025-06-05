@@ -25,11 +25,9 @@
       }
     }
 
-    @include small-tablet {
+    @include tablet {
       margin-right: auto;
     }
-
-
   }
 
   &__action {
@@ -38,8 +36,12 @@
     gap: 16px;
     width: 100%;
 
-    @include small-tablet {
+    @include tablet {
       width: auto;
+    }
+
+    @include small-tablet {
+      gap: 8px;
     }
   }
 
@@ -50,11 +52,12 @@
       gap: 4px;
       padding-left: 20px;
 
-      @include small-tablet {
+      @include tablet {
         display: none;
       }
 
-      & .btn__icon {
+      & .btn__icon,
+      & .btn__icon--close {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -66,17 +69,83 @@
         user-select: none;
       }
 
+      & .btn__icon--close {
+        display: none;
+      }
+
+      &.is-open {
+        background-color: var(--dark-red);
+      }
+
+      &.is-open .btn__icon {
+        display: none;
+      }
+      &.is-open .btn__icon--close {
+        display: flex;
+        stroke-width: 2px;
+      }
+
       & .btn__text {
         user-select: none;
       }
     }
 
-    &--phone,
     &--menu {
+      flex-shrink: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      border-radius: 8px;
+      padding: 8px;
+      width: 40px;
+      height: 40px;
+      color: var(--black);
+      background-color: var(--bg);
+            @include tablet {
+        display: flex;
+      }
+    }
+
+    &--phone {
       display: none;
 
-      @include small-tablet {
+      @include tablet {
         display: flex;
+      }
+    }
+
+    &--login {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      border: none;
+      padding: 0;
+      background-color: transparent;
+      cursor: pointer;
+      color: var(--black);
+      transition: color .3s ease-in-out;
+
+      @include hover {
+        color: var(--accent);
+
+        & .header-middle__link-text {
+          color: var(--accent);
+        }
+      }
+
+      &:focus-visible {
+        outline: none;
+        color: var(--accent);
+
+        & .header-middle__link-text {
+          color: var(--accent);
+        }
+      }
+
+      .site-container--auth & {
+        display: none;
       }
     }
   }
@@ -84,6 +153,11 @@
   &__searchbar {
     flex-grow: 1;
     width: 100%;
+
+    @include tablet {
+      flex-grow: 0;
+      width: unset;
+    }
   }
 
   &__links {
@@ -91,7 +165,7 @@
     align-items: center;
     gap: 32px;
 
-    @include small-tablet {
+    @include tablet {
       display: none;
     }
   }
@@ -119,6 +193,15 @@
 
       & .header-middle__link-text {
         color: var(--accent);
+      }
+    }
+
+    &--login {
+      display: none;
+      color: var(--accent);
+
+      .site-container--auth & {
+        display: flex;
       }
     }
   }

@@ -1,0 +1,52 @@
+.promotion-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &.is-hidden {
+    display: none;
+  }
+
+		&__img {
+      display: flex;
+      border-radius: 10px;
+      width: 100%;
+      background-color: var(--bg);
+      overflow: hidden;
+
+      & img {
+        width: 100%;
+        aspect-ratio: 420/240;
+        mix-blend-mode: multiply;
+
+        @include small-tablet {
+          aspect-ratio: 343/195;
+        }
+      }
+		}
+
+		&__info {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+		}
+
+		&__date {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+		}
+
+    &__title {
+      margin: 0;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 140%;
+      color: var(--black);
+
+      @include small-tablet {
+        font-size: 14px;
+        line-height: 120%;
+      }
+    }
+}

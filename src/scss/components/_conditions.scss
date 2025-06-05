@@ -1,0 +1,24 @@
+.conditions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+		&__caption {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 140%;
+      color: var(--black);
+		}
+
+		&__text {
+      margin: 0;
+      font-size: 16px;
+      line-height: 140%;
+      color: var(--black);
+
+      @include small-tablet {
+        font-size: 14px;
+        line-height: 120%;
+      }
+		}
+}

@@ -5,7 +5,7 @@
   &__btn {
     display: none;
 
-    @include small-tablet {
+    @include tablet {
       display: flex;
     }
   }

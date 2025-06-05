@@ -15,6 +15,11 @@
     color: var(--black);
     counter-increment: item;
 
+    @include small-tablet {
+      font-size: 16px;
+      line-height: 140%;
+    }
+
     &::before {
       content: counter(item);
       display: flex;
@@ -29,6 +34,13 @@
       text-align: center;
       color: var(--black);
       background-color: var(--bg);
+
+      @include small-tablet {
+        width: 24px;
+        height: 24px;
+        font-size: 16px;
+        line-height: 140%;
+      }
     }
   }
 
@@ -60,6 +72,9 @@
 
   &__value, &__param {
     flex-shrink: 0;
+  }
+  &__value {
+    font-weight: 600;
   }
 
   &__products {

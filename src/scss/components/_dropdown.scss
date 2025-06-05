@@ -1,0 +1,95 @@
+.dropdown {
+  position: absolute;
+  top: 32px;
+  left: calc(353px + 48px);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: fit-content;
+  max-width: calc(100vw - 353px);
+
+  @include tablet {
+    left: 16px;
+    width: 100%;
+    max-width: calc(100% - 32px);
+  }
+
+		&__list {
+      @include list-reset;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(6, 22px);
+      gap: 24px;
+      width: 100%;
+
+      @include tablet {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+		}
+
+		&__item {
+      grid-column: 1 span;
+      grid-row: 1 span;
+      display: flex;
+      align-items: flex-start;
+
+      &:first-child {
+        display: none;
+
+        @include tablet {
+          display: flex;
+        }
+      }
+		}
+
+		&__link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      color: var(--black);
+      transition: color .3s ease-in-out;
+
+      @include hover {
+        color: var(--accent);
+      }
+
+      &:focus-visible {
+        outline: none;
+        color: var(--black);
+      }
+		}
+
+		&__link--mobile-back {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 120%;
+      color: var(--accent);
+		}
+
+		&__arrow {
+      width: 24px;
+      height: 24px;
+      fill: none;
+      stroke-width: 1.5px;
+      stroke: currentColor;
+      transform: rotate(-90deg);
+		}
+
+		&__title {
+      margin: 0;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 120%;
+      color: var(--black);
+
+      @include tablet {
+        display: none;
+      }
+		}
+}

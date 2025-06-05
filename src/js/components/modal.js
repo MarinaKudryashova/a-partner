@@ -1,4 +1,7 @@
-import { modal } from '../_functions'
+// import { modal } from '../_functions'
+import GraphModal from 'graph-modal';
+
+const modal = new GraphModal();
 
 document.addEventListener('DOMContentLoaded', () => {
 

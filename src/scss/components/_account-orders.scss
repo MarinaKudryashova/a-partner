@@ -28,11 +28,6 @@
         text-align: left;
         color: var(--grey);
 
-        @media screen and (max-width: 1439px) {
-          width: auto;
-          max-width: 245px;
-        }
-
         &:first-child {
           border-radius: 4px 0 0 4px;
         }
@@ -130,10 +125,6 @@
       font-weight: 500;
       font-size: 14px;
       line-height: 120%;
-    }
-
-    .account-orders__status {
-      color: var(--green);
     }
   }
 

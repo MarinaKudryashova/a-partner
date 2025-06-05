@@ -4,26 +4,12 @@ export function passwordView() {
 
   if(!password || !passwordBtn) return;
 
+passwordBtn.addEventListener('click', function (e) {
+    const isPassword = password.type === 'password';
 
-  // Скрытие иконки глаза при пустом поле
-  function updateIconVisibility() {
-    const hasText = password.value.length > 0
-    if (hasText) {
-      passwordBtn.style.display = 'block'
-    } else {
-      passwordBtn.style.display = 'none'
-    }
-  }
+    password.type = isPassword ? 'text' : 'password';
+    passwordBtn.classList.toggle('show-password', isPassword);
 
-  updateIconVisibility()
-  password.addEventListener('input', updateIconVisibility);
-
-  passwordBtn.addEventListener('click', function (e) {
-      const isPassword = password.type === 'password';
-
-      password.type = isPassword ? 'text' : 'password';
-      passwordBtn.classList.toggle('show-password', isPassword);
-
-      passwordBtn.setAttribute('aria-label', isPassword ? 'Скрыть пароль' : 'Показать пароль');
-  });
+    passwordBtn.setAttribute('aria-label', isPassword ? 'Скрыть пароль' : 'Показать пароль');
+});
 }

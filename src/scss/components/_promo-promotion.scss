@@ -1,0 +1,62 @@
+.promo-promotion {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 24px;
+  margin-bottom: 80px;
+
+  @include small-tablet {
+    margin-bottom: 64px;
+  }
+
+  &__slider {
+    grid-column: 7 span;
+    width: 100%;
+    max-width: 911px;
+
+    @include small-tablet {
+      grid-column: 10 span;
+    }
+  }
+
+  &__slide-img {
+    display: flex;
+    border-radius: 12px;
+    width: 100%;
+    background-color: var(--bg);
+    overflow: hidden;
+    & img {
+      width: 100%;
+      aspect-ratio: 911/298;
+      mix-blend-mode: multiply;
+    }
+  }
+
+  &__banner {
+    grid-column: 3 span;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @include small-tablet {
+      display: none;
+    }
+  }
+
+  &__link {
+    display: flex;
+  }
+
+  &__img {
+    display: flex;
+    border-radius: 12px;
+    width: 100%;
+    background-color: var(--bg);
+    overflow: hidden;
+
+    & img {
+      width: 100%;
+      aspect-ratio: 377/134;
+      mix-blend-mode: multiply;
+    }
+  }
+}

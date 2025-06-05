@@ -1,79 +1,338 @@
 <header class="header">
-   <!-- Верхний уровень (контакты, телефон) -->
-   <div class="header__top header-top">
-    <div class="header-top__container container">
-      <ul class="header-top__list">
-        <li class="header-top__item"><a href="contacts.html" class="header-top__link ui-link">Контакты</a></li>
-      </ul>
-      <a href="tel:89183700070" class="header-top__tel ui-link">8(918)370-00-70</a>
-    </div>
-   </div>
+  <!-- Верхний уровень (контакты, телефон) -->
+  <div class="header__top header-top">
+  <div class="header-top__container container">
+    <ul class="header-top__list">
+      <li class="header-top__item"><a href="contacts.html" class="header-top__link ui-link">Контакты</a></li>
+    </ul>
+    <a href="tel:89183700070" class="header-top__tel ui-link">8(918)370-00-70</a>
+  </div>
+  </div>
 
-   <!-- Средний уровень (лого, каталог, поиск, корзина, войти) -->
-    <div class="header__middle header-middle">
-      <div class="header-middle__container container">
-        <a href="/" class="header-middle__logo logo">
-          <img class="logo__img" src="img/logo-color.svg" alt="Логотип сайта Автопартер" width="176" height="46">
+  <!-- Средний уровень (лого, каталог, поиск, корзина, войти) -->
+  <div class="header__middle header-middle">
+    <div class="header-middle__container container">
+      <a href="/" class="header-middle__logo logo">
+        <img class="logo__img" src="img/logo-color.svg" alt="Логотип сайта Автопартер" width="176" height="46">
+      </a>
+
+      <div class="header-middle__action">
+        <button class="header-middle__btn header-middle__btn--catalog btn-catalog btn btn--full">
+          <svg class="btn__icon">
+            <use xlink:href="img/sprite.svg#icon-catalog"></use>
+          </svg>
+          <svg class="btn__icon btn__icon--close">
+            <use xlink:href="img/sprite.svg#icon-close"></use>
+          </svg>
+          <span class="btn__text">Каталог</span>
+        </button>
+
+        <a href="tel:89183700070" class="header-middle__btn header-middle__btn--phone btn-icon" type="button" aria-label="Позвонить нам">
+          <svg class="btn-icon__icon">
+            <use xlink:href="img/sprite.svg#icon-phone"></use>
+          </svg>
         </a>
 
-        <div class="header-middle__action">
-          <button class="header-middle__btn header-middle__btn--catalog btn btn--full">
-            <svg class="btn__icon">
-              <use xlink:href="img/sprite.svg#icon-catalog"></use>
-            </svg>
-            <span class="btn__text">Каталог</span>
-          </button>
-
-          <a href="tel:89183700070" class="header-middle__btn header-middle__btn--phone btn-icon" type="button" aria-label="Позвонить нам">
+        <div class="header-middle__searchbar searchbar">
+          <button class="searchbar__btn btn-icon" type="button" aria-label="открыть форму поиска" aria-expanded="false">
             <svg class="btn-icon__icon">
-              <use xlink:href="img/sprite.svg#icon-phone"></use>
+              <use xlink:href="img/sprite.svg#icon-search"></use>
             </svg>
-          </a>
-
-          <div class="header-middle__searchbar searchbar">
-            <button class="searchbar__btn btn-icon" type="button" aria-label="открыть форму поиска" aria-expanded="false">
-              <svg class="btn-icon__icon">
-                <use xlink:href="img/sprite.svg#icon-search"></use>
+          </button>
+          <form action="#" class="searchbar__form search" aria-label="форма поиска по сайту">
+            <svg class="search__icon">
+              <use xlink:href="img/sprite.svg#icon-search"></use>
+            </svg>
+            <input type="search" class="search__input input-reset" placeholder="Поиск по сайту ..." aria-label="Введите поисковый запрос">
+            <button type="reset" class="search__btn-clear btn-reset" aria-label="очистить строку поиска">
+              <svg class="search__icon-clear">
+                <use xlink:href="img/sprite.svg#icon-clear"></use>
               </svg>
             </button>
-            <form action="#" class="searchbar__form search" aria-label="форма поиска по сайту">
-              <svg class="search__icon">
-                <use xlink:href="img/sprite.svg#icon-search"></use>
-              </svg>
-              <input type="search" class="search__input input-reset" placeholder="Поиск по сайту ..." aria-label="Введите поисковый запрос">
-              <button type="reset" class="search__btn-clear btn-reset" aria-label="очистить строку поиска">
-                <svg class="search__icon-clear">
-                  <use xlink:href="img/sprite.svg#icon-clear"></use>
-                </svg>
-              </button>
-            </form>
-          </div>
-
-          <button class="header-middle__btn header-middle__btn--menu btn-icon" type="button" aria-label="открыть меню" aria-expanded="false">
-            <svg class="btn-icon__icon">
-              <use xlink:href="img/sprite.svg#icon-menu"></use>
-            </svg>
+          </form>
+        </div>
+        <div class="header-middle__btn header-middle__btn--menu">
+          <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" data-burger>
+            <span class="burger__line"></span>
           </button>
         </div>
-
-        <div class="header-middle__links">
-          <a href="cart.html" class="header-middle__link">
-            <svg class="header-middle__link-icon">
-              <use xlink:href="img/sprite.svg#icon-cart"></use>
-            </svg>
-            <span class="header-middle__link-count">1</span>
-            <span class="header-middle__link-text">Корзина</span>
-          </a>
-          <a href="account.html" class="header-middle__link">
-            <svg class="header-middle__link-icon header-middle__link-icon--login">
-              <use xlink:href="img/sprite.svg#icon-login"></use>
-            </svg>
-            <span class="header-middle__link-text">Войти</span>
-          </a>
-        </div>
-
       </div>
+
+      <div class="header-middle__links">
+        <a href="cart.html" class="header-middle__link">
+          <svg class="header-middle__link-icon">
+            <use xlink:href="img/sprite.svg#icon-cart"></use>
+          </svg>
+          <span class="header-middle__link-count">1</span>
+          <span class="header-middle__link-text">Корзина</span>
+        </a>
+        <button class="header-middle__btn header-middle__btn--login" data-graph-path="authorization">
+          <svg class="header-middle__link-icon header-middle__link-icon--login">
+            <use xlink:href="img/sprite.svg#icon-login"></use>
+          </svg>
+          <span class="header-middle__link-text">Войти</span>
+        </button>
+        <a href="account.html" class="header-middle__link header-middle__link--login">
+          <svg class="header-middle__link-icon header-middle__link-icon--login">
+            <use xlink:href="img/sprite.svg#icon-login"></use>
+          </svg>
+          <span class="header-middle__link-text">Аккаунт</span>
+        </a>
+      </div>
+
     </div>
+  </div>
+
+  <!-- Каталог мею -->
+  <div class="header__catalog-menu catalog-menu">
+    <div class="catalog-menu__container">
+      <ul class="catalog-menu__list">
+        <li class="catalog-menu__item">
+          <a href="#" class="catalog-menu__link catalog-menu__link--sale">
+            <svg class="catalog-menu__icon">
+              <use xlink:href="img/sprite.svg#sale"></use>
+            </svg>
+            <span class="catalog-menu__text">Акции</span>
+          </a>
+        </li>
+        <li class="catalog-menu__item">
+          <a href="#" class="catalog-menu__link catalog-menu__link--drop">
+            <svg class="catalog-menu__icon">
+              <use xlink:href="img/sprite.svg#canister"></use>
+            </svg>
+            <span class="catalog-menu__text">Моторные масла</span>
+          </a>
+          <button class="catalog-menu__btn-drop">
+            <svg class="catalog-menu__arrow">
+              <use xlink:href="img/sprite.svg#chevron-down"></use>
+            </svg>
+          </button>
+          <div class="catalog-menu__dropdown dropdown">
+            <h3 class="dropdown__title">Моторные масла</h3>
+            <ul class="dropdown__list">
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link dropdown__link--mobile-back mobile-back">
+                  <svg class="dropdown__arrow">
+                    <use xlink:href="img/sprite.svg#chevron-down"></use>
+                  </svg>
+                  Моторные масла
+                </a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Категория 2-ого уровня</a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Категория 2-ого уровня</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="catalog-menu__item">
+          <a href="#" class="catalog-menu__link catalog-menu__link--drop">
+            <svg class="catalog-menu__icon">
+              <use xlink:href="img/sprite.svg#barrel"></use>
+            </svg>
+            <span class="catalog-menu__text">Другие масла и спецжидкости</span>
+          </a>
+          <button class="catalog-menu__btn-drop">
+            <svg class="catalog-menu__arrow">
+              <use xlink:href="img/sprite.svg#chevron-down"></use>
+            </svg>
+          </button>
+          <div class="catalog-menu__dropdown dropdown">
+            <h3 class="dropdown__title">Другие масла и спецжидкости</h3>
+            <ul class="dropdown__list">
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link dropdown__link--mobile-back mobile-back">
+                  <svg class="dropdown__arrow">
+                    <use xlink:href="img/sprite.svg#chevron-down"></use>
+                  </svg>
+                  Другие масла и спецжидкости
+                </a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Категория 2-ого уровня</a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Категория 2-ого уровня</a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Категория 2-ого уровня</a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Категория 2-ого уровня</a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Категория 2-ого уровня</a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Категория 2-ого уровня</a>
+              </li>
+
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Категория 2-ого уровня</a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Категория 2-ого уровня</a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Категория 2-ого уровня</a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Категория 2-ого уровня</a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Категория 2-ого уровня</a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Категория 2-ого уровня</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="catalog-menu__item">
+          <a href="#" class="catalog-menu__link catalog-menu__link--drop">
+            <svg class="catalog-menu__icon">
+              <use xlink:href="img/sprite.svg#canister-2"></use>
+            </svg>
+            <span class="catalog-menu__text">Тех.жидкости</span>
+          </a>
+          <button class="catalog-menu__btn-drop">
+            <svg class="catalog-menu__arrow">
+              <use xlink:href="img/sprite.svg#chevron-down"></use>
+            </svg>
+          </button>
+          <div class="catalog-menu__dropdown dropdown"></div>
+        </li>
+        <li class="catalog-menu__item">
+          <a href="#" class="catalog-menu__link catalog-menu__link--drop">
+            <svg class="catalog-menu__icon">
+              <use xlink:href="img/sprite.svg#canister-2"></use>
+            </svg>
+            <span class="catalog-menu__text">Тех.жидкости</span>
+          </a>
+          <button class="catalog-menu__btn-drop">
+            <svg class="catalog-menu__arrow">
+              <use xlink:href="img/sprite.svg#chevron-down"></use>
+            </svg>
+          </button>
+          <div class="catalog-menu__dropdown dropdown"></div>
+        </li>
+        <li class="catalog-menu__item">
+          <a href="#" class="catalog-menu__link catalog-menu__link--drop">
+            <svg class="catalog-menu__icon">
+              <use xlink:href="img/sprite.svg#filter"></use>
+            </svg>
+            <span class="catalog-menu__text">Фильтры</span>
+          </a>
+          <button class="catalog-menu__btn-drop">
+            <svg class="catalog-menu__arrow">
+              <use xlink:href="img/sprite.svg#chevron-down"></use>
+            </svg>
+          </button>
+          <div class="catalog-menu__dropdown dropdown"></div>
+        </li>
+        <li class="catalog-menu__item">
+          <a href="#" class="catalog-menu__link catalog-menu__link--drop">
+            <svg class="catalog-menu__icon">
+              <use xlink:href="img/sprite.svg#chemistry"></use>
+            </svg>
+            <span class="catalog-menu__text">Автомобильная химия</span>
+          </a>
+          <button class="catalog-menu__btn-drop">
+            <svg class="catalog-menu__arrow">
+              <use xlink:href="img/sprite.svg#chevron-down"></use>
+            </svg>
+          </button>
+          <div class="catalog-menu__dropdown dropdown"></div>
+        </li>
+        <li class="catalog-menu__item">
+          <a href="#" class="catalog-menu__link catalog-menu__link--drop">
+            <svg class="catalog-menu__icon">
+              <use xlink:href="img/sprite.svg#chemistry"></use>
+            </svg>
+            <span class="catalog-menu__text">Автомобильная химия</span>
+          </a>
+          <button class="catalog-menu__btn-drop">
+            <svg class="catalog-menu__arrow">
+              <use xlink:href="img/sprite.svg#chevron-down"></use>
+            </svg>
+          </button>
+          <div class="catalog-menu__dropdown dropdown"></div>
+        </li>
+        <li class="catalog-menu__item">
+          <a href="#" class="catalog-menu__link catalog-menu__link--drop">
+            <svg class="catalog-menu__icon">
+              <use xlink:href="img/sprite.svg#lubricant"></use>
+            </svg>
+            <span class="catalog-menu__text">Смазки</span>
+          </a>
+          <button class="catalog-menu__btn-drop">
+            <svg class="catalog-menu__arrow">
+              <use xlink:href="img/sprite.svg#chevron-down"></use>
+            </svg>
+          </button>
+          <div class="catalog-menu__dropdown dropdown"></div>
+        </li>
+        <li class="catalog-menu__item">
+          <a href="#" class="catalog-menu__link catalog-menu__link--drop">
+            <svg class="catalog-menu__icon">
+              <use xlink:href="img/sprite.svg#other"></use>
+            </svg>
+            <span class="catalog-menu__text">Прочее</span>
+          </a>
+          <button class="catalog-menu__btn-drop">
+            <svg class="catalog-menu__arrow">
+              <use xlink:href="img/sprite.svg#chevron-down"></use>
+            </svg>
+          </button>
+          <div class="catalog-menu__dropdown dropdown"></div>
+        </li>
+        <li class="catalog-menu__item">
+          <a href="#" class="catalog-menu__link catalog-menu__link--drop">
+            <svg class="catalog-menu__icon">
+              <use xlink:href="img/sprite.svg#battery"></use>
+            </svg>
+            <span class="catalog-menu__text">Аккумуляторы</span>
+          </a>
+          <button class="catalog-menu__btn-drop">
+            <svg class="catalog-menu__arrow">
+              <use xlink:href="img/sprite.svg#chevron-down"></use>
+            </svg>
+          </button>
+          <div class="catalog-menu__dropdown dropdown"></div>
+        </li>
+        <li class="catalog-menu__item">
+          <a href="#" class="catalog-menu__link catalog-menu__link--drop">
+            <svg class="catalog-menu__icon">
+              <use xlink:href="img/sprite.svg#chemistry-2"></use>
+            </svg>
+            <span class="catalog-menu__text">Для дома и офиса</span>
+          </a>
+          <button class="catalog-menu__btn-drop">
+            <svg class="catalog-menu__arrow">
+              <use xlink:href="img/sprite.svg#chevron-down"></use>
+            </svg>
+          </button>
+          <div class="catalog-menu__dropdown dropdown"></div>
+        </li>
+        <li class="catalog-menu__item">
+          <a href="#" class="catalog-menu__link catalog-menu__link--drop">
+            <svg class="catalog-menu__icon">
+              <use xlink:href="img/sprite.svg#pos"></use>
+            </svg>
+            <span class="catalog-menu__text">POS-материалы</span>
+          </a>
+          <button class="catalog-menu__btn-drop">
+            <svg class="catalog-menu__arrow">
+              <use xlink:href="img/sprite.svg#chevron-down"></use>
+            </svg>
+          </button>
+          <div class="catalog-menu__dropdown dropdown"></div>
+        </li>
+      </ul>
+    </div>
+  </div>
 
   <!-- Нижний уровень (меню) -->
   <nav class="header__nav" title="main navigation">
@@ -92,4 +351,34 @@
       </ul>
     </div>
   </nav>
+
+  <!-- Нижний уровень меню (мобильная версия)  header-bottom__item--btn -->
+  <div class="header__bottom header-bottom fixed-block">
+    <div class="header-bottom__container container">
+      <a href="/" class="header-bottom__item">
+        <svg class="header-bottom__icon">
+          <use xlink:href="img/sprite.svg#icon-home"></use>
+        </svg>
+        <span class="header-bottom__text">Главная</span>
+      </a>
+      <a href="catalog.html" class="header-bottom__item">
+        <svg class="header-bottom__icon">
+          <use xlink:href="img/sprite.svg#icon-catalog-mobile"></use>
+        </svg>
+        <span class="header-bottom__text">Каталог</span>
+      </a>
+      <a href="cart.html" class="header-bottom__item">
+        <svg class="header-bottom__icon header-bottom__icon--cart">
+          <use xlink:href="img/sprite.svg#icon-cart"></use>
+        </svg>
+        <span class="header-bottom__text">Корзина</span>
+      </a>
+      <a href="account.html" class="header-bottom__item">
+        <svg class="header-bottom__icon">
+          <use xlink:href="img/sprite.svg#icon-login"></use>
+        </svg>
+        <span class="header-bottom__text">Войти</span>
+      </a>
+    </div>
+  </div>
 </header>

@@ -39,7 +39,6 @@
       </li>
     </ul>
     <div class="tabs__content">
-      <!-- Мои данные -->
       <div class="tabs__panel account-content__tab">
         <!-- Мои данные -->
         <div class="account-data">
@@ -53,25 +52,15 @@
                   <input class="account-data__input-field" type="text" id="company" name="company" required>
                   <span class="account-data__input-label">Компания<span>*</span></span>
                 </label>
-                <button class="account-data__clear-btn btn-reset clear-btn" type="button" aria-label="Очистить поле ввода">
-                    <svg class="account-data__fill-icon">
-                      <use xlink:href="img/sprite.svg#icon-clear"></use>
-                    </svg>
-                </button>
                 <span class="account-data__input-error">Неправильно заполнено поле...</span>
               </div>
               <!-- ФИО -->
               <div class="account-data__input">
                 <label for="manager">
                   <input class="account-data__input-field" type="text" id="manager" name="manager"
-                    placeholder="ФИО менеджера">
+                    placeholder="ФИО менеджера" autocomplete="given-name">
                   <span class="account-data__input-label">ФИО менеджера</span>
                 </label>
-                <button class="account-data__clear-btn btn-reset clear-btn" type="button" aria-label="Очистить поле ввода">
-                    <svg class="account-data__fill-icon">
-                      <use xlink:href="img/sprite.svg#icon-clear"></use>
-                    </svg>
-                </button>
                 <span class="account-data__input-error">Неправильно заполнено поле...</span>
               </div>
               <!-- Дата рождения с air-datepicker -->
@@ -88,7 +77,7 @@
               <!-- Email -->
               <div class="account-data__input">
                 <label for="email">
-                  <input class="account-data__input-field" type="email" id="email" name="email" required>
+                  <input class="account-data__input-field" type="email" id="email" name="email" autocomplete="email" required>
                   <span class="account-data__input-label">E-mail<span>*</span></span>
                 </label>
                 <span class="account-data__input-error">Неправильно заполнено поле...</span>
@@ -475,7 +464,7 @@
             </svg>
             Назад</button>
           <h2 class="order-info__title">Заказ №1981-01-cl</h2>
-          <ol class="order-info__wrap list-reset">
+          <ul class="order-info__wrap list-reset">
             <li class="order-info__wrap-item">
               <h3 class="order-info__wrap-title">Данные о заказе</h3>
               <ul class="order-info__data list-reset">
@@ -581,8 +570,9 @@
                     </div>
                   </div>
                 </li>
+
               </ul>
-          </ol>
+          </ul>
         </div>
       </div>
       <!-- Мои покупки -->
@@ -602,20 +592,17 @@
                       <li class="badges__item badges__item--new">новинка</li>
                     </ul>
                     <!-- Скидка -->
-                    <span class="product-card__discount">-12%</span>
+                    <span class="product-card__discount discount">-12%</span>
                     <!-- Изображение -->
                     <picture class="product-card__picture">
-                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
-                        type="image/webp">
-                      <img loading="lazy" src="img/catalog/product-thumb.png"
-                        srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
+                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x" type="image/webp">
+                      <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
                     </picture>
                   </div>
                   <!-- Цены -->
-                  <div class="product-card__price">
-                    <span class="product-card__price-current">4000 <span
-                        class="product-card__price-unit">р.</span></span>
-                    <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
+                  <div class="product-card__price price">
+                    <span class="price__current">4000 <span class="price__unit">р.</span></span>
+                    <span class="price__old">10000 <span class="price__unit">р.</span></span>
                   </div>
                   <div class="product-card__info">
                     <div class="product-card__meta">
@@ -627,8 +614,7 @@
                     <!-- Название -->
                     <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
                     <!-- Описание -->
-                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
-                      вязкости: 30</p>
+                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс вязкости: 30</p>
                   </div>
                   <div class="product-card__actions">
                     <!-- Количество -->
@@ -666,20 +652,17 @@
                       <li class="badges__item badges__item--new">новинка</li>
                     </ul>
                     <!-- Скидка -->
-                    <span class="product-card__discount">-12%</span>
+                    <span class="product-card__discount discount">-12%</span>
                     <!-- Изображение -->
                     <picture class="product-card__picture">
-                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
-                        type="image/webp">
-                      <img loading="lazy" src="img/catalog/product-thumb.png"
-                        srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
+                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x" type="image/webp">
+                      <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
                     </picture>
                   </div>
                   <!-- Цены -->
-                  <div class="product-card__price">
-                    <span class="product-card__price-current">4000 <span
-                        class="product-card__price-unit">р.</span></span>
-                    <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
+                  <div class="product-card__price price">
+                    <span class="price__current">4000 <span class="price__unit">р.</span></span>
+                    <span class="price__old">10000 <span class="price__unit">р.</span></span>
                   </div>
                   <div class="product-card__info">
                     <div class="product-card__meta">
@@ -691,8 +674,7 @@
                     <!-- Название -->
                     <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
                     <!-- Описание -->
-                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
-                      вязкости: 30</p>
+                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс вязкости: 30</p>
                   </div>
                   <div class="product-card__actions">
                     <!-- Количество -->
@@ -730,20 +712,17 @@
                       <li class="badges__item badges__item--new">новинка</li>
                     </ul>
                     <!-- Скидка -->
-                    <span class="product-card__discount">-12%</span>
+                    <span class="product-card__discount discount">-12%</span>
                     <!-- Изображение -->
                     <picture class="product-card__picture">
-                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
-                        type="image/webp">
-                      <img loading="lazy" src="img/catalog/product-thumb.png"
-                        srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
+                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x" type="image/webp">
+                      <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
                     </picture>
                   </div>
                   <!-- Цены -->
-                  <div class="product-card__price">
-                    <span class="product-card__price-current">4000 <span
-                        class="product-card__price-unit">р.</span></span>
-                    <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
+                  <div class="product-card__price price">
+                    <span class="price__current">4000 <span class="price__unit">р.</span></span>
+                    <span class="price__old">10000 <span class="price__unit">р.</span></span>
                   </div>
                   <div class="product-card__info">
                     <div class="product-card__meta">
@@ -755,8 +734,7 @@
                     <!-- Название -->
                     <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
                     <!-- Описание -->
-                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
-                      вязкости: 30</p>
+                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс вязкости: 30</p>
                   </div>
                   <div class="product-card__actions">
                     <!-- Количество -->
@@ -794,20 +772,17 @@
                       <li class="badges__item badges__item--new">новинка</li>
                     </ul>
                     <!-- Скидка -->
-                    <span class="product-card__discount">-12%</span>
+                    <span class="product-card__discount discount">-12%</span>
                     <!-- Изображение -->
                     <picture class="product-card__picture">
-                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
-                        type="image/webp">
-                      <img loading="lazy" src="img/catalog/product-thumb.png"
-                        srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
+                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x" type="image/webp">
+                      <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
                     </picture>
                   </div>
                   <!-- Цены -->
-                  <div class="product-card__price">
-                    <span class="product-card__price-current">4000 <span
-                        class="product-card__price-unit">р.</span></span>
-                    <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
+                  <div class="product-card__price price">
+                    <span class="price__current">4000 <span class="price__unit">р.</span></span>
+                    <span class="price__old">10000 <span class="price__unit">р.</span></span>
                   </div>
                   <div class="product-card__info">
                     <div class="product-card__meta">
@@ -819,8 +794,7 @@
                     <!-- Название -->
                     <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
                     <!-- Описание -->
-                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
-                      вязкости: 30</p>
+                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс вязкости: 30</p>
                   </div>
                   <div class="product-card__actions">
                     <!-- Количество -->
@@ -858,20 +832,17 @@
                       <li class="badges__item badges__item--new">новинка</li>
                     </ul>
                     <!-- Скидка -->
-                    <span class="product-card__discount">-12%</span>
+                    <span class="product-card__discount discount">-12%</span>
                     <!-- Изображение -->
                     <picture class="product-card__picture">
-                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
-                        type="image/webp">
-                      <img loading="lazy" src="img/catalog/product-thumb.png"
-                        srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
+                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x" type="image/webp">
+                      <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
                     </picture>
                   </div>
                   <!-- Цены -->
-                  <div class="product-card__price">
-                    <span class="product-card__price-current">4000 <span
-                        class="product-card__price-unit">р.</span></span>
-                    <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
+                  <div class="product-card__price price">
+                    <span class="price__current">4000 <span class="price__unit">р.</span></span>
+                    <span class="price__old">10000 <span class="price__unit">р.</span></span>
                   </div>
                   <div class="product-card__info">
                     <div class="product-card__meta">
@@ -883,8 +854,7 @@
                     <!-- Название -->
                     <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
                     <!-- Описание -->
-                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
-                      вязкости: 30</p>
+                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс вязкости: 30</p>
                   </div>
                   <div class="product-card__actions">
                     <!-- Количество -->
@@ -922,20 +892,17 @@
                       <li class="badges__item badges__item--new">новинка</li>
                     </ul>
                     <!-- Скидка -->
-                    <span class="product-card__discount">-12%</span>
+                    <span class="product-card__discount discount">-12%</span>
                     <!-- Изображение -->
                     <picture class="product-card__picture">
-                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
-                        type="image/webp">
-                      <img loading="lazy" src="img/catalog/product-thumb.png"
-                        srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
+                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x" type="image/webp">
+                      <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
                     </picture>
                   </div>
                   <!-- Цены -->
-                  <div class="product-card__price">
-                    <span class="product-card__price-current">4000 <span
-                        class="product-card__price-unit">р.</span></span>
-                    <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
+                  <div class="product-card__price price">
+                    <span class="price__current">4000 <span class="price__unit">р.</span></span>
+                    <span class="price__old">10000 <span class="price__unit">р.</span></span>
                   </div>
                   <div class="product-card__info">
                     <div class="product-card__meta">
@@ -947,8 +914,7 @@
                     <!-- Название -->
                     <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
                     <!-- Описание -->
-                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
-                      вязкости: 30</p>
+                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс вязкости: 30</p>
                   </div>
                   <div class="product-card__actions">
                     <!-- Количество -->
@@ -986,20 +952,17 @@
                       <li class="badges__item badges__item--new">новинка</li>
                     </ul>
                     <!-- Скидка -->
-                    <span class="product-card__discount">-12%</span>
+                    <span class="product-card__discount discount">-12%</span>
                     <!-- Изображение -->
                     <picture class="product-card__picture">
-                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
-                        type="image/webp">
-                      <img loading="lazy" src="img/catalog/product-thumb.png"
-                        srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
+                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x" type="image/webp">
+                      <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
                     </picture>
                   </div>
                   <!-- Цены -->
-                  <div class="product-card__price">
-                    <span class="product-card__price-current">4000 <span
-                        class="product-card__price-unit">р.</span></span>
-                    <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
+                  <div class="product-card__price price">
+                    <span class="price__current">4000 <span class="price__unit">р.</span></span>
+                    <span class="price__old">10000 <span class="price__unit">р.</span></span>
                   </div>
                   <div class="product-card__info">
                     <div class="product-card__meta">
@@ -1011,8 +974,7 @@
                     <!-- Название -->
                     <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
                     <!-- Описание -->
-                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
-                      вязкости: 30</p>
+                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс вязкости: 30</p>
                   </div>
                   <div class="product-card__actions">
                     <!-- Количество -->
@@ -1050,20 +1012,17 @@
                       <li class="badges__item badges__item--new">новинка</li>
                     </ul>
                     <!-- Скидка -->
-                    <span class="product-card__discount">-12%</span>
+                    <span class="product-card__discount discount">-12%</span>
                     <!-- Изображение -->
                     <picture class="product-card__picture">
-                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
-                        type="image/webp">
-                      <img loading="lazy" src="img/catalog/product-thumb.png"
-                        srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
+                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x" type="image/webp">
+                      <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
                     </picture>
                   </div>
                   <!-- Цены -->
-                  <div class="product-card__price">
-                    <span class="product-card__price-current">4000 <span
-                        class="product-card__price-unit">р.</span></span>
-                    <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
+                  <div class="product-card__price price">
+                    <span class="price__current">4000 <span class="price__unit">р.</span></span>
+                    <span class="price__old">10000 <span class="price__unit">р.</span></span>
                   </div>
                   <div class="product-card__info">
                     <div class="product-card__meta">
@@ -1075,8 +1034,7 @@
                     <!-- Название -->
                     <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
                     <!-- Описание -->
-                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
-                      вязкости: 30</p>
+                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс вязкости: 30</p>
                   </div>
                   <div class="product-card__actions">
                     <!-- Количество -->
@@ -1114,20 +1072,17 @@
                       <li class="badges__item badges__item--new">новинка</li>
                     </ul>
                     <!-- Скидка -->
-                    <span class="product-card__discount">-12%</span>
+                    <span class="product-card__discount discount">-12%</span>
                     <!-- Изображение -->
                     <picture class="product-card__picture">
-                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
-                        type="image/webp">
-                      <img loading="lazy" src="img/catalog/product-thumb.png"
-                        srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
+                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x" type="image/webp">
+                      <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
                     </picture>
                   </div>
                   <!-- Цены -->
-                  <div class="product-card__price">
-                    <span class="product-card__price-current">4000 <span
-                        class="product-card__price-unit">р.</span></span>
-                    <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
+                  <div class="product-card__price price">
+                    <span class="price__current">4000 <span class="price__unit">р.</span></span>
+                    <span class="price__old">10000 <span class="price__unit">р.</span></span>
                   </div>
                   <div class="product-card__info">
                     <div class="product-card__meta">
@@ -1139,8 +1094,7 @@
                     <!-- Название -->
                     <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
                     <!-- Описание -->
-                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
-                      вязкости: 30</p>
+                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс вязкости: 30</p>
                   </div>
                   <div class="product-card__actions">
                     <!-- Количество -->
@@ -1178,20 +1132,17 @@
                       <li class="badges__item badges__item--new">новинка</li>
                     </ul>
                     <!-- Скидка -->
-                    <span class="product-card__discount">-12%</span>
+                    <span class="product-card__discount discount">-12%</span>
                     <!-- Изображение -->
                     <picture class="product-card__picture">
-                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
-                        type="image/webp">
-                      <img loading="lazy" src="img/catalog/product-thumb.png"
-                        srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
+                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x" type="image/webp">
+                      <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
                     </picture>
                   </div>
                   <!-- Цены -->
-                  <div class="product-card__price">
-                    <span class="product-card__price-current">4000 <span
-                        class="product-card__price-unit">р.</span></span>
-                    <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
+                  <div class="product-card__price price">
+                    <span class="price__current">4000 <span class="price__unit">р.</span></span>
+                    <span class="price__old">10000 <span class="price__unit">р.</span></span>
                   </div>
                   <div class="product-card__info">
                     <div class="product-card__meta">
@@ -1203,8 +1154,7 @@
                     <!-- Название -->
                     <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
                     <!-- Описание -->
-                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
-                      вязкости: 30</p>
+                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс вязкости: 30</p>
                   </div>
                   <div class="product-card__actions">
                     <!-- Количество -->
@@ -1242,20 +1192,17 @@
                       <li class="badges__item badges__item--new">новинка</li>
                     </ul>
                     <!-- Скидка -->
-                    <span class="product-card__discount">-12%</span>
+                    <span class="product-card__discount discount">-12%</span>
                     <!-- Изображение -->
                     <picture class="product-card__picture">
-                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
-                        type="image/webp">
-                      <img loading="lazy" src="img/catalog/product-thumb.png"
-                        srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
+                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x" type="image/webp">
+                      <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
                     </picture>
                   </div>
                   <!-- Цены -->
-                  <div class="product-card__price">
-                    <span class="product-card__price-current">4000 <span
-                        class="product-card__price-unit">р.</span></span>
-                    <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
+                  <div class="product-card__price price">
+                    <span class="price__current">4000 <span class="price__unit">р.</span></span>
+                    <span class="price__old">10000 <span class="price__unit">р.</span></span>
                   </div>
                   <div class="product-card__info">
                     <div class="product-card__meta">
@@ -1267,8 +1214,7 @@
                     <!-- Название -->
                     <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
                     <!-- Описание -->
-                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
-                      вязкости: 30</p>
+                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс вязкости: 30</p>
                   </div>
                   <div class="product-card__actions">
                     <!-- Количество -->
@@ -1306,20 +1252,17 @@
                       <li class="badges__item badges__item--new">новинка</li>
                     </ul>
                     <!-- Скидка -->
-                    <span class="product-card__discount">-12%</span>
+                    <span class="product-card__discount discount">-12%</span>
                     <!-- Изображение -->
                     <picture class="product-card__picture">
-                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
-                        type="image/webp">
-                      <img loading="lazy" src="img/catalog/product-thumb.png"
-                        srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
+                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x" type="image/webp">
+                      <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
                     </picture>
                   </div>
                   <!-- Цены -->
-                  <div class="product-card__price">
-                    <span class="product-card__price-current">4000 <span
-                        class="product-card__price-unit">р.</span></span>
-                    <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
+                  <div class="product-card__price price">
+                    <span class="price__current">4000 <span class="price__unit">р.</span></span>
+                    <span class="price__old">10000 <span class="price__unit">р.</span></span>
                   </div>
                   <div class="product-card__info">
                     <div class="product-card__meta">
@@ -1331,8 +1274,7 @@
                     <!-- Название -->
                     <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
                     <!-- Описание -->
-                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
-                      вязкости: 30</p>
+                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс вязкости: 30</p>
                   </div>
                   <div class="product-card__actions">
                     <!-- Количество -->
@@ -1370,20 +1312,17 @@
                       <li class="badges__item badges__item--new">новинка</li>
                     </ul>
                     <!-- Скидка -->
-                    <span class="product-card__discount">-12%</span>
+                    <span class="product-card__discount discount">-12%</span>
                     <!-- Изображение -->
                     <picture class="product-card__picture">
-                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
-                        type="image/webp">
-                      <img loading="lazy" src="img/catalog/product-thumb.png"
-                        srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
+                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x" type="image/webp">
+                      <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
                     </picture>
                   </div>
                   <!-- Цены -->
-                  <div class="product-card__price">
-                    <span class="product-card__price-current">4000 <span
-                        class="product-card__price-unit">р.</span></span>
-                    <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
+                  <div class="product-card__price price">
+                    <span class="price__current">4000 <span class="price__unit">р.</span></span>
+                    <span class="price__old">10000 <span class="price__unit">р.</span></span>
                   </div>
                   <div class="product-card__info">
                     <div class="product-card__meta">
@@ -1395,8 +1334,7 @@
                     <!-- Название -->
                     <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
                     <!-- Описание -->
-                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
-                      вязкости: 30</p>
+                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс вязкости: 30</p>
                   </div>
                   <div class="product-card__actions">
                     <!-- Количество -->
@@ -1434,20 +1372,17 @@
                       <li class="badges__item badges__item--new">новинка</li>
                     </ul>
                     <!-- Скидка -->
-                    <span class="product-card__discount">-12%</span>
+                    <span class="product-card__discount discount">-12%</span>
                     <!-- Изображение -->
                     <picture class="product-card__picture">
-                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
-                        type="image/webp">
-                      <img loading="lazy" src="img/catalog/product-thumb.png"
-                        srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
+                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x" type="image/webp">
+                      <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
                     </picture>
                   </div>
                   <!-- Цены -->
-                  <div class="product-card__price">
-                    <span class="product-card__price-current">4000 <span
-                        class="product-card__price-unit">р.</span></span>
-                    <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
+                  <div class="product-card__price price">
+                    <span class="price__current">4000 <span class="price__unit">р.</span></span>
+                    <span class="price__old">10000 <span class="price__unit">р.</span></span>
                   </div>
                   <div class="product-card__info">
                     <div class="product-card__meta">
@@ -1459,8 +1394,7 @@
                     <!-- Название -->
                     <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
                     <!-- Описание -->
-                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
-                      вязкости: 30</p>
+                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс вязкости: 30</p>
                   </div>
                   <div class="product-card__actions">
                     <!-- Количество -->
@@ -1498,20 +1432,17 @@
                       <li class="badges__item badges__item--new">новинка</li>
                     </ul>
                     <!-- Скидка -->
-                    <span class="product-card__discount">-12%</span>
+                    <span class="product-card__discount discount">-12%</span>
                     <!-- Изображение -->
                     <picture class="product-card__picture">
-                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
-                        type="image/webp">
-                      <img loading="lazy" src="img/catalog/product-thumb.png"
-                        srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
+                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x" type="image/webp">
+                      <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
                     </picture>
                   </div>
                   <!-- Цены -->
-                  <div class="product-card__price">
-                    <span class="product-card__price-current">4000 <span
-                        class="product-card__price-unit">р.</span></span>
-                    <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
+                  <div class="product-card__price price">
+                    <span class="price__current">4000 <span class="price__unit">р.</span></span>
+                    <span class="price__old">10000 <span class="price__unit">р.</span></span>
                   </div>
                   <div class="product-card__info">
                     <div class="product-card__meta">
@@ -1523,8 +1454,7 @@
                     <!-- Название -->
                     <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
                     <!-- Описание -->
-                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
-                      вязкости: 30</p>
+                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс вязкости: 30</p>
                   </div>
                   <div class="product-card__actions">
                     <!-- Количество -->
@@ -1562,20 +1492,17 @@
                       <li class="badges__item badges__item--new">новинка</li>
                     </ul>
                     <!-- Скидка -->
-                    <span class="product-card__discount">-12%</span>
+                    <span class="product-card__discount discount">-12%</span>
                     <!-- Изображение -->
                     <picture class="product-card__picture">
-                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
-                        type="image/webp">
-                      <img loading="lazy" src="img/catalog/product-thumb.png"
-                        srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
+                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x" type="image/webp">
+                      <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
                     </picture>
                   </div>
                   <!-- Цены -->
-                  <div class="product-card__price">
-                    <span class="product-card__price-current">4000 <span
-                        class="product-card__price-unit">р.</span></span>
-                    <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
+                  <div class="product-card__price price">
+                    <span class="price__current">4000 <span class="price__unit">р.</span></span>
+                    <span class="price__old">10000 <span class="price__unit">р.</span></span>
                   </div>
                   <div class="product-card__info">
                     <div class="product-card__meta">
@@ -1587,8 +1514,7 @@
                     <!-- Название -->
                     <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
                     <!-- Описание -->
-                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
-                      вязкости: 30</p>
+                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс вязкости: 30</p>
                   </div>
                   <div class="product-card__actions">
                     <!-- Количество -->
@@ -1634,20 +1560,17 @@
                       <li class="badges__item badges__item--new">новинка</li>
                     </ul>
                     <!-- Скидка -->
-                    <span class="product-card__discount">-12%</span>
+                    <span class="product-card__discount discount">-12%</span>
                     <!-- Изображение -->
                     <picture class="product-card__picture">
-                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
-                        type="image/webp">
-                      <img loading="lazy" src="img/catalog/product-thumb.png"
-                        srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
+                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x" type="image/webp">
+                      <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
                     </picture>
                   </div>
                   <!-- Цены -->
-                  <div class="product-card__price">
-                    <span class="product-card__price-current">4000 <span
-                        class="product-card__price-unit">р.</span></span>
-                    <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
+                  <div class="product-card__price price">
+                    <span class="price__current">4000 <span class="price__unit">р.</span></span>
+                    <span class="price__old">10000 <span class="price__unit">р.</span></span>
                   </div>
                   <div class="product-card__info">
                     <div class="product-card__meta">
@@ -1659,75 +1582,7 @@
                     <!-- Название -->
                     <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
                     <!-- Описание -->
-                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
-                      вязкости: 30</p>
-                  </div>
-                  <div class="product-card__actions">
-                    <!-- Количество -->
-                    <div class="product-card__quantity quantity">
-                      <div class="quantity__label visually-hidden">Количество:</div>
-                      <div class="quantity__control" aria-label="Выбор количества">
-                        <button class="quantity__btn quantity__btn--minus" disabled aria-label="Уменьшить количество">
-                          <svg class="quantity__icon">
-                            <use xlink:href="img/sprite.svg#icon-minus"></use>
-                          </svg>
-                        </button>
-                        <span class="quantity__value" aria-label="Количество товара">1</span>
-                        <button class="quantity__btn quantity__btn--plus" aria-label="Увеличить количество">
-                          <svg class="quantity__icon">
-                            <use xlink:href="img/sprite.svg#icon-plus"></use>
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                    <!-- Кнпока Добавить в корзину -->
-                    <button class="product-card__add-to-cart add-to-cart" aria-label="Добавить в корзину">
-                      <span class="add-to-cart__text">Купить</span>
-                      <span class="add-to-cart__count">1</span>
-                      <svg class="add-to-cart__icon">
-                        <use xlink:href="img/sprite.svg#icon-cart"></use>
-                      </svg>
-                    </button>
-                  </div>
-                </a>
-
-              </li>
-              <li class="account-purchases__list-item">
-                <a href="#" class="product-card">
-                  <div class="product-card__view">
-                    <!-- Бейджи -->
-                    <ul class="product-card__badges badges">
-                      <li class="badges__item badges__item--hit">хит</li>
-                      <li class="badges__item badges__item--new">новинка</li>
-                    </ul>
-                    <!-- Скидка -->
-                    <span class="product-card__discount">-12%</span>
-                    <!-- Изображение -->
-                    <picture class="product-card__picture">
-                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
-                        type="image/webp">
-                      <img loading="lazy" src="img/catalog/product-thumb.png"
-                        srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
-                    </picture>
-                  </div>
-                  <!-- Цены -->
-                  <div class="product-card__price">
-                    <span class="product-card__price-current">4000 <span
-                        class="product-card__price-unit">р.</span></span>
-                    <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
-                  </div>
-                  <div class="product-card__info">
-                    <div class="product-card__meta">
-                      <!-- Бренд -->
-                      <span class="product-card__brand">VOLGA OIL</span>
-                      <!-- Артикул -->
-                      <span class="product-card__sku">Арт.: 800809</span>
-                    </div>
-                    <!-- Название -->
-                    <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
-                    <!-- Описание -->
-                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
-                      вязкости: 30</p>
+                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс вязкости: 30</p>
                   </div>
                   <div class="product-card__actions">
                     <!-- Количество -->
@@ -1767,20 +1622,17 @@
                       <li class="badges__item badges__item--new">новинка</li>
                     </ul>
                     <!-- Скидка -->
-                    <span class="product-card__discount">-12%</span>
+                    <span class="product-card__discount discount">-12%</span>
                     <!-- Изображение -->
                     <picture class="product-card__picture">
-                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
-                        type="image/webp">
-                      <img loading="lazy" src="img/catalog/product-thumb.png"
-                        srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
+                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x" type="image/webp">
+                      <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
                     </picture>
                   </div>
                   <!-- Цены -->
-                  <div class="product-card__price">
-                    <span class="product-card__price-current">4000 <span
-                        class="product-card__price-unit">р.</span></span>
-                    <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
+                  <div class="product-card__price price">
+                    <span class="price__current">4000 <span class="price__unit">р.</span></span>
+                    <span class="price__old">10000 <span class="price__unit">р.</span></span>
                   </div>
                   <div class="product-card__info">
                     <div class="product-card__meta">
@@ -1792,8 +1644,7 @@
                     <!-- Название -->
                     <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
                     <!-- Описание -->
-                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
-                      вязкости: 30</p>
+                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс вязкости: 30</p>
                   </div>
                   <div class="product-card__actions">
                     <!-- Количество -->
@@ -1833,20 +1684,17 @@
                       <li class="badges__item badges__item--new">новинка</li>
                     </ul>
                     <!-- Скидка -->
-                    <span class="product-card__discount">-12%</span>
+                    <span class="product-card__discount discount">-12%</span>
                     <!-- Изображение -->
                     <picture class="product-card__picture">
-                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
-                        type="image/webp">
-                      <img loading="lazy" src="img/catalog/product-thumb.png"
-                        srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
+                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x" type="image/webp">
+                      <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
                     </picture>
                   </div>
                   <!-- Цены -->
-                  <div class="product-card__price">
-                    <span class="product-card__price-current">4000 <span
-                        class="product-card__price-unit">р.</span></span>
-                    <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
+                  <div class="product-card__price price">
+                    <span class="price__current">4000 <span class="price__unit">р.</span></span>
+                    <span class="price__old">10000 <span class="price__unit">р.</span></span>
                   </div>
                   <div class="product-card__info">
                     <div class="product-card__meta">
@@ -1858,8 +1706,7 @@
                     <!-- Название -->
                     <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
                     <!-- Описание -->
-                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
-                      вязкости: 30</p>
+                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс вязкости: 30</p>
                   </div>
                   <div class="product-card__actions">
                     <!-- Количество -->
@@ -1899,20 +1746,17 @@
                       <li class="badges__item badges__item--new">новинка</li>
                     </ul>
                     <!-- Скидка -->
-                    <span class="product-card__discount">-12%</span>
+                    <span class="product-card__discount discount">-12%</span>
                     <!-- Изображение -->
                     <picture class="product-card__picture">
-                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
-                        type="image/webp">
-                      <img loading="lazy" src="img/catalog/product-thumb.png"
-                        srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
+                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x" type="image/webp">
+                      <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
                     </picture>
                   </div>
                   <!-- Цены -->
-                  <div class="product-card__price">
-                    <span class="product-card__price-current">4000 <span
-                        class="product-card__price-unit">р.</span></span>
-                    <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
+                  <div class="product-card__price price">
+                    <span class="price__current">4000 <span class="price__unit">р.</span></span>
+                    <span class="price__old">10000 <span class="price__unit">р.</span></span>
                   </div>
                   <div class="product-card__info">
                     <div class="product-card__meta">
@@ -1924,8 +1768,7 @@
                     <!-- Название -->
                     <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
                     <!-- Описание -->
-                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
-                      вязкости: 30</p>
+                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс вязкости: 30</p>
                   </div>
                   <div class="product-card__actions">
                     <!-- Количество -->
@@ -1965,20 +1808,17 @@
                       <li class="badges__item badges__item--new">новинка</li>
                     </ul>
                     <!-- Скидка -->
-                    <span class="product-card__discount">-12%</span>
+                    <span class="product-card__discount discount">-12%</span>
                     <!-- Изображение -->
                     <picture class="product-card__picture">
-                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
-                        type="image/webp">
-                      <img loading="lazy" src="img/catalog/product-thumb.png"
-                        srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
+                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x" type="image/webp">
+                      <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
                     </picture>
                   </div>
                   <!-- Цены -->
-                  <div class="product-card__price">
-                    <span class="product-card__price-current">4000 <span
-                        class="product-card__price-unit">р.</span></span>
-                    <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
+                  <div class="product-card__price price">
+                    <span class="price__current">4000 <span class="price__unit">р.</span></span>
+                    <span class="price__old">10000 <span class="price__unit">р.</span></span>
                   </div>
                   <div class="product-card__info">
                     <div class="product-card__meta">
@@ -1990,8 +1830,7 @@
                     <!-- Название -->
                     <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
                     <!-- Описание -->
-                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
-                      вязкости: 30</p>
+                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс вязкости: 30</p>
                   </div>
                   <div class="product-card__actions">
                     <!-- Количество -->
@@ -2031,20 +1870,17 @@
                       <li class="badges__item badges__item--new">новинка</li>
                     </ul>
                     <!-- Скидка -->
-                    <span class="product-card__discount">-12%</span>
+                    <span class="product-card__discount discount">-12%</span>
                     <!-- Изображение -->
                     <picture class="product-card__picture">
-                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
-                        type="image/webp">
-                      <img loading="lazy" src="img/catalog/product-thumb.png"
-                        srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
+                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x" type="image/webp">
+                      <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
                     </picture>
                   </div>
                   <!-- Цены -->
-                  <div class="product-card__price">
-                    <span class="product-card__price-current">4000 <span
-                        class="product-card__price-unit">р.</span></span>
-                    <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
+                  <div class="product-card__price price">
+                    <span class="price__current">4000 <span class="price__unit">р.</span></span>
+                    <span class="price__old">10000 <span class="price__unit">р.</span></span>
                   </div>
                   <div class="product-card__info">
                     <div class="product-card__meta">
@@ -2056,8 +1892,7 @@
                     <!-- Название -->
                     <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
                     <!-- Описание -->
-                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
-                      вязкости: 30</p>
+                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс вязкости: 30</p>
                   </div>
                   <div class="product-card__actions">
                     <!-- Количество -->
@@ -2097,20 +1932,17 @@
                       <li class="badges__item badges__item--new">новинка</li>
                     </ul>
                     <!-- Скидка -->
-                    <span class="product-card__discount">-12%</span>
+                    <span class="product-card__discount discount">-12%</span>
                     <!-- Изображение -->
                     <picture class="product-card__picture">
-                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
-                        type="image/webp">
-                      <img loading="lazy" src="img/catalog/product-thumb.png"
-                        srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
+                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x" type="image/webp">
+                      <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
                     </picture>
                   </div>
                   <!-- Цены -->
-                  <div class="product-card__price">
-                    <span class="product-card__price-current">4000 <span
-                        class="product-card__price-unit">р.</span></span>
-                    <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
+                  <div class="product-card__price price">
+                    <span class="price__current">4000 <span class="price__unit">р.</span></span>
+                    <span class="price__old">10000 <span class="price__unit">р.</span></span>
                   </div>
                   <div class="product-card__info">
                     <div class="product-card__meta">
@@ -2122,8 +1954,7 @@
                     <!-- Название -->
                     <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
                     <!-- Описание -->
-                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
-                      вязкости: 30</p>
+                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс вязкости: 30</p>
                   </div>
                   <div class="product-card__actions">
                     <!-- Количество -->
@@ -2163,20 +1994,17 @@
                       <li class="badges__item badges__item--new">новинка</li>
                     </ul>
                     <!-- Скидка -->
-                    <span class="product-card__discount">-12%</span>
+                    <span class="product-card__discount discount">-12%</span>
                     <!-- Изображение -->
                     <picture class="product-card__picture">
-                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
-                        type="image/webp">
-                      <img loading="lazy" src="img/catalog/product-thumb.png"
-                        srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
+                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x" type="image/webp">
+                      <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
                     </picture>
                   </div>
                   <!-- Цены -->
-                  <div class="product-card__price">
-                    <span class="product-card__price-current">4000 <span
-                        class="product-card__price-unit">р.</span></span>
-                    <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
+                  <div class="product-card__price price">
+                    <span class="price__current">4000 <span class="price__unit">р.</span></span>
+                    <span class="price__old">10000 <span class="price__unit">р.</span></span>
                   </div>
                   <div class="product-card__info">
                     <div class="product-card__meta">
@@ -2188,8 +2016,7 @@
                     <!-- Название -->
                     <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
                     <!-- Описание -->
-                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
-                      вязкости: 30</p>
+                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс вязкости: 30</p>
                   </div>
                   <div class="product-card__actions">
                     <!-- Количество -->
@@ -2229,20 +2056,17 @@
                       <li class="badges__item badges__item--new">новинка</li>
                     </ul>
                     <!-- Скидка -->
-                    <span class="product-card__discount">-12%</span>
+                    <span class="product-card__discount discount">-12%</span>
                     <!-- Изображение -->
                     <picture class="product-card__picture">
-                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
-                        type="image/webp">
-                      <img loading="lazy" src="img/catalog/product-thumb.png"
-                        srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
+                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x" type="image/webp">
+                      <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
                     </picture>
                   </div>
                   <!-- Цены -->
-                  <div class="product-card__price">
-                    <span class="product-card__price-current">4000 <span
-                        class="product-card__price-unit">р.</span></span>
-                    <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
+                  <div class="product-card__price price">
+                    <span class="price__current">4000 <span class="price__unit">р.</span></span>
+                    <span class="price__old">10000 <span class="price__unit">р.</span></span>
                   </div>
                   <div class="product-card__info">
                     <div class="product-card__meta">
@@ -2254,8 +2078,7 @@
                     <!-- Название -->
                     <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
                     <!-- Описание -->
-                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
-                      вязкости: 30</p>
+                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс вязкости: 30</p>
                   </div>
                   <div class="product-card__actions">
                     <!-- Количество -->
@@ -2295,20 +2118,17 @@
                       <li class="badges__item badges__item--new">новинка</li>
                     </ul>
                     <!-- Скидка -->
-                    <span class="product-card__discount">-12%</span>
+                    <span class="product-card__discount discount">-12%</span>
                     <!-- Изображение -->
                     <picture class="product-card__picture">
-                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
-                        type="image/webp">
-                      <img loading="lazy" src="img/catalog/product-thumb.png"
-                        srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
+                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x" type="image/webp">
+                      <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
                     </picture>
                   </div>
                   <!-- Цены -->
-                  <div class="product-card__price">
-                    <span class="product-card__price-current">4000 <span
-                        class="product-card__price-unit">р.</span></span>
-                    <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
+                  <div class="product-card__price price">
+                    <span class="price__current">4000 <span class="price__unit">р.</span></span>
+                    <span class="price__old">10000 <span class="price__unit">р.</span></span>
                   </div>
                   <div class="product-card__info">
                     <div class="product-card__meta">
@@ -2320,8 +2140,7 @@
                     <!-- Название -->
                     <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
                     <!-- Описание -->
-                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
-                      вязкости: 30</p>
+                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс вязкости: 30</p>
                   </div>
                   <div class="product-card__actions">
                     <!-- Количество -->
@@ -2361,20 +2180,17 @@
                       <li class="badges__item badges__item--new">новинка</li>
                     </ul>
                     <!-- Скидка -->
-                    <span class="product-card__discount">-12%</span>
+                    <span class="product-card__discount discount">-12%</span>
                     <!-- Изображение -->
                     <picture class="product-card__picture">
-                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x"
-                        type="image/webp">
-                      <img loading="lazy" src="img/catalog/product-thumb.png"
-                        srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
+                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x" type="image/webp">
+                      <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
                     </picture>
                   </div>
                   <!-- Цены -->
-                  <div class="product-card__price">
-                    <span class="product-card__price-current">4000 <span
-                        class="product-card__price-unit">р.</span></span>
-                    <span class="product-card__price-old">10000 <span class="product-card__price-unit">р.</span></span>
+                  <div class="product-card__price price">
+                    <span class="price__current">4000 <span class="price__unit">р.</span></span>
+                    <span class="price__old">10000 <span class="price__unit">р.</span></span>
                   </div>
                   <div class="product-card__info">
                     <div class="product-card__meta">
@@ -2386,8 +2202,69 @@
                     <!-- Название -->
                     <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
                     <!-- Описание -->
-                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс
-                      вязкости: 30</p>
+                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс вязкости: 30</p>
+                  </div>
+                  <div class="product-card__actions">
+                    <!-- Количество -->
+                    <div class="product-card__quantity quantity">
+                      <div class="quantity__label visually-hidden">Количество:</div>
+                      <div class="quantity__control" aria-label="Выбор количества">
+                        <button class="quantity__btn quantity__btn--minus" disabled aria-label="Уменьшить количество">
+                          <svg class="quantity__icon">
+                            <use xlink:href="img/sprite.svg#icon-minus"></use>
+                          </svg>
+                        </button>
+                        <span class="quantity__value" aria-label="Количество товара">1</span>
+                        <button class="quantity__btn quantity__btn--plus" aria-label="Увеличить количество">
+                          <svg class="quantity__icon">
+                            <use xlink:href="img/sprite.svg#icon-plus"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <!-- Кнпока Добавить в корзину -->
+                    <button class="product-card__add-to-cart add-to-cart" aria-label="Добавить в корзину">
+                      <span class="add-to-cart__text">Купить</span>
+                      <span class="add-to-cart__count">1</span>
+                      <svg class="add-to-cart__icon">
+                        <use xlink:href="img/sprite.svg#icon-cart"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </a>
+              </li>
+              <li class="account-purchases__list-item">
+                <a href="#" class="product-card">
+                  <div class="product-card__view">
+                    <!-- Бейджи -->
+                    <ul class="product-card__badges badges">
+                      <li class="badges__item badges__item--hit">хит</li>
+                      <li class="badges__item badges__item--new">новинка</li>
+                    </ul>
+                    <!-- Скидка -->
+                    <span class="product-card__discount discount">-12%</span>
+                    <!-- Изображение -->
+                    <picture class="product-card__picture">
+                      <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x" type="image/webp">
+                      <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
+                    </picture>
+                  </div>
+                  <!-- Цены -->
+                  <div class="product-card__price price">
+                    <span class="price__current">4000 <span class="price__unit">р.</span></span>
+                    <span class="price__old">10000 <span class="price__unit">р.</span></span>
+                  </div>
+                  <div class="product-card__info">
+                    <div class="product-card__meta">
+                      <!-- Бренд -->
+                      <span class="product-card__brand">VOLGA OIL</span>
+                      <!-- Артикул -->
+                      <span class="product-card__sku">Арт.: 800809</span>
+                    </div>
+                    <!-- Название -->
+                    <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
+                    <!-- Описание -->
+                    <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс вязкости: 30</p>
                   </div>
                   <div class="product-card__actions">
                     <!-- Количество -->

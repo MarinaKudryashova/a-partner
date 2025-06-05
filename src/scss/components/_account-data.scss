@@ -9,21 +9,16 @@
 
   &__form-wrap {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 477px);
     gap: 16px 24px;
+    width: 100%;
     margin: 0 0 24px;
 
-    @media screen and (max-width: 950px) {
+    @include small-mobile {
       display: flex;
       flex-direction: column;
       gap: 16px;
     }
-
-    // @include small-mobile {
-    //   display: flex;
-    //   flex-direction: column;
-    //   gap: 16px;
-    // }
   }
 
   &__input {
@@ -66,11 +61,8 @@
       border: 1px solid var(--light-red);
       outline: none;
     }
-
-    @include small-mobile {
-      width: 100%;
-    }
   }
+
 
   &__input-label {
     font-weight: 400;
@@ -150,21 +142,6 @@
   &__icon-eye {
     width: 24px;
     height: 24px;
-    fill: none;
-    stroke-width: 1.5px;
-    stroke: var(--grey);
-  }
-
-  &__clear-btn {
-    position: absolute;
-    top: 37px;
-    right: 16px;
-    cursor: pointer;
-  }
-
-  &__fill-icon {
-    width: 16px;
-    height: 16px;
     fill: none;
     stroke-width: 1.5px;
     stroke: var(--grey);
