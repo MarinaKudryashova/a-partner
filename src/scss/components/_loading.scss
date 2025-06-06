@@ -1,5 +1,6 @@
-.btn[data-loading-btn] {
+.btn[data-is-loading] {
   position: relative;
+  transition: 0.3s;
 
   &::after {
     content: '';
@@ -12,17 +13,25 @@
     border: 0.15em solid transparent;
     border-right-color: var(--grey);
     border-radius: 50%;
-    animation: button-anim 0.7s linear infinite;
-    opacity: 0;
+    transition: opacity 0.3 ease-in-out, animation 0.3 ease-in-out;
   }
+}
 
-  &.loading {
-    color: transparent;
-  }
+.btn[data-is-loading="false"] {
+  color: var(--grey);
+}
 
-  &.loading::after {
-    opacity: 1;
-  }
+.btn[data-is-loading="false"]::after {
+  animation: none;
+  opacity: 0;
+}
+.btn[data-is-loading="true"] {
+  color: transparent;
+}
+
+.btn[data-is-loading="true"]::after {
+  animation: button-anim 0.7s linear infinite;
+  opacity: 1;
 }
 
 @keyframes button-anim {
