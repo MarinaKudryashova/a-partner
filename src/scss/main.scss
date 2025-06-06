@@ -11,14 +11,14 @@
 @import "./components/catalog-menu";
 @import "./components/dropdown";
 @import "./components/burger";
-@import "./components/auth";
+@import "./components/header-bottom";
 @import "./components/searchbar";
 @import "./components/search";
 @import "./components/main-menu";
 @import "./components/breadcrumbs";
 @import "./components/phone";
 @import "./components/contacts";
-@import "./components/custom-datepicker";
+// @import "./components/custom-datepicker";
 
 @import "./components/footer";
 @import "./components/footer-top";
@@ -91,6 +91,7 @@
 @import "./components/layout";
 @import "./components/promotion-card";
 @import "./components/promotion-date";
+@import "./components/loading";
 
 // подключения компонентов страницы Акции-поста
 @import "./components/post-promotion";

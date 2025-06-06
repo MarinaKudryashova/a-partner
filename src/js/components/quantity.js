@@ -12,7 +12,7 @@ document.querySelectorAll('.quantity__btn').forEach(btn => {
 
 
     if (this.classList.contains('quantity__btn--minus')) {
-      console.log(this);
+      // console.log(this);
       if (value > 1) {
         value--;
       }

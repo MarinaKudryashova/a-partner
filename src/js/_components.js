@@ -10,5 +10,6 @@ import './components/tabs-products';
 import './components/message';
 import './components/order-nav';
 import './components/air-datepicker';
+import './components/show-hide-password';
 
 import './components/modal';

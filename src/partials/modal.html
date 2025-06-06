@@ -1,6 +1,7 @@
 <div class="graph-modal">
+
   <!-- Модальное авторизации -->
-  <div class="graph-modal__container modal" role="dialog" aria-modal="true" data-graph-target="authorization">
+  <div class="graph-modal__container modal modal--view-mobile" role="dialog" aria-modal="true" data-graph-target="authorization">
     <h2 class="modal__title">Вход в Ваш личный кабинет</h2>
     <form action="#" method="post" class="modal__form form">
       <div class="form-field">
@@ -10,15 +11,15 @@
       <div class="form-field">
         <label for="userPassword" class="form-field__label form-field__label--required" >Пароль</label>
         <input class="form-field__input" type="password" id="userPassword" name="userPassword" placeholder="Пароль" required>
-        <button class="form-field__btn form-field__btn--password btn-reset" type="button" aria-label="Показать пароль">
-          <svg class="form-field__icon account-data__icon--closed">
+        <button class="form-field__btn btn-reset" data-show-password="false" type="button" aria-label="Показать пароль">
+          <svg class="form-field__icon form-field__icon--closed">
             <use xlink:href="img/sprite.svg#icon-eye-closed"></use>
           </svg>
           <svg class="form-field__icon">
             <use xlink:href="img/sprite.svg#icon-eye"></use>
           </svg>
         </button>
-        <button type="button" class="form-field__btn form-field__btn--forgot" data-graph-path="forgotPasswordBtn">Забыли пароль?</button>
+        <button type="button" class="form-field__btn form-field__btn--forgot btn-reset" data-graph-path="forgotPasswordBtn">Забыли пароль?</button>
       </div>
       <button class="modal__btn btn btn--full">Войти</button>
     </form>
@@ -27,6 +28,24 @@
   </div>
 
   <!-- Модальное забыли пароль -->
+  <div class="graph-modal__container modal modal--view-mobile" role="dialog" aria-modal="true" data-graph-target="forgotPasswordBtn">
+    <button type="button" class="form-field__btn form-field__btn--backauth btn-reset" data-graph-path="authorization">
+      <svg class="form-field__icon form-field__icon--left">
+        <use xlink:href="img/sprite.svg#chevron-down"></use>
+      </svg>
+      Назад
+    </button>
+    <h2 class="modal__title">Забыли пароль?</h2>
+    <form action="#" method="post" class="modal__form form">
+      <div class="form-field">
+        <label for="userEmail" class="form-field__label form-field__label--required" >E-mail</label>
+        <input class="form-field__input" type="text" id="userEmail" name="userEmail" placeholder="Введите электронную почту" required>
+      </div>
+      <button class="modal__btn btn btn--full">Выслать новый пароль</button>
+    </form>
+    <button class="btn-reset graph-modal__close js-modal-close password-change__close"
+      aria-label="Закрыть модальное окно" type="button"></button>
+  </div>
 
   <!-- Модальное окно смены пароля -->
   <!-- <div class="graph-modal__container password-change" role="dialog" aria-modal="true" data-graph-target="changePassword">

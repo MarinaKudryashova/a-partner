@@ -1,0 +1,105 @@
+.header-bottom {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+  padding-bottom: 18px;
+  background-color: var(--white);
+
+		&__container {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+		}
+
+		&__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+      color: var(--black);
+
+      &--btn {
+        border: none;
+        padding: 0;
+        color: currentColor;
+        background: transparent;
+
+        .site-container--auth & {
+          display: none;
+        }
+      }
+
+      &--link {
+        display: none;
+        color: var(--accent);
+
+        & .header-bottom__text {
+          color: var(--accent);
+        }
+
+        @include hover {
+          color: var(--dark-red);
+
+          & .header-bottom__text {
+            color: var(--dark-red);
+          }
+        }
+
+        &:focus-visible {
+          outline: none;
+          color: var(--dark-red);
+
+          & .header-bottom__text {
+            color: var(--dark-red);
+          }
+        }
+
+        &:active {
+          outline: none;
+          color: var(--dark-red);
+
+          & .header-bottom__text {
+            color: var(--dark-red);
+          }
+        }
+
+        .site-container--auth & {
+          display: flex;
+        }
+      }
+		}
+
+		&__icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      fill: none;
+      stroke-width: 1.5px;
+      stroke: currentColor;
+      user-select: none;
+      transition: stroke .3s ease-in-out;
+		}
+
+    &__icon--cart {
+      fill: currentColor;
+      stroke-width: 0;
+      stroke: none;
+      transition: fill .3s ease-in-out;
+    }
+
+		&__text {
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 110%;
+      color: var(--grey);
+      user-select: none;
+      transition: color .3s ease-in-out;
+		}
+}
