@@ -51,8 +51,8 @@ document.addEventListener('DOMContentLoaded', function (e) {
       if (btnCatalog.classList.contains('is-open')) {
         disableScroll();
       } else {
-        enableScroll();
         closeCatalog();
+        enableScroll();
       }
     });
 

@@ -30,6 +30,11 @@ img {
 a {
   text-decoration: none;
 }
+// отключить подсветку в мобил. версия Chrome/Safari
+// button, a, input, [role="button"] {
+//   -webkit-tap-highlight-color: transparent;
+//   tap-highlight-color: transparent; /* Для некоторых браузеров */
+// }
 
 .site-container {
   display: flex;
@@ -41,10 +46,6 @@ a {
 .main {
   flex: 1 0 auto;
 }
-
-// .is-hidden {
-//   display: none !important; /* stylelint-disable-line declaration-no-important */
-// }
 
 .btn-reset {
   border: none;

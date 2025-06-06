@@ -200,6 +200,27 @@
       display: none;
       color: var(--accent);
 
+      & .header-middle__link-text {
+        color: var(--accent);
+      }
+
+      @include hover {
+        color: var(--dark-red);
+
+        & .header-middle__link-text {
+          color: var(--dark-red);
+        }
+      }
+
+      &:focus-visible {
+        outline: none;
+        color: var(--dark-red);
+
+        & .header-middle__link-text {
+          color: var(--dark-red);
+        }
+      }
+
       .site-container--auth & {
         display: flex;
       }
@@ -210,11 +231,13 @@
     width: 24px;
     height: 24px;
     fill: currentColor;
+    transition: fill .3s ease-in-out;
 
     &--login {
       fill: none;
       stroke: currentColor;
       stroke-width: 1.5px;
+      transition: stroke .3s ease-in-out;
     }
   }
 

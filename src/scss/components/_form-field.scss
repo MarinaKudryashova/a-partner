@@ -1,4 +1,5 @@
 .form-field {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -14,7 +15,6 @@
         content: '*';
         color: var(--accent);
       }
-
     }
   }
 
@@ -46,7 +46,49 @@
     }
   }
 
-  &__btn {}
+  &__btn--forgot {
+    align-self: flex-start;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 120%;
+    color: var(--accent);
+    transition: color .3s ease-in-out;
+
+    @include hover {
+      color: var(--dark-red);
+    }
+
+    &:focus-visible {
+      outline: none;
+      color: var(--dark-red);
+    }
+  }
+
+  &__btn--backauth {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 120%;
+    color: var(--accent);
+    transition: color .3s ease-in-out;
+
+    @include hover {
+      color: var(--dark-red);
+    }
+
+    &:focus-visible {
+      outline: none;
+      color: var(--dark-red);
+    }
+
+    & .form-field__icon--left {
+      stroke: currentColor;
+      transform: rotate(-90deg);
+    }
+  }
 
   &__icon {
     width: 24px;
@@ -54,5 +96,24 @@
     fill: none;
     stroke-width: 1.5px;
     stroke: var(--grey);
+  }
+
+  &__btn[data-show-password] {
+    position: absolute;
+    top: 34px;
+    right: 16px;
+  }
+
+  &__btn[data-show-password="false"] &__icon {
+    display: none;
+  }
+  &__btn[data-show-password="true"] &__icon {
+    display: inline-block;
+  }
+  &__btn[data-show-password="false"] &__icon--closed {
+    display: inline-block;
+  }
+  &__btn[data-show-password="true"] &__icon--closed {
+    display: none;
   }
 }

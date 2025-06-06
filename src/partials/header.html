@@ -84,7 +84,7 @@
   </div>
 
   <!-- Каталог мею -->
-  <div class="header__catalog-menu catalog-menu">
+  <div class="header__catalog-menu catalog-menu fixed-block">
     <div class="catalog-menu__container">
       <ul class="catalog-menu__list">
         <li class="catalog-menu__item">
@@ -373,11 +373,17 @@
         </svg>
         <span class="header-bottom__text">Корзина</span>
       </a>
-      <a href="account.html" class="header-bottom__item">
-        <svg class="header-bottom__icon">
+      <button class="header-bottom__item header-bottom__item--btn" data-graph-path="authorization">
+        <svg class="header-bottom__icon header-bottom__icon--login">
           <use xlink:href="img/sprite.svg#icon-login"></use>
         </svg>
         <span class="header-bottom__text">Войти</span>
+      </button>
+      <a href="account.html" class="header-bottom__item header-bottom__item--link">
+        <svg class="header-bottom__icon">
+          <use xlink:href="img/sprite.svg#icon-login"></use>
+        </svg>
+        <span class="header-bottom__text">Аккаунт</span>
       </a>
     </div>
   </div>
