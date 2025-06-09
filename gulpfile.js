@@ -249,8 +249,19 @@ const htmlInclude = () => {
       prefix: '@',
       basepath: '@file'
     }))
+    // .pipe(typograf({
+    //   locale: ['ru', 'en-US']
+    // }))
     .pipe(typograf({
-      locale: ['ru', 'en-US']
+      locale: ['ru', 'en-US'],
+      // Type of HTML entities: 'digit' - &#160;, 'name' - &nbsp;, 'default' - UTF-8
+      htmlEntity: { type: 'digit' },
+      disableRule: ['ru/optalign/*'],
+      enableRule: ['ru/money/ruble'],
+      safeTags: [
+          ['<\\?php', '\\?>'],
+          ['<no-typography>', '</no-typography>']
+      ],
     }))
     .pipe(dest(buildFolder))
     .pipe(browserSync.stream());

@@ -1,0 +1,85 @@
+.custom-checkbox {
+  &__field[disabled] ~ &__label{
+    cursor: default;
+  }
+
+  &__field[disabled] ~ &__label::before {
+    border-color: var(--border);
+    background-color: var(--border);
+  }
+
+  &__field[disabled] ~ &__label &__text {
+    color: var(--grey);
+  }
+
+  &__field:checked ~ &__label::before {
+    border-color: var(--accent);
+    background-color: var(--accent);
+  }
+
+  &__field:hover:not(.custom-checkbox__field:checked):not(.custom-checkbox__field[disabled]) ~ &__label::before {
+    border-color: var(--accent);
+    background-color: var(--light-red);
+  }
+
+  &__field:hover:not(.custom-checkbox__field[disabled]) ~ &__label &__text {
+    color: var(--accent);
+  }
+
+  &__field:focus-visible:not(.custom-checkbox__field:checked):not(.custom-checkbox__field[disabled]) ~ &__label::before {
+    border-color: var(--accent);
+    background-color: var(--light-red);
+  }
+
+  &__field:focus-visible:not(.custom-checkbox__field[disabled]) ~ &__label &__text {
+    color: var(--accent);
+  }
+
+  &__field:checked ~ &__label &__icon {
+    opacity: 1;
+  }
+
+  &__label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+  }
+
+  &__label::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid var(--grey);
+    border-radius: 4px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--white);
+    transition: border-color .3s ease-in-out, background-color .3s ease-in-out;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: var(--black);
+    user-select: none;
+    transition: color .3s ease-in-out;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 10px;
+    height: 10px;
+    fill: none;
+    stroke-width: 2px;
+    stroke: var(--white);
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+  }
+}
+
+
+

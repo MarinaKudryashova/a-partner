@@ -7,6 +7,26 @@
   <div class="site-container site-container--auth">
     @include('partials/header.html')
     <main class="main">
+      <div class="page__container container">
+        @include('partials/breadcrumbs-category.html')
+        <h1 class="page__title">Наименование категории</h1>
+        <div class="category-content">
+          <!-- Боковая панель фильтров -->
+            @include('partials/filter-category.html')
+           <!-- Основная область каталога -->
+          <div class="category-content__area">
+            <!-- Подкатегории -->
+            @include('partials/nav-subcategories.html')
+            @include('partials/category-config.html')
+            <!-- Сетка товаров(по умолчанию) (варианты отображение сетка, список, расширенный список) -->
+            @include('partials/products-area.html')
+            <!-- Кнопка "Показать еще" и пагинация -->
+             @include('partials/page-controls.html')
+          </div>
+        </div>
+        <!-- Смотрели -->
+         @include('partials/offer-watched-category.html')
+      </div>
     </main>
     @include('partials/footer.html')
     @include('partials/modal.html')

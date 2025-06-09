@@ -1,0 +1,79 @@
+.page-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: 24px;
+
+  &__more-btn {
+    min-width: 328px;
+  }
+
+  // .page-controls__paginations
+
+  &__paginations {
+  }
+}
+
+.paginations {
+  display: flex;
+  gap: 8px;
+
+  & a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    width: 40px;
+    height: 40px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: center;
+    cursor: pointer;
+    color: var(--black);
+    transition: color var(--duration) ease-in-out, border-color var(--duration) ease-in-out, background-color var(--duration) ease-in-out;
+
+    @include hover {
+      &:not(a[disabled]) {
+        color: var(--accent);
+      }
+    }
+
+    &:focus-visible {
+      outline: none;
+      &:not(a[disabled]) {
+        border-color: var(--accent);
+        color: var(--accent);
+        background-color: var(--light-red);
+      }
+    }
+  }
+
+  & a[disabled] {
+    cursor: default;
+    opacity: 0.3;
+  }
+
+  & a.is-active {
+    color: var(--accent);
+  }
+
+  &__prev, &__next {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke-width: 1.5px;
+    stroke: currentColor;
+  }
+
+  &__prev {
+    transform: rotate(-90deg);
+  }
+
+  &__next {
+    transform: rotate(90deg);
+  }
+}

@@ -1,0 +1,32 @@
+.filter-btn {
+  display: none;
+  flex-shrink: 0;
+  border: none;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  color: var(--grey);
+  background-color: transparent;
+  cursor: pointer;
+  transition: color .3s ease-in-out;
+
+  @include hover {
+    color: var(--accent);
+  }
+
+  &:focus-visible{
+    outline: none;
+    color: var(--accent);
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.5px;
+    user-select: none;
+    pointer-events: none;
+    transition: stroke .3s ease-in-out;
+  }
+}

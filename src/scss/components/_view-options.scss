@@ -1,0 +1,52 @@
+.view-options {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  &__label {
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--black);
+  }
+
+  &__btn {
+    flex-shrink: 0;
+    border: none;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    color: var(--grey);
+    background-color: transparent;
+    cursor: pointer;
+    transition: color .3s ease-in-out;
+
+    @include hover {
+      color: var(--accent);
+    }
+
+    &:focus-visible{
+      outline: none;
+      color: var(--accent);
+    }
+
+    &.is-active {
+      color: var(--accent);
+    }
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.5px;
+    user-select: none;
+    pointer-events: none;
+
+    &--grid {
+      fill: currentColor;
+      stroke: none;
+      transition: fill .3s ease-in-out;
+    }
+  }
+}

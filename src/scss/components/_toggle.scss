@@ -1,0 +1,40 @@
+.toggle {
+
+  &__item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__input[type="checkbox"] {
+    display: none;
+  }
+
+  &__slider {
+    position: relative;
+    width: 32px;
+    height: 16px;
+    background-color: var(--grey);
+    border-radius: 30px;
+    transition: background-color 0.3s;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      border-radius: 100%;
+      background-color: var(--white);
+      top: 1px;
+      left: 1px;
+      transition: transform 0.3s;
+    }
+  }
+
+  &__input:checked + &__slider {
+    background-color: var(--accent);
+  }
+  &__input:checked + &__slider:before {
+    transform: translateX(16px);
+  }
+}

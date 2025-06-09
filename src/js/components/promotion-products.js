@@ -2,8 +2,6 @@ import { isMobile, isTablet, isDesktop } from '../functions/check-viewport';
 import { loadMoreCards } from '../functions/loadMoreCards';
 
 document.addEventListener('DOMContentLoaded', function() {
-    const promotionList = document.getElementById('postPromotionProductsList');
-    const allCards = document.querySelectorAll('.product-card');
     const loadMoreBtn = document.querySelector('.post-promotion-products__more-btn');
     let visibleCount; // Показываем первые 9 карточки
     let loadMoreCount; // Показываем по 9 дополнительные карточки
@@ -27,5 +25,5 @@ document.addEventListener('DOMContentLoaded', function() {
       visibleCount = 4; // Показываем первые 9 карточки
       loadMoreCount = 4; // Показываем по 9 дополнительные карточки
     }
-    loadMoreCards('.product-card', loadMoreBtn, visibleCount, loadMoreCount);
+    loadMoreCards('#postPromotionProductsList .product-card', loadMoreBtn, visibleCount, loadMoreCount);
 });

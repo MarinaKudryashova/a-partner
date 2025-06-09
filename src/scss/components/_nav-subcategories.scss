@@ -1,0 +1,30 @@
+.nav-subcategories {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+
+  &__link {
+    border-radius: 10px;
+    padding: 8px 16px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 120%;
+    text-align: center;
+    color: var(--grey);
+    background-color: var(--bg);
+    transition: color .3s ease-in-out, background-color .3s ease-in-out;
+
+    @include hover {
+      color: var(--accent)
+    }
+
+    &:focus-visible {
+      outline: none;
+      color: var(--accent);
+      background-color: var(--light-red);
+    }
+  }
+}

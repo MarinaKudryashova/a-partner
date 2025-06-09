@@ -1,0 +1,29 @@
+.product-card-params {
+  @include list-reset;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;     /* Количество строк */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 2.4em;             /* Примерная высота 2 строк (1.4em на строку) */
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2em;
+  color: var(--grey);
+
+  @include mobile {
+    font-size: 10px;
+    line-height: 110%;
+  }
+
+  &__row {
+    display: inline;
+
+    &::after {
+      content: ',';
+      margin-right: 4px;
+      margin-left: -4px;
+    }
+  }
+}

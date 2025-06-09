@@ -1,0 +1,286 @@
+<section class="filter">
+  <h2 class="filter__title">Фильтры</h2>
+
+  <!-- Поиск -->
+  <div class="filter-widget">
+    <form action="#" class="search" aria-label="форма поиска по фильтрам">
+      <svg class="search__icon">
+        <use xlink:href="img/sprite.svg#icon-search"></use>
+      </svg>
+      <input type="search" class="search__input input-reset" placeholder="Поиск по фильтрам ..." aria-label="Введите поисковый запрос">
+      <button type="reset" class="search__btn-clear btn-reset" aria-label="очистить строку поиска">
+        <svg class="search__icon-clear">
+          <use xlink:href="img/sprite.svg#icon-clear"></use>
+        </svg>
+      </button>
+    </form>
+  </div>
+
+  <!-- Наличие -->
+  <div class="filter-widget">
+    <div class="filter-widget__header">
+      <span class="filter-widget__name">Наличие в магазине</span>
+      <div class="filter-widget__toggle toggle">
+        <label class="toggle__item">
+          <input type="checkbox" class="toggle__input" id="in-stock-toggle" name="in-stock-toggle" checked>
+          <span class="toggle__slider"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Цена -->
+  <div class="filter-widget is-open" data-accordion>
+    <div class="filter-widget__header">
+      <button class="filter-widget__open" data-accordion-control aria-expanded="true">
+        <span class="filter-widget__name">Цена</span>
+        <svg class="filter-widget__icon">
+          <use xlink:href="img/sprite.svg#chevron-down"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="filter-widget__body" data-accordion-content aria-hidden="true">
+      <div class="price-filter">
+        <div class="price-filter__groups-field">
+          <label for="min-price" class="price-filter__field">
+            <span class="price-filter__prefix">от</span>
+            <input type="number" id="min-price" name="min-price" class="price-filter__input" min="0" max="8000" value="0">
+          </label>
+          <label for="max-price" class="price-filter__field">
+            <span class="price-filter__prefix">до</span>
+            <input type="number" id="max-price" name="max-price" class="price-filter__input" min="0" max="8000" value="8000">
+          </label>
+        </div>
+        <div class="price-filter__slider">
+          <div class="price-filter__track"></div>
+          <input type="range" class="price-filter__range min" min="0" max="8000" value="0" step="100">
+          <input type="range" class="price-filter__range max" min="0" max="8000" value="8000" step="100">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Скидка -->
+  <div class="filter-widget">
+    <div class="filter-widget__header">
+      <span class="filter-widget__name">Скидка на товар</span>
+      <div class="filter-widget__toggle toggle">
+        <label class="toggle__item">
+          <input type="checkbox" class="toggle__input" id="discount-only" name="discount-only">
+          <span class="toggle__slider"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Производитель -->
+  <div class="filter-widget is-open" data-accordion>
+    <div class="filter-widget__header">
+      <button class="filter-widget__open" data-accordion-control aria-expanded="true">
+        <span class="filter-widget__name">Производитель</span>
+        <svg class="filter-widget__icon">
+          <use xlink:href="img/sprite.svg#chevron-down"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="filter-widget__body" data-accordion-content aria-hidden="true">
+      <div class="custom-checkbox" data-visible="true">
+        <input class="custom-checkbox__field visually-hidden" type="checkbox" id="brand-ID-1" name="brand-ID-1">
+        <label class="custom-checkbox__label" for="brand-ID-1">
+          <span class="custom-checkbox__text">Лукойл</span>
+          <svg class="custom-checkbox__icon" width="10" height="10" aria-hidden="true">
+            <use xlink:href="img/sprite.svg#icon-tick"></use>
+          </svg>
+        </label>
+      </div>
+      <div class="custom-checkbox" data-visible="true">
+        <input class="custom-checkbox__field visually-hidden" type="checkbox" id="brand-ID-2" name="brand-ID-2" disabled>
+        <label class="custom-checkbox__label" for="brand-ID-2">
+          <span class="custom-checkbox__text">Лукойл</span>
+          <svg class="custom-checkbox__icon" width="10" height="10" aria-hidden="true">
+            <use xlink:href="img/sprite.svg#icon-tick"></use>
+          </svg>
+        </label>
+      </div>
+      <div class="custom-checkbox" data-visible="true">
+        <input class="custom-checkbox__field visually-hidden" type="checkbox" id="brand-ID-3" name="brand-ID-3">
+        <label class="custom-checkbox__label" for="brand-ID-3">
+          <span class="custom-checkbox__text">Лукойл</span>
+          <svg class="custom-checkbox__icon" width="10" height="10" aria-hidden="true">
+            <use xlink:href="img/sprite.svg#icon-tick"></use>
+          </svg>
+        </label>
+      </div>
+      <div class="custom-checkbox" data-visible="true">
+        <input class="custom-checkbox__field visually-hidden" type="checkbox" id="brand-ID-4" name="brand-ID-4" checked>
+        <label class="custom-checkbox__label" for="brand-ID-4">
+          <span class="custom-checkbox__text">Лукойл</span>
+          <svg class="custom-checkbox__icon" width="10" height="10" aria-hidden="true">
+            <use xlink:href="img/sprite.svg#icon-tick"></use>
+          </svg>
+        </label>
+      </div>
+
+      <div class="custom-checkbox" data-visible="false">
+        <input class="custom-checkbox__field visually-hidden" type="checkbox" id="brand-ID-5" name="brand-ID-5">
+        <label class="custom-checkbox__label" for="brand-ID-5">
+          <span class="custom-checkbox__text">Лукойл</span>
+          <svg class="custom-checkbox__icon" width="10" height="10" aria-hidden="true">
+            <use xlink:href="img/sprite.svg#icon-tick"></use>
+          </svg>
+        </label>
+      </div>
+      <div class="custom-checkbox" data-visible="false">
+        <input class="custom-checkbox__field visually-hidden" type="checkbox" id="brand-ID-6" name="brand-ID-6">
+        <label class="custom-checkbox__label" for="brand-ID-6">
+          <span class="custom-checkbox__text">Лукойл</span>
+          <svg class="custom-checkbox__icon" width="10" height="10" aria-hidden="true">
+            <use xlink:href="img/sprite.svg#icon-tick"></use>
+          </svg>
+        </label>
+      </div>
+      <div class="custom-checkbox" data-visible="false">
+        <input class="custom-checkbox__field visually-hidden" type="checkbox" id="brand-ID-6" name="brand-ID-6">
+        <label class="custom-checkbox__label" for="brand-ID-6">
+          <span class="custom-checkbox__text">Лукойл</span>
+          <svg class="custom-checkbox__icon" width="10" height="10" aria-hidden="true">
+            <use xlink:href="img/sprite.svg#icon-tick"></use>
+          </svg>
+        </label>
+      </div>
+      <button class="filter-widget__more-btn btn-reset" data-show-more type="button">Показать ещё</button>
+    </div>
+  </div>
+
+  <!-- Тип базового масла -->
+  <div class="filter-widget" data-accordion>
+    <div class="filter-widget__header">
+      <button class="filter-widget__open" data-accordion-control aria-expanded="false">
+        <span class="filter-widget__name">Тип базового масла</span>
+        <svg class="filter-widget__icon">
+          <use xlink:href="img/sprite.svg#chevron-down"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="filter-widget__body" data-accordion-content aria-hidden="false">
+      <div class="custom-checkbox" data-visible="true">
+        <input class="custom-checkbox__field visually-hidden" type="checkbox" id="mineralische" name="mineralische">
+        <label class="custom-checkbox__label" for="mineralische">
+          <span class="custom-checkbox__text">Миниральное</span>
+          <svg class="custom-checkbox__icon" width="10" height="10" aria-hidden="true">
+            <use xlink:href="img/sprite.svg#icon-tick"></use>
+          </svg>
+        </label>
+      </div>
+      <div class="custom-checkbox" data-visible="true">
+        <input class="custom-checkbox__field visually-hidden" type="checkbox" id="teilesyntetisches" name="teilesyntetisches">
+        <label class="custom-checkbox__label" for="teilesyntetisches">
+          <span class="custom-checkbox__text">Полусинтетические</span>
+          <svg class="custom-checkbox__icon" width="10" height="10" aria-hidden="true">
+            <use xlink:href="img/sprite.svg#icon-tick"></use>
+          </svg>
+        </label>
+      </div>
+      <div class="custom-checkbox" data-visible="true">
+        <input class="custom-checkbox__field visually-hidden" type="checkbox" id="vollsyntetisches" name="vollsyntetisches">
+        <label class="custom-checkbox__label" for="vollsyntetisches">
+          <span class="custom-checkbox__text">Синтетические</span>
+          <svg class="custom-checkbox__icon" width="10" height="10" aria-hidden="true">
+            <use xlink:href="img/sprite.svg#icon-tick"></use>
+          </svg>
+        </label>
+      </div>
+    </div>
+  </div>
+
+    <!-- Класс вязкости SAE -->
+  <div class="filter-widget is-open" data-accordion>
+    <div class="filter-widget__header">
+      <button class="filter-widget__open" data-accordion-control aria-expanded="true">
+        <span class="filter-widget__name">
+          Класс вязкости SAE
+          <div class="filter-widget__tooltip tooltip" data-tooltip>
+            <div class="tooltip__trigger" tabindex="0" aria-describedby="tooltip-1" aria-label="" aria-expanded="false" role="button" data-tooltip-trigger>
+              <svg class="tooltip__icon" aria-hidden="true">
+                <use xlink:href="img/sprite.svg#question"></use>
+              </svg>
+            </div>
+            <span class="tooltip__content" id="tooltip-1" role="tooltip" data-tooltip-content>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+          </div>
+        </span>
+        <svg class="filter-widget__icon">
+          <use xlink:href="img/sprite.svg#chevron-down"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="filter-widget__body" data-accordion-content aria-hidden="true">
+      <div class="custom-radio">
+        <input class="custom-radio__field visually-hidden" type="radio" id="viscosity-grade-true" name="viscosity-grade" value="true" required checked>
+        <label class="custom-radio__label" for="viscosity-grade-true">Да</label>
+      </div>
+      <div class="custom-radio">
+        <input class="custom-radio__field visually-hidden" type="radio" id="viscosity-grade-false" name="viscosity-grade" value="false" required>
+        <label class="custom-radio__label" for="viscosity-grade-false">Нет</label>
+      </div>
+    </div>
+  </div>
+
+    <!-- Объём -->
+  <div class="filter-widget is-open" data-accordion>
+    <div class="filter-widget__header">
+      <button class="filter-widget__open" data-accordion-control aria-expanded="true">
+        <span class="filter-widget__name">Объём</span>
+        <svg class="filter-widget__icon">
+          <use xlink:href="img/sprite.svg#chevron-down"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="filter-widget__body" data-accordion-content aria-hidden="true">
+      <div class="custom-radio">
+        <input class="custom-radio__field visually-hidden" type="radio" id="volume-true" name="volume" value="true" required>
+        <label class="custom-radio__label" for="volume-true">Да</label>
+      </div>
+      <div class="custom-radio">
+        <input class="custom-radio__field visually-hidden" type="radio" id="volume-false" name="volume" value="false" required checked>
+        <label class="custom-radio__label" for="volume-false">Нет</label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Применение -->
+  <div class="filter-widget is-open" data-accordion>
+    <div class="filter-widget__header">
+      <button class="filter-widget__open" data-accordion-control aria-expanded="true">
+        <span class="filter-widget__name">
+          Применение
+          <div class="filter-widget__tooltip tooltip" data-tooltip>
+            <div class="tooltip__trigger" tabindex="0" aria-describedby="tooltip-2" aria-label="" aria-expanded="false" role="button" data-tooltip-trigger>
+              <svg class="tooltip__icon" aria-hidden="true">
+                <use xlink:href="img/sprite.svg#question"></use>
+              </svg>
+            </div>
+            <span class="tooltip__content" id="tooltip-2" role="tooltip" data-tooltip-content>Lorem ipsum dolor sit amet, consectetur adipiscing elit.....</span>
+          </div>
+        </span>
+        <svg class="filter-widget__icon">
+          <use xlink:href="img/sprite.svg#chevron-down"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="filter-widget__body" data-accordion-content aria-hidden="true">
+      <div class="custom-radio">
+        <input class="custom-radio__field visually-hidden" type="radio" id="use-true" name="use" value="true" required checked>
+        <label class="custom-radio__label" for="use-true">Да</label>
+      </div>
+      <div class="custom-radio">
+        <input class="custom-radio__field visually-hidden" type="radio" id="use-false" name="use" value="false" required>
+        <label class="custom-radio__label" for="use-false">Нет</label>
+      </div>
+    </div>
+  </div>
+  <div class="filter__action">
+    <button class="filter__btn btn btn--grey" type="reset">Сбросить</button>
+    <button class="filter__btn filter__btn--apply btn btn--stroke" type="button">Применить</button>
+  </div>
+
+</section>
