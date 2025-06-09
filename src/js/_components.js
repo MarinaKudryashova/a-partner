@@ -11,5 +11,11 @@ import './components/message';
 import './components/order-nav';
 import './components/air-datepicker';
 import './components/show-hide-password';
+import './components/sort-options';
+import './components/view-options';
+import './components/price-range';
+import './components/fiter-accordion';
+import './components/showmore';
+import './components/tooltips';
 
 import './components/modal';

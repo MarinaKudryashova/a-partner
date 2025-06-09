@@ -20,256 +20,400 @@
       <!-- Слайд START -->
       <div class="swiper-slide">
         <!-- Карточка товара -->
-        <a href="product.html" class="product-card">
-          <div class="product-card__view">
+        <article class="product-card" itemscope itemtype="http://schema.org/Product">
+          <a href="product.html" class="product-card__link"></a>
+          <div class="product-card__view" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
             <!-- Бейджи -->
-            <ul class="product-card__badges badges">
-              <li class="badges__item badges__item--hit">хит</li>
-              <li class="badges__item badges__item--new">новинка</li>
+            <ul class="product-card__badges badges" aria-label="Метки товара">
+              <li class="badges__item badges__item--hit" aria-label="Хит продаж" itemprop="itemCondition">хит</li>
+              <li class="badges__item badges__item--new" aria-label="Новинка" itemprop="itemCondition">новинка</li>
             </ul>
             <!-- Скидка -->
-            <span class="product-card__discount discount">-12%</span>
+            <span class="product-card__discount discount" aria-label="Скидка 12 процентов" itemprop="discount">-12%</span>
             <!-- Изображение -->
             <picture class="product-card__picture">
               <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x" type="image/webp">
-              <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
+              <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара VOLGA OIL Дизель М-10Г2к 10л" itemprop="contentUrl">
+                <meta itemprop="width" content="211">
+                <meta itemprop="height" content="211">
             </picture>
           </div>
-          <!-- Цены -->
-          <div class="product-card__price price">
-            <span class="price__current">4000 <span class="price__unit">р.</span></span>
-            <span class="price__old">10000 <span class="price__unit">р.</span></span>
+          <!-- Цены (отображение сетка) -->
+          <div class="product-card__price product-card__price--grid price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+            <meta itemprop="priceCurrency" content="RUB">
+            <span class="price__current" itemprop="price" content="4000">4000 <span class="price__unit">р.</span></span>
+            <span class="price__old" aria-label="Старая цена 10 000 рублей" itemprop="price">10000 <span class="price__unit">р.</span></span>
+            <link itemprop="availability" href="http://schema.org/InStock">
+            <meta itemprop="priceValidUntil" content="2025-12-31">
+            <meta itemprop="url" content="https://autopartner.cosmo-design.ru/product.html">
+            <meta itemprop="itemCondition" content="http://schema.org/NewCondition">
           </div>
           <div class="product-card__info">
             <div class="product-card__meta">
               <!-- Бренд -->
-              <span class="product-card__brand">VOLGA OIL</span>
+              <span class="product-card__brand" itemprop="brand" itemscope itemtype="http://schema.org/Brand">
+                <span itemprop="name">VOLGA OIL</span>
+              </span>
               <!-- Артикул -->
-              <span class="product-card__sku">Арт.: 800809</span>
+              <span class="product-card__sku" itemprop="sku">Арт.: 800809</span>
+              <meta itemprop="mpn" content="800809">
             </div>
             <!-- Название -->
-            <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
+            <h3 class="product-card__title" itemprop="name">VOLGA OIL Дизель М-10Г2к 10л.</h3>
             <!-- Описание -->
-            <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс вязкости: 30</p>
+            <p class="product-card__descr" itemprop="description">Ресурсосберегающее моторное масло для бензиновых и дизельных двигателей легковых автомобилей линейки AVISTA pace EVO для транспортных средств с увеличенным интервалом технического обслуживания и</p>
+            <!-- Параметры -->
+            <div itemprop="additionalProperty" itemscope itemtype="http://schema.org/PropertyValue">
+              <ul class="product-card__params product-card-params">
+                <li class="product-card-params__row" itemprop="name" content="Тип базового масла">
+                  <span class="product-card-params__param">Тип базового масла:</span>
+                  <span class="product-card-params__bottom"></span>
+                  <span class="product-card-params__value" itemprop="value">Минеральное</span>
+                </li>
+                <li class="product-card-params__row" itemprop="name" content="Тип двигателя">
+                  <span class="product-card-params__param">Тип двигателя:</span>
+                  <span class="product-card-params__bottom"></span>
+                  <span class="product-card-params__value" itemprop="value">дизельный</span>
+                </li>
+                <li class="product-card-params__row" itemprop="name" content="Класс вязкости">
+                  <span class="product-card-params__param">Класс вязкости:</span>
+                  <span class="product-card-params__bottom"></span>
+                  <span class="product-card-params__value" itemprop="value">дизельный</span>
+                </li>
+              </ul>
+            </div>
           </div>
           <div class="product-card__actions">
             <!-- Количество -->
-            <div class="product-card__quantity quantity">
+            <div class="product-card__quantity quantity" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
               <div class="quantity__label visually-hidden">Количество:</div>
-              <div class="quantity__control" aria-label="Выбор количества">
-                <button class="quantity__btn quantity__btn--minus" disabled aria-label="Уменьшить количество">
-                  <svg class="quantity__icon">
+              <div class="quantity__control" role="group" aria-label="Выбор количества">
+                <button class="quantity__btn quantity__btn--minus" disabled aria-label="Уменьшить количество" type="button">
+                  <svg class="quantity__icon" aria-hidden="true">
                     <use xlink:href="img/sprite.svg#icon-minus"></use>
                   </svg>
                 </button>
-                <span class="quantity__value" aria-label="Количество товара">1</span>
-                <button class="quantity__btn quantity__btn--plus" aria-label="Увеличить количество">
-                  <svg class="quantity__icon">
+                <span class="quantity__value" aria-live="polite" itemprop="inventoryLevel" content="1">1</span>
+                <button class="quantity__btn quantity__btn--plus" aria-label="Увеличить количество" type="button">
+                  <svg class="quantity__icon" aria-hidden="true">
                     <use xlink:href="img/sprite.svg#icon-plus"></use>
                   </svg>
                 </button>
               </div>
             </div>
             <!-- Кнпока Добавить в корзину -->
-            <button class="product-card__add-to-cart add-to-cart" aria-label="Добавить в корзину">
+            <button class="product-card__add-to-cart add-to-cart" aria-label="Добавить в корзину товар VOLGA OIL Дизель М-10Г2к 10л" type="button" data-product-id="158503" itemprop="potentialAction" itemscope itemtype="http://schema.org/OrderAction">
               <span class="add-to-cart__text">Купить</span>
-              <span class="add-to-cart__count">1</span>
-              <svg class="add-to-cart__icon">
+              <span class="add-to-cart__count"aria-hidden="true">1</span>
+              <svg class="add-to-cart__icon" aria-hidden="true">
                 <use xlink:href="img/sprite.svg#icon-cart"></use>
               </svg>
+              <meta itemprop="target" content="https://autopartner.cosmo-design.ru/cart/add/158503">
             </button>
           </div>
-        </a>
+
+          <!-- Дополнительные метаданные -->
+          <meta itemprop="category" content="Моторные масла">
+          <meta itemprop="productID" content="pid:158503">
+        </article>
       </div>
       <!-- Слайд END -->
       <div class="swiper-slide">
         <!-- Карточка товара -->
-        <a href="#" class="product-card">
-          <div class="product-card__view">
+        <article class="product-card" itemscope itemtype="http://schema.org/Product">
+          <a href="product.html" class="product-card__link"></a>
+          <div class="product-card__view" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
             <!-- Бейджи -->
-            <ul class="product-card__badges badges">
-              <li class="badges__item badges__item--hit">хит</li>
-              <li class="badges__item badges__item--new">новинка</li>
+            <ul class="product-card__badges badges" aria-label="Метки товара">
+              <li class="badges__item badges__item--hit" aria-label="Хит продаж" itemprop="itemCondition">хит</li>
+              <li class="badges__item badges__item--new" aria-label="Новинка" itemprop="itemCondition">новинка</li>
             </ul>
             <!-- Скидка -->
-            <span class="product-card__discount discount">-12%</span>
+            <span class="product-card__discount discount" aria-label="Скидка 12 процентов" itemprop="discount">-12%</span>
             <!-- Изображение -->
             <picture class="product-card__picture">
               <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x" type="image/webp">
-              <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
+              <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара VOLGA OIL Дизель М-10Г2к 10л" itemprop="contentUrl">
+                <meta itemprop="width" content="211">
+                <meta itemprop="height" content="211">
             </picture>
           </div>
-          <!-- Цены -->
-          <div class="product-card__price price">
-            <span class="price__current">4000 <span class="price__unit">р.</span></span>
-            <span class="price__old">10000 <span class="price__unit">р.</span></span>
+          <!-- Цены (отображение сетка) -->
+          <div class="product-card__price product-card__price--grid price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+            <meta itemprop="priceCurrency" content="RUB">
+            <span class="price__current" itemprop="price" content="4000">4000 <span class="price__unit">р.</span></span>
+            <span class="price__old" aria-label="Старая цена 10 000 рублей" itemprop="price">10000 <span class="price__unit">р.</span></span>
+            <link itemprop="availability" href="http://schema.org/InStock">
+            <meta itemprop="priceValidUntil" content="2025-12-31">
+            <meta itemprop="url" content="https://autopartner.cosmo-design.ru/product.html">
+            <meta itemprop="itemCondition" content="http://schema.org/NewCondition">
           </div>
           <div class="product-card__info">
             <div class="product-card__meta">
               <!-- Бренд -->
-              <span class="product-card__brand">VOLGA OIL</span>
+              <span class="product-card__brand" itemprop="brand" itemscope itemtype="http://schema.org/Brand">
+                <span itemprop="name">VOLGA OIL</span>
+              </span>
               <!-- Артикул -->
-              <span class="product-card__sku">Арт.: 800809</span>
+              <span class="product-card__sku" itemprop="sku">Арт.: 800809</span>
+              <meta itemprop="mpn" content="800809">
             </div>
             <!-- Название -->
-            <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
+            <h3 class="product-card__title" itemprop="name">VOLGA OIL Дизель М-10Г2к 10л.</h3>
             <!-- Описание -->
-            <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс вязкости: 30</p>
+            <p class="product-card__descr" itemprop="description">Ресурсосберегающее моторное масло для бензиновых и дизельных двигателей легковых автомобилей линейки AVISTA pace EVO для транспортных средств с увеличенным интервалом технического обслуживания и</p>
+            <!-- Параметры -->
+            <div itemprop="additionalProperty" itemscope itemtype="http://schema.org/PropertyValue">
+              <ul class="product-card__params product-card-params">
+                <li class="product-card-params__row" itemprop="name" content="Тип базового масла">
+                  <span class="product-card-params__param">Тип базового масла:</span>
+                  <span class="product-card-params__bottom"></span>
+                  <span class="product-card-params__value" itemprop="value">Минеральное</span>
+                </li>
+                <li class="product-card-params__row" itemprop="name" content="Тип двигателя">
+                  <span class="product-card-params__param">Тип двигателя:</span>
+                  <span class="product-card-params__bottom"></span>
+                  <span class="product-card-params__value" itemprop="value">дизельный</span>
+                </li>
+                <li class="product-card-params__row" itemprop="name" content="Класс вязкости">
+                  <span class="product-card-params__param">Класс вязкости:</span>
+                  <span class="product-card-params__bottom"></span>
+                  <span class="product-card-params__value" itemprop="value">дизельный</span>
+                </li>
+              </ul>
+            </div>
           </div>
           <div class="product-card__actions">
             <!-- Количество -->
-            <div class="product-card__quantity quantity">
+            <div class="product-card__quantity quantity" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
               <div class="quantity__label visually-hidden">Количество:</div>
-              <div class="quantity__control" aria-label="Выбор количества">
-                <button class="quantity__btn quantity__btn--minus" disabled aria-label="Уменьшить количество">
-                  <svg class="quantity__icon">
+              <div class="quantity__control" role="group" aria-label="Выбор количества">
+                <button class="quantity__btn quantity__btn--minus" disabled aria-label="Уменьшить количество" type="button">
+                  <svg class="quantity__icon" aria-hidden="true">
                     <use xlink:href="img/sprite.svg#icon-minus"></use>
                   </svg>
                 </button>
-                <span class="quantity__value" aria-label="Количество товара">1</span>
-                <button class="quantity__btn quantity__btn--plus" aria-label="Увеличить количество">
-                  <svg class="quantity__icon">
+                <span class="quantity__value" aria-live="polite" itemprop="inventoryLevel" content="1">1</span>
+                <button class="quantity__btn quantity__btn--plus" aria-label="Увеличить количество" type="button">
+                  <svg class="quantity__icon" aria-hidden="true">
                     <use xlink:href="img/sprite.svg#icon-plus"></use>
                   </svg>
                 </button>
               </div>
             </div>
             <!-- Кнпока Добавить в корзину -->
-            <button class="product-card__add-to-cart add-to-cart" aria-label="Добавить в корзину">
+            <button class="product-card__add-to-cart add-to-cart" aria-label="Добавить в корзину товар VOLGA OIL Дизель М-10Г2к 10л" type="button" data-product-id="158503" itemprop="potentialAction" itemscope itemtype="http://schema.org/OrderAction">
               <span class="add-to-cart__text">Купить</span>
-              <span class="add-to-cart__count">1</span>
-              <svg class="add-to-cart__icon">
+              <span class="add-to-cart__count"aria-hidden="true">1</span>
+              <svg class="add-to-cart__icon" aria-hidden="true">
                 <use xlink:href="img/sprite.svg#icon-cart"></use>
               </svg>
+              <meta itemprop="target" content="https://autopartner.cosmo-design.ru/cart/add/158503">
             </button>
           </div>
-        </a>
+
+          <!-- Дополнительные метаданные -->
+          <meta itemprop="category" content="Моторные масла">
+          <meta itemprop="productID" content="pid:158503">
+        </article>
       </div>
       <div class="swiper-slide">
         <!-- Карточка товара -->
-        <a href="#" class="product-card">
-          <div class="product-card__view">
+        <article class="product-card" itemscope itemtype="http://schema.org/Product">
+          <a href="product.html" class="product-card__link"></a>
+          <div class="product-card__view" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
             <!-- Бейджи -->
-            <ul class="product-card__badges badges">
-              <li class="badges__item badges__item--hit">хит</li>
-              <li class="badges__item badges__item--new">новинка</li>
+            <ul class="product-card__badges badges" aria-label="Метки товара">
+              <li class="badges__item badges__item--hit" aria-label="Хит продаж" itemprop="itemCondition">хит</li>
+              <li class="badges__item badges__item--new" aria-label="Новинка" itemprop="itemCondition">новинка</li>
             </ul>
             <!-- Скидка -->
-            <span class="product-card__discount discount">-12%</span>
+            <span class="product-card__discount discount" aria-label="Скидка 12 процентов" itemprop="discount">-12%</span>
             <!-- Изображение -->
             <picture class="product-card__picture">
               <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x" type="image/webp">
-              <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
+              <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара VOLGA OIL Дизель М-10Г2к 10л" itemprop="contentUrl">
+                <meta itemprop="width" content="211">
+                <meta itemprop="height" content="211">
             </picture>
           </div>
-          <!-- Цены -->
-          <div class="product-card__price price">
-            <span class="price__current">4000 <span class="price__unit">р.</span></span>
-            <span class="price__old">10000 <span class="price__unit">р.</span></span>
+          <!-- Цены (отображение сетка) -->
+          <div class="product-card__price product-card__price--grid price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+            <meta itemprop="priceCurrency" content="RUB">
+            <span class="price__current" itemprop="price" content="4000">4000 <span class="price__unit">р.</span></span>
+            <span class="price__old" aria-label="Старая цена 10 000 рублей" itemprop="price">10000 <span class="price__unit">р.</span></span>
+            <link itemprop="availability" href="http://schema.org/InStock">
+            <meta itemprop="priceValidUntil" content="2025-12-31">
+            <meta itemprop="url" content="https://autopartner.cosmo-design.ru/product.html">
+            <meta itemprop="itemCondition" content="http://schema.org/NewCondition">
           </div>
           <div class="product-card__info">
             <div class="product-card__meta">
               <!-- Бренд -->
-              <span class="product-card__brand">VOLGA OIL</span>
+              <span class="product-card__brand" itemprop="brand" itemscope itemtype="http://schema.org/Brand">
+                <span itemprop="name">VOLGA OIL</span>
+              </span>
               <!-- Артикул -->
-              <span class="product-card__sku">Арт.: 800809</span>
+              <span class="product-card__sku" itemprop="sku">Арт.: 800809</span>
+              <meta itemprop="mpn" content="800809">
             </div>
             <!-- Название -->
-            <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
+            <h3 class="product-card__title" itemprop="name">VOLGA OIL Дизель М-10Г2к 10л.</h3>
             <!-- Описание -->
-            <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс вязкости: 30</p>
+            <p class="product-card__descr" itemprop="description">Ресурсосберегающее моторное масло для бензиновых и дизельных двигателей легковых автомобилей линейки AVISTA pace EVO для транспортных средств с увеличенным интервалом технического обслуживания и</p>
+            <!-- Параметры -->
+            <div itemprop="additionalProperty" itemscope itemtype="http://schema.org/PropertyValue">
+              <ul class="product-card__params product-card-params">
+                <li class="product-card-params__row" itemprop="name" content="Тип базового масла">
+                  <span class="product-card-params__param">Тип базового масла:</span>
+                  <span class="product-card-params__bottom"></span>
+                  <span class="product-card-params__value" itemprop="value">Минеральное</span>
+                </li>
+                <li class="product-card-params__row" itemprop="name" content="Тип двигателя">
+                  <span class="product-card-params__param">Тип двигателя:</span>
+                  <span class="product-card-params__bottom"></span>
+                  <span class="product-card-params__value" itemprop="value">дизельный</span>
+                </li>
+                <li class="product-card-params__row" itemprop="name" content="Класс вязкости">
+                  <span class="product-card-params__param">Класс вязкости:</span>
+                  <span class="product-card-params__bottom"></span>
+                  <span class="product-card-params__value" itemprop="value">дизельный</span>
+                </li>
+              </ul>
+            </div>
           </div>
           <div class="product-card__actions">
             <!-- Количество -->
-            <div class="product-card__quantity quantity">
+            <div class="product-card__quantity quantity" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
               <div class="quantity__label visually-hidden">Количество:</div>
-              <div class="quantity__control" aria-label="Выбор количества">
-                <button class="quantity__btn quantity__btn--minus" disabled aria-label="Уменьшить количество">
-                  <svg class="quantity__icon">
+              <div class="quantity__control" role="group" aria-label="Выбор количества">
+                <button class="quantity__btn quantity__btn--minus" disabled aria-label="Уменьшить количество" type="button">
+                  <svg class="quantity__icon" aria-hidden="true">
                     <use xlink:href="img/sprite.svg#icon-minus"></use>
                   </svg>
                 </button>
-                <span class="quantity__value" aria-label="Количество товара">1</span>
-                <button class="quantity__btn quantity__btn--plus" aria-label="Увеличить количество">
-                  <svg class="quantity__icon">
+                <span class="quantity__value" aria-live="polite" itemprop="inventoryLevel" content="1">1</span>
+                <button class="quantity__btn quantity__btn--plus" aria-label="Увеличить количество" type="button">
+                  <svg class="quantity__icon" aria-hidden="true">
                     <use xlink:href="img/sprite.svg#icon-plus"></use>
                   </svg>
                 </button>
               </div>
             </div>
             <!-- Кнпока Добавить в корзину -->
-            <button class="product-card__add-to-cart add-to-cart" aria-label="Добавить в корзину">
+            <button class="product-card__add-to-cart add-to-cart" aria-label="Добавить в корзину товар VOLGA OIL Дизель М-10Г2к 10л" type="button" data-product-id="158503" itemprop="potentialAction" itemscope itemtype="http://schema.org/OrderAction">
               <span class="add-to-cart__text">Купить</span>
-              <span class="add-to-cart__count">1</span>
-              <svg class="add-to-cart__icon">
+              <span class="add-to-cart__count"aria-hidden="true">1</span>
+              <svg class="add-to-cart__icon" aria-hidden="true">
                 <use xlink:href="img/sprite.svg#icon-cart"></use>
               </svg>
+              <meta itemprop="target" content="https://autopartner.cosmo-design.ru/cart/add/158503">
             </button>
           </div>
-        </a>
+
+          <!-- Дополнительные метаданные -->
+          <meta itemprop="category" content="Моторные масла">
+          <meta itemprop="productID" content="pid:158503">
+        </article>
       </div>
       <div class="swiper-slide">
         <!-- Карточка товара -->
-        <a href="product.html" class="product-card">
-          <div class="product-card__view">
+        <article class="product-card" itemscope itemtype="http://schema.org/Product">
+          <a href="product.html" class="product-card__link"></a>
+          <div class="product-card__view" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
             <!-- Бейджи -->
-            <ul class="product-card__badges badges">
-              <li class="badges__item badges__item--hit">хит</li>
-              <li class="badges__item badges__item--new">новинка</li>
+            <ul class="product-card__badges badges" aria-label="Метки товара">
+              <li class="badges__item badges__item--hit" aria-label="Хит продаж" itemprop="itemCondition">хит</li>
+              <li class="badges__item badges__item--new" aria-label="Новинка" itemprop="itemCondition">новинка</li>
             </ul>
             <!-- Скидка -->
-            <span class="product-card__discount discount">-12%</span>
+            <span class="product-card__discount discount" aria-label="Скидка 12 процентов" itemprop="discount">-12%</span>
             <!-- Изображение -->
             <picture class="product-card__picture">
               <source srcset="img/catalog/product-thumb.webp 1x, img/catalog/product-thumb@2x.webp 2x" type="image/webp">
-              <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара">
+              <img loading="lazy" src="img/catalog/product-thumb.png" srcset="img/catalog/product-thumb@2x.png 2x" width="211" height="211" alt="Изображение товара VOLGA OIL Дизель М-10Г2к 10л" itemprop="contentUrl">
+                <meta itemprop="width" content="211">
+                <meta itemprop="height" content="211">
             </picture>
           </div>
-          <!-- Цены -->
-          <div class="product-card__price price">
-            <span class="price__current">4000 <span class="price__unit">р.</span></span>
-            <span class="price__old">10000 <span class="price__unit">р.</span></span>
+          <!-- Цены (отображение сетка) -->
+          <div class="product-card__price product-card__price--grid price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+            <meta itemprop="priceCurrency" content="RUB">
+            <span class="price__current" itemprop="price" content="4000">4000 <span class="price__unit">р.</span></span>
+            <span class="price__old" aria-label="Старая цена 10 000 рублей" itemprop="price">10000 <span class="price__unit">р.</span></span>
+            <link itemprop="availability" href="http://schema.org/InStock">
+            <meta itemprop="priceValidUntil" content="2025-12-31">
+            <meta itemprop="url" content="https://autopartner.cosmo-design.ru/product.html">
+            <meta itemprop="itemCondition" content="http://schema.org/NewCondition">
           </div>
           <div class="product-card__info">
             <div class="product-card__meta">
               <!-- Бренд -->
-              <span class="product-card__brand">VOLGA OIL</span>
+              <span class="product-card__brand" itemprop="brand" itemscope itemtype="http://schema.org/Brand">
+                <span itemprop="name">VOLGA OIL</span>
+              </span>
               <!-- Артикул -->
-              <span class="product-card__sku">Арт.: 800809</span>
+              <span class="product-card__sku" itemprop="sku">Арт.: 800809</span>
+              <meta itemprop="mpn" content="800809">
             </div>
             <!-- Название -->
-            <h3 class="product-card__title">VOLGA OIL Дизель М-10Г2к 10л.</h3>
+            <h3 class="product-card__title" itemprop="name">VOLGA OIL Дизель М-10Г2к 10л.</h3>
             <!-- Описание -->
-            <p class="product-card__descr">Тип базового масла: Минеральное, Тип двигателя: дизельный, Класс вязкости: 30</p>
+            <p class="product-card__descr" itemprop="description">Ресурсосберегающее моторное масло для бензиновых и дизельных двигателей легковых автомобилей линейки AVISTA pace EVO для транспортных средств с увеличенным интервалом технического обслуживания и</p>
+            <!-- Параметры -->
+            <div itemprop="additionalProperty" itemscope itemtype="http://schema.org/PropertyValue">
+              <ul class="product-card__params product-card-params">
+                <li class="product-card-params__row" itemprop="name" content="Тип базового масла">
+                  <span class="product-card-params__param">Тип базового масла:</span>
+                  <span class="product-card-params__bottom"></span>
+                  <span class="product-card-params__value" itemprop="value">Минеральное</span>
+                </li>
+                <li class="product-card-params__row" itemprop="name" content="Тип двигателя">
+                  <span class="product-card-params__param">Тип двигателя:</span>
+                  <span class="product-card-params__bottom"></span>
+                  <span class="product-card-params__value" itemprop="value">дизельный</span>
+                </li>
+                <li class="product-card-params__row" itemprop="name" content="Класс вязкости">
+                  <span class="product-card-params__param">Класс вязкости:</span>
+                  <span class="product-card-params__bottom"></span>
+                  <span class="product-card-params__value" itemprop="value">дизельный</span>
+                </li>
+              </ul>
+            </div>
           </div>
           <div class="product-card__actions">
             <!-- Количество -->
-            <div class="product-card__quantity quantity">
+            <div class="product-card__quantity quantity" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
               <div class="quantity__label visually-hidden">Количество:</div>
-              <div class="quantity__control" aria-label="Выбор количества">
-                <button class="quantity__btn quantity__btn--minus" disabled aria-label="Уменьшить количество">
-                  <svg class="quantity__icon">
+              <div class="quantity__control" role="group" aria-label="Выбор количества">
+                <button class="quantity__btn quantity__btn--minus" disabled aria-label="Уменьшить количество" type="button">
+                  <svg class="quantity__icon" aria-hidden="true">
                     <use xlink:href="img/sprite.svg#icon-minus"></use>
                   </svg>
                 </button>
-                <span class="quantity__value" aria-label="Количество товара">1</span>
-                <button class="quantity__btn quantity__btn--plus" aria-label="Увеличить количество">
-                  <svg class="quantity__icon">
+                <span class="quantity__value" aria-live="polite" itemprop="inventoryLevel" content="1">1</span>
+                <button class="quantity__btn quantity__btn--plus" aria-label="Увеличить количество" type="button">
+                  <svg class="quantity__icon" aria-hidden="true">
                     <use xlink:href="img/sprite.svg#icon-plus"></use>
                   </svg>
                 </button>
               </div>
             </div>
             <!-- Кнпока Добавить в корзину -->
-            <button class="product-card__add-to-cart add-to-cart" aria-label="Добавить в корзину">
+            <button class="product-card__add-to-cart add-to-cart" aria-label="Добавить в корзину товар VOLGA OIL Дизель М-10Г2к 10л" type="button" data-product-id="158503" itemprop="potentialAction" itemscope itemtype="http://schema.org/OrderAction">
               <span class="add-to-cart__text">Купить</span>
-              <span class="add-to-cart__count">1</span>
-              <svg class="add-to-cart__icon">
+              <span class="add-to-cart__count"aria-hidden="true">1</span>
+              <svg class="add-to-cart__icon" aria-hidden="true">
                 <use xlink:href="img/sprite.svg#icon-cart"></use>
               </svg>
+              <meta itemprop="target" content="https://autopartner.cosmo-design.ru/cart/add/158503">
             </button>
           </div>
-        </a>
+
+          <!-- Дополнительные метаданные -->
+          <meta itemprop="category" content="Моторные масла">
+          <meta itemprop="productID" content="pid:158503">
+        </article>
       </div>
     </div>
   </div>

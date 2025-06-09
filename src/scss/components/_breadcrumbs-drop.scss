@@ -24,20 +24,20 @@
     visibility: visible;
   }
 
-		&__link {
-      font-weight: 400;
-      font-size: 12px;
-      line-height: 120%;
-      color: var(--black);
-      transition: color .3s ease-in-out;
+  &__link {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 120%;
+    color: var(--black);
+    transition: color .3s ease-in-out;
 
-      &:focus-visible {
-        outline: none;
-        color: var(--accent);
-      }
+    &:focus-visible {
+      outline: none;
+      color: var(--accent);
+    }
 
-      @include hover {
-        color: var(--accent);
-      }
-		}
+    @include hover {
+      color: var(--accent);
+    }
+  }
 }

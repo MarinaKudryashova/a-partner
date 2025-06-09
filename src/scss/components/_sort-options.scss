@@ -1,0 +1,103 @@
+.sort-options {
+
+  &__dropdown {
+    position: relative;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    border: none;
+    padding: 0;
+    color: var(--black);
+    background-color: transparent;
+    cursor: pointer;
+    transition: color .3s ease-in-out;
+
+    &:focus-visible {
+      outline: none;
+      color: var(--accent);
+    }
+
+    @include hover {
+      color: var(--accent);
+    }
+  }
+
+  &__current {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 120%;
+    color: currentColor;
+    user-select: none;
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke-width: 1.5px;
+    stroke: var(--grey);
+    transform: rotate(180deg);
+    user-select: none;
+    pointer-events: none;
+    transition: stroke .3s ease-in-out, transform .3s ease-in-out;
+
+    .sort-options__btn[aria-expanded="true"] & {
+      transform: rotate(0);
+    }
+
+    .sort-options__btn:focus-visible &,
+    .sort-options__btn:hover & {
+      stroke: var(--accent);
+    }
+  }
+
+  &__menu {
+    @include list-reset;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 8px 12px;
+    min-width: 150px;
+    box-shadow: 0 4px 16px 0 rgba(0, 4, 4, 0.16);
+    background-color: var(--white);
+    list-style: none;
+    margin: 4px 0 0;
+    z-index: 100;
+    transform: translateY(8%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
+    &[aria-hidden="false"],
+    .sort-options__dropdown.is-open & {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__item {
+    padding: 4px 0;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 120%;
+    color: var(--black);
+    cursor: pointer;
+    user-select: none;
+    transition: color .3s ease-in-out;
+
+    &:focus-visible {
+      outline: none;
+      color: var(--accent);
+    }
+
+    @include hover {
+      color: var(--accent);
+    }
+  }
+}

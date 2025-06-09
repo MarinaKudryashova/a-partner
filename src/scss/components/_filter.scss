@@ -1,0 +1,22 @@
+.filter {
+  position: sticky;
+  top: 10px;
+  height: fit-content;
+
+  &__title {
+    margin: 0;
+  }
+
+  &__action {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__btn {
+    width: calc(50% - 8px / 2);
+  }
+
+  &__btn--apply {
+    background-color: transparent;
+  }
+}

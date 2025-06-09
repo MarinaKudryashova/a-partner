@@ -1,0 +1,80 @@
+.custom-radio {
+  &__field[disabled] ~ &__label{
+    cursor: default;
+  }
+
+  &__field[disabled] ~ &__label::before {
+    border-color: var(--grey);
+    background-color: var(--border);
+  }
+
+  &__field[disabled] ~ &__label &__text {
+    color: var(--grey);
+  }
+
+  &__field:checked ~ &__label::before {
+    border-color: var(--accent);
+  }
+
+  &__field:hover:not(.custom-radio__field:checked):not(.custom-radio__field[disabled]) ~ &__label::before {
+    border-color: var(--accent);
+    background-color: var(--light-red);
+  }
+
+  &__field:hover:not(.custom-radio__field[disabled]) ~ &__label {
+    color: var(--accent);
+  }
+
+  &__field:focus-visible:not(.custom-radio__field:checked):not(.custom-radio__field[disabled]) ~ &__label::before {
+    outline: none;
+    border-color: var(--accent);
+    background-color: var(--light-red);
+  }
+
+  &__field:focus-visible:not(.custom-radio__field[disabled]) ~ &__label {
+    color: var(--accent);
+  }
+
+  &__field:checked ~ &__label::after {
+    opacity: 1;
+  }
+
+  &__label {
+    position: relative;
+    padding-left: 30px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: var(--black);
+    cursor: pointer;
+    user-select: none;
+    transition: color .3s ease-in-out;
+  }
+
+  &__label::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid var(--grey);
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    background-color: var(--white);
+    transition: border-color .3s ease-in-out, background-color .3s ease-in-out;
+  }
+
+  &__label::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    border-radius: 100%;
+    width: 12px;
+    height: 12px;
+    background-color: var(--accent);
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+  }
+}
+
