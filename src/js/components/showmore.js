@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
-  const showMoreBtn = document.querySelector('[data-show-more]');
-  const hiddenItems = showMoreBtn.parentElement.querySelectorAll('[data-visible]');
+  const showMoreBtn = document?.querySelector('[data-show-more]');
+  const hiddenItems = showMoreBtn?.parentElement?.querySelectorAll('[data-visible]');
   const visibleCount = 4;
 
   let isExpanded = false;
-  showMoreBtn.addEventListener('click', function() {
+  showMoreBtn?.addEventListener('click', function() {
     if (isExpanded) {
       hiddenItems.forEach((item, index) => {
         if (index >= visibleCount) {

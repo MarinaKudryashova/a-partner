@@ -15,6 +15,10 @@
     border-collapse: collapse;
 
     & thead {
+      @include small-tablet {
+        display: none;
+      }
+
       & tr {
         background-color: var(--bg);
       }
@@ -42,11 +46,45 @@
       border-bottom: 1px solid var(--border);
     }
 
+    & tr {
+      @include small-tablet {
+        display: block;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        width: 100%;
+
+        &:not(:last-child) {
+          margin-bottom: 8px;
+        }
+      }
+    }
+
     & td {
       padding: 16px;
       font-weight: 400;
       font-size: 14px;
       line-height: 120%;
+
+      @include small-tablet {
+        display: flex;
+        align-items: center;
+        padding: 0;
+
+        &::before {
+          content: attr(data-label);
+          padding: 8px 16px;
+          width: 37%;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 120%;
+          color: var(--grey);
+          background-color: var(--bg);
+        }
+        & a,
+        & span {
+          padding: 8px 16px;
+        }
+      }
     }
   }
 
@@ -58,86 +96,67 @@
   &__status {
     color: var(--green);
   }
-
-  //скрываем на мобилке
-  @include small-mobile {
-    .account-content__slider {
-      display: none;
-    }
-
-    .account-orders__nav {
-      display: none;
-    }
-  }
 }
 
-.account-orders-mobile {
-  &__list {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
+// .account-orders-mobile {
+//   &__list {
+//     display: flex;
+//     flex-direction: column;
+//     flex-wrap: wrap;
+//     gap: 8px;
+//   }
 
-  &__list-item {
-    width: 100%;
-  }
+//   &__list-item {
+//     width: 100%;
+//   }
 
-  &__order-card {
-    display: grid;
-    grid-template-columns: 128px 215px;
-    overflow: hidden;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-  }
+//   &__order-card {
+//     display: grid;
+//     grid-template-columns: 128px 215px;
+//     overflow: hidden;
+//     border: 1px solid var(--border);
+//     border-radius: 8px;
+//   }
 
-  &__header {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    padding: 8px 16px;
-    background-color: var(--bg);
+//   &__header {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 16px;
+//     padding: 8px 16px;
+//     background-color: var(--bg);
 
-    & span {
-      display: block;
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 120%;
-      color: var(--grey);
-    }
-  }
+//     & span {
+//       display: block;
+//       font-weight: 500;
+//       font-size: 14px;
+//       line-height: 120%;
+//       color: var(--grey);
+//     }
+//   }
 
-  &__values {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    padding: 8px 16px;
+//   &__values {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 16px;
+//     padding: 8px 16px;
 
-    & span {
-      display: block;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 120%;
-      color: var(--black);
-    }
+//     & span {
+//       display: block;
+//       font-weight: 400;
+//       font-size: 14px;
+//       line-height: 120%;
+//       color: var(--black);
+//     }
 
-    & a {
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 120%;
-    }
-  }
+//     & a {
+//       font-weight: 500;
+//       font-size: 14px;
+//       line-height: 120%;
+//     }
+//   }
 
-  @include for-desktop {
-    display: none;
-  }
-}
-
-.account-orders, .order-info {
-  display: none;
-}
-.account-orders.active, .order-info.active {
-  display: block;
-}
-
+//   @include for-desktop {
+//     display: none;
+//   }
+// }
 

@@ -10,6 +10,10 @@
   cursor: pointer;
   transition: color .3s ease-in-out;
 
+  @include small-tablet {
+    display: flex;
+  }
+
   @include hover {
     color: var(--accent);
   }

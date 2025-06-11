@@ -1,4 +1,4 @@
-.order-info {
+.orderinfo {
   width: 100%;
 
   &__btn {
@@ -82,67 +82,73 @@
     padding-top: 20px;
   }
 
-  &__product-item {
-    display: grid;
-    grid-template-columns: 496px 1fr 1fr;
-    align-items: start;
-    padding: 0 0 20px;
-
-    @include small-mobile {
-      grid-template-columns: repeat(2, 1fr);
-      justify-content: space-between;
-    }
-  }
-
-  &__product-info {
-    @include small-mobile {
-      grid-column: span 2;
-    }
-  }
-
-  &__product-quantity {
-    text-align: center;
-    color: var(--grey);
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 120%;
-
-    @include small-mobile {
-      text-align: left;
-    }
-  }
-
-  &__price {
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    gap: 5px;
-  }
-
-  &__product-price {
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 140%;
-
-    @include small-mobile {
-      font-weight: 700;
-      font-size: 20px;
-      line-height: 120%;
-      color: var(--accent);
-    }
-  }
-
-  &__product-unit-price {
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 120%;
-
-    @include small-mobile {
-      text-decoration: line-through;
-    }
-  }
-
   .cart-product__title:hover {
     color: var(--accent);
+  }
+}
+
+.cart-product--orderinfo {
+  align-items: start;
+  padding: 0 0 20px;
+
+  @include small-tablet {
+    flex-direction: row;
+  }
+
+  @include mobile {
+    flex-direction: column;
+  }
+
+}
+
+.cart-product--orderinfo .cart-product__info {
+  flex: 1 1 396px;
+
+  @include small-tablet {
+    flex: 1 0 350px;
+  }
+  @include mobile {
+    padding-right: 0;
+    flex: 1 1 auto;
+  }
+}
+.cart-product--orderinfo .cart-product__action {
+  flex: 1 1 auto;
+}
+
+.cart-product--orderinfo .cart-product__orderinfo-quantity {
+  flex: 1 1 auto;
+  text-align: center;
+  color: var(--grey);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 120%;
+
+  @include tablet {
+    flex: 1 0 auto;
+  }
+
+  @include mobile {
+    text-align: left;
+  }
+}
+.cart-product--orderinfo .cart-product__price--orderinfo {
+  flex: 1 1 auto;
+
+  @include tablet {
+    flex: 1 0 auto;
+  }
+}
+
+.cart-product__price--orderinfo .price__current {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  color: var(--black);
+
+  @include small-tablet {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 120%;
   }
 }

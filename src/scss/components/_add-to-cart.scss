@@ -26,6 +26,7 @@
 
   &__text {
     display: none;
+    user-select: none;
 
     @include small-desktop {
       display: block;
@@ -54,6 +55,7 @@
     color: var(--white);
     background-color: var(--black);
     transform: translate(25%, -25%);
+    user-select: none;
 
     @include small-desktop {
       display: none;
@@ -65,6 +67,7 @@
     height: 24px;
     fill: currentColor;
     pointer-events: none;
+    user-select: none;
 
     @include small-desktop {
       display: none;

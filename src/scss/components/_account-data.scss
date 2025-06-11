@@ -8,14 +8,13 @@
   }
 
   &__form-wrap {
-    display: grid;
-    grid-template-columns: repeat(2, 477px);
+    display: flex;
+    flex-wrap: wrap;
     gap: 16px 24px;
     width: 100%;
     margin: 0 0 24px;
 
-    @include small-mobile {
-      display: flex;
+    @include tablet {
       flex-direction: column;
       gap: 16px;
     }
@@ -23,127 +22,132 @@
 
   &__input {
     position: relative;
+    width: calc(50% - 24px / 2);
 
-    &--error {
-      .account-data__input-label {
-        color: var(--accent);
-      }
-
-      .account-data__input-error {
-        display: block;
-      }
-    }
-
-    & label {
-      display: flex;
-      flex-direction: column-reverse;
-      gap: 4px;
-    }
+    @include tablet {
+      width: 100%;
   }
 
-  &__input-field {
-    position: relative;
-    padding: 14.5px 16px;
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    color: var(--black);
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 120%;
+    // &--error {
+    //   .account-data__input-label {
+    //     color: var(--accent);
+    //   }
 
-    transition: border 0.3s ease-in;
+    //   .account-data__input-error {
+    //     display: block;
+    //   }
+    // }
 
-    &:hover {
-      border: 1px solid var(--light-red);
-    }
-
-    &:focus-visible {
-      border: 1px solid var(--light-red);
-      outline: none;
-    }
+    // & label {
+    //   display: flex;
+    //   flex-direction: column-reverse;
+    //   gap: 4px;
+    // }
   }
 
+  // &__input-field {
+  //   position: relative;
+  //   padding: 14.5px 16px;
+  //   border: 1px solid var(--border);
+  //   border-radius: 10px;
+  //   color: var(--black);
+  //   font-weight: 400;
+  //   font-size: 14px;
+  //   line-height: 120%;
 
-  &__input-label {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 120%;
-    color: var(--grey);
+  //   transition: border 0.3s ease-in;
 
-    & span {
-      color: var(--accent);
-    }
-  }
+  //   &:hover {
+  //     border: 1px solid var(--light-red);
+  //   }
 
-  &__input-error {
-    position: absolute;
-    left: 0;
-    bottom: -12px;
-    font-weight: 400;
-    font-size: 10px;
-    line-height: 110%;
-    color: var(--accent);
-    display: none;
-  }
+  //   &:focus-visible {
+  //     border: 1px solid var(--light-red);
+  //     outline: none;
+  //   }
+  // }
 
-  &__date-icon, &__email-icon
 
-  {
-    position: absolute;
-    top: 34px;
-    right: 16px;
+  // &__input-label {
+  //   font-weight: 400;
+  //   font-size: 14px;
+  //   line-height: 120%;
+  //   color: var(--grey);
 
-    width: 20px;
-    height: 20px;
-    fill: none;
-    stroke-width: 1.5px;
-    stroke: var(--grey);
-    cursor: pointer;
-  }
+  //   & span {
+  //     color: var(--accent);
+  //   }
+  // }
 
-  &__password-btn {
-    position: absolute;
-    top: 34px;
-    right: 45px;
+  // &__input-error {
+  //   position: absolute;
+  //   left: 0;
+  //   bottom: -12px;
+  //   font-weight: 400;
+  //   font-size: 10px;
+  //   line-height: 110%;
+  //   color: var(--accent);
+  //   display: none;
+  // }
 
-    &--edit {
-      top: 34px;
-      right: 16px;
-    }
+  // &__date-icon, &__email-icon
 
-    &.show-password {
-      .account-data__icon-eye {
-        display: inline-block;
-      }
-      .account-data__icon-eye--closed {
-        display: none;
-      }
-    }
+  // {
+  //   position: absolute;
+  //   top: 34px;
+  //   right: 16px;
 
-    &:not(.show-password) {
-      .account-data__icon-eye--closed {
-        display: inline-block;
-      }
-    }
+  //   width: 20px;
+  //   height: 20px;
+  //   fill: none;
+  //   stroke-width: 1.5px;
+  //   stroke: var(--grey);
+  //   cursor: pointer;
+  // }
 
-    .account-data__icon-eye {
-      display: none;
-    }
-  }
+  // &__password-btn {
+  //   position: absolute;
+  //   top: 34px;
+  //   right: 45px;
 
-  &__icon-pencil {
-    width: 20px;
-    height: 20px;
-    fill: none;
-    stroke-width: 1.5px;
-    stroke: var(--grey);
-  }
+  //   &--edit {
+  //     top: 34px;
+  //     right: 16px;
+  //   }
 
-  &__icon-eye {
-    width: 24px;
-    height: 24px;
-    fill: none;
-    stroke-width: 1.5px;
-    stroke: var(--grey);
-  }
+  //   &.show-password {
+  //     .account-data__icon-eye {
+  //       display: inline-block;
+  //     }
+  //     .account-data__icon-eye--closed {
+  //       display: none;
+  //     }
+  //   }
+
+  //   &:not(.show-password) {
+  //     .account-data__icon-eye--closed {
+  //       display: inline-block;
+  //     }
+  //   }
+
+  //   .account-data__icon-eye {
+  //     display: none;
+  //   }
+  // }
+
+  // &__icon-pencil {
+  //   width: 20px;
+  //   height: 20px;
+  //   fill: none;
+  //   stroke-width: 1.5px;
+  //   stroke: var(--grey);
+  // }
+
+  // &__icon-eye {
+  //   width: 24px;
+  //   height: 24px;
+  //   fill: none;
+  //   stroke-width: 1.5px;
+  //   stroke: var(--grey);
+  // }
 }

@@ -91,6 +91,10 @@
         }
 
       }
+
+      @include small-mobile {
+        min-width: unset;
+      }
 		}
 
 		&__link {
@@ -111,6 +115,10 @@
 
       &:focus-visible {
         outline: none;
+      }
+
+      @include small-mobile {
+        max-width: calc(100% - 16px);
       }
 		}
 

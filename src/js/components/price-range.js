@@ -8,37 +8,39 @@ document.addEventListener('DOMContentLoaded', function() {
   const defaultColor = getComputedStyle(document.documentElement).getPropertyValue('--border').trim()
 
   // Обновление полей ввода при изменении ползунков
-  minRange.addEventListener('input', function() {
+  minRange?.addEventListener('input', function() {
     minPriceInput.value = this.value;
     updateTrack();
   });
 
-  maxRange.addEventListener('input', function() {
+  maxRange?.addEventListener('input', function() {
     maxPriceInput.value = this.value;
     updateTrack();
   });
 
   // Обновление ползунков при изменении полей ввода
-  minPriceInput.addEventListener('input', function() {
+  minPriceInput?.addEventListener('input', function() {
     minRange.value = this.value;
     updateTrack();
   });
 
-  maxPriceInput.addEventListener('input', function() {
+  maxPriceInput?.addEventListener('input', function() {
     maxRange.value = this.value;
     updateTrack();
   });
 
   // Обновление визуального отображения диапазона
   function updateTrack() {
-    const minVal = parseInt(minRange.value);
-    const maxVal = parseInt(maxRange.value);
-    const offsetVal = parseInt(maxRange.max) / 100;
-    track.style.background = `linear-gradient(to right,
-      ${defaultColor} ${minVal / offsetVal}%,
-      ${accentColor} ${minVal / offsetVal}%,
-      ${accentColor} ${maxVal / offsetVal}%,
-      ${defaultColor} ${maxVal / offsetVal}%)`;
+    if (minRange || maxRange) {
+      const minVal = parseInt(minRange.value);
+      const maxVal = parseInt(maxRange.value);
+      const offsetVal = parseInt(maxRange.max) / 100;
+      track.style.background = `linear-gradient(to right,
+        ${defaultColor} ${minVal / offsetVal}%,
+        ${accentColor} ${minVal / offsetVal}%,
+        ${accentColor} ${maxVal / offsetVal}%,
+        ${defaultColor} ${maxVal / offsetVal}%)`;
+    }
   }
 
   // Инициализация

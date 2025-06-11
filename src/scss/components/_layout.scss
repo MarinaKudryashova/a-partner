@@ -30,18 +30,22 @@
 
   &[data-view-target="grid"] {
     --numer-elem: 4;
+    --offset: 16px;
+    gap: 24px var(--offset);
 
-    @include tablet {
+    @include big-desktop {
+      --offset: 8px;
+    }
+    @include small-desktop {
       --numer-elem: 3;
+    }
+    @include tablet {
+      --numer-elem: 2;
     }
   }
 
   &[data-view-target="grid"] &__item {
     width: calc(100% / var(--numer-elem) - var(--offset)*(var(--numer-elem) - 1) / var(--numer-elem));
-
-    @include mobile {
-      width: 100%;
-    }
   }
 
   &[data-view-target="list"],

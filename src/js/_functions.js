@@ -95,9 +95,9 @@
 // import 'air-datepicker/air-datepicker.css';
 
 // Подключение функции показа и скрытия пароля
-import { passwordView } from './functions/show-hide-password';
-passwordView()
+// import { passwordView } from './functions/show-hide-password';
+// passwordView()
 
 // Очищение полей ввода
-import { clearInput } from './functions/clear-input';
-clearInput()
+// import { clearInput } from './components/clear-input';
+// clearInput()
