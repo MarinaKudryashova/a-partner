@@ -4,7 +4,12 @@
   gap: 24px;
   margin-bottom: 80px;
 
-  @include tablet {
+  @include big-desktop {
+    grid-template-columns: 260px minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  @include small-tablet {
     display: flex;
     flex-direction: column;
     gap: 64px;
@@ -16,5 +21,9 @@
 
   &__area {
     max-width: 978px;
+
+    @include small-tablet {
+      max-width: unset;
+    }
   }
 }

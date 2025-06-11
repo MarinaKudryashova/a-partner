@@ -1,5 +1,14 @@
 <section class="filter">
-  <h2 class="filter__title">Фильтры</h2>
+  <div class="filter__heading">
+    <button type="button" class="filter__btn-back btn-reset" aria-label="назад к выбору товаров">
+      <svg>
+        <use xlink:href="img/sprite.svg#chevron-down"></use>
+      </svg>
+    </button>
+    <h2 class="filter__title">Фильтры</h2>
+    <button class="filter__btn-clear btn-reset" type="reset">Сбросить</button>
+  </div>
+  <!-- <h2 class="filter__title">Фильтры</h2> -->
 
   <!-- Поиск -->
   <div class="filter-widget">
@@ -279,7 +288,7 @@
     </div>
   </div>
   <div class="filter__action">
-    <button class="filter__btn btn btn--grey" type="reset">Сбросить</button>
+    <button class="filter__btn filter__btn--clear btn btn--grey" type="reset">Сбросить</button>
     <button class="filter__btn filter__btn--apply btn btn--stroke" type="button">Применить</button>
   </div>
 

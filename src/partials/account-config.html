@@ -1,0 +1,50 @@
+<div class="panel-config panel-config--account">
+  <!-- Информация о количестве товаров -->
+  <span class="panel-config__found">Найдено 104 товара</span>
+  <div class="panel-config__panel">
+    <!-- Фильтр -->
+    <button class="panel-config__filter-btn filter-btn" data-filer-open="false" type="button" title="Сетка" aria-label="Показать товары в виде сетки">
+      <svg class="filter-btn__icon">
+        <use xlink:href="img/sprite.svg#icon-filter"></use>
+      </svg>
+    </button>
+    <!-- Cортировка -->
+    <div class="panel-config__sort sort-options" id="sort-select">
+      <span class="sort-options__label visually-hidden">Сортировка:</span>
+      <div class="sort-options__dropdown">
+        <button class="sort-options__btn" data-sort-btn aria-haspopup="true" aria-expanded="false" aria-labelledby="sortLabel sortValue">
+          <span class="sort-options__current" data-sort-value>По популярности</span>
+          <svg class="sort-options__icon">
+            <use xlink:href="img/sprite.svg#chevron-down"></use>
+          </svg>
+        </button>
+        <ul class="sort-options__menu" data-sort-menu aria-labelledby="sortButton" aria-hidden="true" role="menu">
+          <li class="sort-options__item" role="menuitemradio" aria-selected="false" data-value="defauld" tabindex="0">По умолчанию</li>
+          <li class="sort-options__item" role="menuitemradio" aria-selected="true" data-value="popularity" tabindex="0">По популярности</li>
+          <li class="sort-options__item" role="menuitemradio" aria-selected="false" data-value="newest" tabindex="0">По новизне</li>
+          <li class="sort-options__item" role="menuitemradio" aria-selected="false" data-value="price-asc" tabindex="0">По возрастанию цены</li>
+          <li class="sort-options__item" role="menuitemradio" aria-selected="false" data-value="price-desc" tabindex="0">По убыванию цены</li>
+        </ul>
+      </div>
+    </div>
+    <!-- Изменение отображения -->
+     <div class="panel-config__view-options view-options">
+        <span class="view-options__label">Вид:</span>
+        <button class="view-options__btn is-active" data-view-path="grid" type="button" title="Сетка" aria-label="Показать товары в виде сетки">
+          <svg class="view-options__icon view-options__icon--grid">
+            <use xlink:href="img/sprite.svg#icon-grid"></use>
+          </svg>
+        </button>
+        <button class="view-options__btn" data-view-path="list" type="button" title="Список" aria-label="Показать товары в виде списка">
+          <svg class="view-options__icon">
+            <use xlink:href="img/sprite.svg#icon-list"></use>
+          </svg>
+        </button>
+        <button class="view-options__btn" data-view-path="extended-list" type="button" title="Расширенный список" aria-label="Показать товары в виде расширенного списка">
+          <svg class="view-options__icon">
+            <use xlink:href="img/sprite.svg#icon-extended-list"></use>
+          </svg>
+        </button>
+     </div>
+  </div>
+</div>

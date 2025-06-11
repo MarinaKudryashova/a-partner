@@ -23,3 +23,37 @@
 		&__btn {
 		}
 }
+.graph-modal.is-open {
+  &:has(.account-exit) {
+    @include mobile {
+      top: 57px;
+      bottom: 73px;
+      z-index: 20;
+      padding: 0;
+      background-color: initial;
+    }
+  }
+  &:has(.modal--view-mobile) {
+    @include mobile {
+      top: 57px;
+      bottom: 73px;
+      z-index: 20;
+      padding: 0;
+      background-color: transparent;
+    }
+  }
+}
+
+.modal--view-mobile {
+  @include mobile {
+    border-radius: 0;
+    padding: 24px 16px;
+    width: 100%;
+    height: 100%;
+    max-width: unset;
+
+    & .graph-modal__close {
+      display: none;
+    }
+  }
+}

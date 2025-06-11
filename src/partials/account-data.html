@@ -1,0 +1,63 @@
+<section class="account-data is-hidden" data-section-content="myDetails">
+  <h2 class="account-data__title">Мои данные</h2>
+  <!-- Форма ввода данных -->
+  <form class="account-data__form" action="#" method="post">
+    <div class="account-data__form-wrap">
+      <!-- Название компании -->
+      <div class="form-field account-data__input">
+        <label for="company" class="form-field__label form-field__label--required" >Компания</label>
+        <input class="form-field__input" type="text" id="company" name="company" placeholder="Компания" required>
+        <!-- <span class="form-field__error">Неправильно заполнено поле...</span> -->
+      </div>
+
+      <!-- ФИО -->
+      <div class="form-field account-data__input">
+        <label for="manager" class="form-field__label" >ФИО менеджера</label>
+        <input class="form-field__input" type="text" id="manager" name="manager" placeholder="ФИО менеджера" autocomplete="given-name">
+      </div>
+
+      <!-- Дата рождения с air-datepicker -->
+      <div class="form-field account-data__input">
+        <label for="my-datepicker" class="form-field__label" >Дата рождения</label>
+        <input class="form-field__input" type="text" id="my-datepicker" name="my-datepicker" placeholder="Дата рождения">
+        <button class="form-field__btn btn-reset" type="button" data-show-datepicker aria-controls="my-datepicker" aria-label="Открыть календарь">
+          <svg class="form-field__icon">
+            <use xlink:href="img/sprite.svg#icon-calendar"></use>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Email -->
+      <div class="form-field account-data__input">
+        <label for="email" class="form-field__label form-field__label--required" >E-mail</label>
+        <input class="form-field__input" type="email" id="email" name="email" placeholder="E-mail" required autocomplete="email">
+        <button class="form-field__btn form-field__btn--info btn-reset" type="button" aria-label="Открыть календарь">
+          <svg class="form-field__icon">
+            <use xlink:href="img/sprite.svg#icon-info"></use>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Пароль -->
+      <div class="form-field account-data__input">
+        <label for="accountPassword" class="form-field__label form-field__label--required" >Пароль</label>
+        <input class="form-field__input" type="password" id="accountPassword" name="accountPassword" placeholder="Пароль" required>
+        <button class="form-field__btn form-field__btn--left btn-reset" data-show-password="false" type="button" aria-controls="accountPassword" aria-label="Показать пароль">
+          <svg class="form-field__icon form-field__icon--closed">
+            <use xlink:href="img/sprite.svg#icon-eye-closed"></use>
+          </svg>
+          <svg class="form-field__icon">
+            <use xlink:href="img/sprite.svg#icon-eye"></use>
+          </svg>
+        </button>
+        <button class="form-field__btn form-field__btn--edit btn-reset" type="button" data-graph-path="changePassword" aria-label="Изменить пароль">
+          <svg class="form-field__icon">
+            <use xlink:href="img/sprite.svg#icon-pencil"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <button class="account-data__form-btn btn btn--full" type="button">Сохранить</button>
+  </form>
+</section>

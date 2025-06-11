@@ -41,7 +41,7 @@
     &:-webkit-autofill,
     &:-webkit-autofill:hover,
     &:-webkit-autofill:focus {
-      border-color: var(--accent);
+      // border-color: var(--accent);
       -webkit-box-shadow: 0 0 0px 40rem #ffffff inset;
     }
   }
@@ -96,13 +96,29 @@
     fill: none;
     stroke-width: 1.5px;
     stroke: var(--grey);
+    user-select: none;
+    pointer-events: none;
   }
-
+  &__btn--edit,
+  &__btn--info,
+  &__btn[data-show-datepicker],
   &__btn[data-show-password] {
     position: absolute;
     top: 34px;
     right: 16px;
   }
+
+  &__btn--left[data-show-password] {
+    right: 45px;
+  }
+
+  &__btn--edit &__icon,
+  &__btn--info &__icon,
+  &__btn[data-show-datepicker] &__icon {
+    width: 20px;
+    height: 20px;
+  }
+
 
   &__btn[data-show-password="false"] &__icon {
     display: none;

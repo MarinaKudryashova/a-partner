@@ -9,11 +9,42 @@
     <main class="main">
       <div class="page__container container">
         @include('partials/breadcrumbs-account.html')
-        @include('partials/account-content.html')
+        <h1 class="main-title">Личный кабинет</h1>
+        <div class="account-content">
+        <!-- Боковое меню(владки) -->
+         @include('partials/account-nav.html')
+        <!-- Основное содержимое -->
+         <div class="account-content__area">
+            <!-- Мои данные -->
+            @include('partials/account-data.html')
+
+            <!-- История заказов -->
+            <section class="account-orders is-hidden" data-section-content="orderHistory">
+              <h2 class="account-orders__title">История заказов</h2>
+              <!-- Таблица со списком заказов -->
+              @include('partials/account-orders-table.html')
+              <!-- Кнопка "Показать еще" и пагинация -->
+              @include('partials/page-controls.html')
+            </section>
+            <!-- Детали заказа (скрыты по умолчанию) -->
+             @include('partials/order-info.html')
+
+            <!-- Мои покупки -->
+            <section class="account-purchases  is-hidden" data-section-content="MyPurchases">
+              <h2 class="account-purchases__title">Мои покупки</h2>
+              @include('partials/account-config.html')
+              <!-- Список товаров -->
+              @include('partials/products-area.html')
+              <!-- Кнопка "Показать еще" и пагинация -->
+              @include('partials/page-controls.html')
+            </section>
+         </div>
+        </div>
       </div>
     </main>
     @include('partials/footer.html')
     @include('partials/modal.html')
+    @include('partials/message.html')
   </div>
 </body>
 

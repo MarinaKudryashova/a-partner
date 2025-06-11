@@ -11,7 +11,7 @@
       <div class="form-field">
         <label for="userPassword" class="form-field__label form-field__label--required" >Пароль</label>
         <input class="form-field__input" type="password" id="userPassword" name="userPassword" placeholder="Пароль" required>
-        <button class="form-field__btn btn-reset" data-show-password="false" type="button" aria-label="Показать пароль">
+        <button class="form-field__btn btn-reset" data-show-password="false" type="button" aria-controls="userPassword" aria-label="Показать пароль">
           <svg class="form-field__icon form-field__icon--closed">
             <use xlink:href="img/sprite.svg#icon-eye-closed"></use>
           </svg>
@@ -47,37 +47,65 @@
       aria-label="Закрыть модальное окно" type="button"></button>
   </div>
 
+
+  <!-- Модальное окно выхода из личного кабинета -->
+  <div class="graph-modal__container account-exit modal" role="dialog" aria-modal="true" data-graph-target="exitModal">
+    <h2 class="modal__title account-exit__title">Выйти из аккаунта</h2>
+    <p class="account-exit__text">Вы уверены, что хотите выйти из аккаунта?</p>
+    <div class="account-exit__btn-wrap modal__btn-wrap">
+      <button class="modal__btn account-exit__btn account-exit__btn--grey btn" type="button">Выйти</button>
+      <button class="modal__btn account-exit__btn btn btn--full btn-reset js-modal-close"
+        type="button">Отмена</button>
+    </div>
+    <button class="btn-reset graph-modal__close js-modal-close account-exit__close"
+      aria-label="Закрыть модальное окно" type="button"></button>
+  </div>
+
   <!-- Модальное окно смены пароля -->
-  <!-- <div class="graph-modal__container password-change" role="dialog" aria-modal="true" data-graph-target="changePassword">
-    <h2 class="modal__title password-change__title">Изменить пароль</h2>
-    <form action="#" method="post" class="change-password__form">
-      <div class="account-data__input">
-        <label for="newPassword">
-          <input class="account-data__input-field" type="password" id="newPassword" name="newPassword" required>
-          <span class="account-data__input-label">Новый пароль<span>*</span></span>
-        </label>
+  <div class="graph-modal__container modal" role="dialog" aria-modal="true"
+    data-graph-target="changePassword">
+    <h2 class="modal__title">Изменить пароль</h2>
+    <form action="#" method="post" class="modal__form form">
+      <!-- Новый пароль -->
+      <div class="form-field">
+        <label for="newPassword" class="form-field__label form-field__label--required" >Новый пароль</label>
+        <input class="form-field__input" type="password" id="newPassword" name="newPassword" placeholder="Пароль" required>
+        <button class="form-field__btn btn-reset" data-show-password="false" type="button" aria-controls="newPassword" aria-label="Показать пароль">
+          <svg class="form-field__icon form-field__icon--closed">
+            <use xlink:href="img/sprite.svg#icon-eye-closed"></use>
+          </svg>
+          <svg class="form-field__icon">
+            <use xlink:href="img/sprite.svg#icon-eye"></use>
+          </svg>
+        </button>
       </div>
-      <div class="account-data__input">
-        <label for="repeatPassword">
-          <input class="account-data__input-field" type="password" id="repeatPassword" name="repeatPassword" required>
-          <span class="account-data__input-label">Повторите пароль<span>*</span></span>
-        </label>
+      <!-- Повторить пароль -->
+      <div class="form-field">
+        <label for="repeatPassword" class="form-field__label form-field__label--required" >Повторите пароль</label>
+        <input class="form-field__input" type="password" id="repeatPassword" name="repeatPassword" placeholder="Пароль" required>
+        <button class="form-field__btn btn-reset" data-show-password="false" type="button" aria-controls="repeatPassword" aria-label="Показать пароль">
+          <svg class="form-field__icon form-field__icon--closed">
+            <use xlink:href="img/sprite.svg#icon-eye-closed"></use>
+          </svg>
+          <svg class="form-field__icon">
+            <use xlink:href="img/sprite.svg#icon-eye"></use>
+          </svg>
+        </button>
+      </div>
+      <!-- Сложность пароля -->
+      <div class="password-difficulty">
+        <span class="password-difficulty__text">Сложность пароля:</span>
+        <ul class="password-difficulty__visual">
+          <span class="password-difficulty__tab password-difficulty__tab--active"></span>
+          <span class="password-difficulty__tab password-difficulty__tab--active"></span>
+          <span class="password-difficulty__tab password-difficulty__tab--active"></span>
+          <span class="password-difficulty__tab"></span>
+          <span class="password-difficulty__tab"></span>
+        </ul>
       </div>
       <button class="modal__btn btn btn--full">Сохранить</button>
     </form>
     <button class="btn-reset graph-modal__close js-modal-close password-change__close"
       aria-label="Закрыть модальное окно" type="button"></button>
-  </div> -->
-  <!-- Модальное окно выхода из личного кабинета -->
-  <!-- <div class="graph-modal__container account-exit" role="dialog" aria-modal="true" data-graph-target="exitModal">
-    <h2 class="modal__title account-exit__title">Выйти из аккаунта</h2>
-    <p class="account-exit__text">Вы уверены, что хотите выйти из аккаунта?</p>
-    <div class="account-exit__btn-wrap modal__btn-wrap">
-      <button class="modal__btn account-exit__btn account-exit__btn--grey btn" type="button">Выйти</button>
-      <button class="modal__btn account-exit__btn btn btn--full btn-reset" type="button"
-        data-graph-modal-close>Отмена</button>
-    </div>
-    <button class="btn-reset graph-modal__close js-modal-close account-exit__close"
-      aria-label="Закрыть модальное окно" type="button"></button>
-  </div> -->
+  </div>
 </div>

@@ -1,28 +1,31 @@
- :root {
-  --font-family: "Inter", sans-serif;
- // colors
-  --black: #000404;
-	--grey: #808080;
-	--border: #e1e4e8;
-	--bg: #f3f5f8;
-	--white: #fff;
-	--accent: #e1110e;
-	--dark-red: #b60705;
-	--light-red: #f8c2c1;
-	--green: #2eaf00;
-	--orange: #ff7a00;
-  --border-info: #9dc0ee;
-  --bg-info: #f5f9ff;
- }
+//  :root {
+//   --font-family: "Inter", sans-serif;
+//  // colors
+//   --black: #000404;
+// 	--grey: #808080;
+// 	--border: #e1e4e8;
+// 	--bg: #f3f5f8;
+// 	--white: #fff;
+// 	--accent: #e1110e;
+// 	--dark-red: #b60705;
+// 	--light-red: #f8c2c1;
+// 	--green: #2eaf00;
+// 	--orange: #ff7a00;
+//   --border-info: #9dc0ee;
+//   --bg-info: #f5f9ff;
+//  }
 
 .air-datepicker-global-container .custom-datepicker {
-  // width: 292px;
+  --adp-cell-background-color-selected: #2eaf00;
+  --adp-cell-background-color-selected-hover: #2eaf00;
+  width: 292px;
   // min-height: 270px;
   padding: 8px 16px 0;
   border: none;
   border-radius: 10px;
   box-shadow: 0px 4px 40px 0px #2121211A;
 }
+
 
 .custom-datepicker .air-datepicker--pointer {
   display: none;
@@ -35,7 +38,7 @@
 .custom-datepicker .air-datepicker-nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  // justify-content: space-between;
   border-bottom: 1px solid var(--border);
   padding: 0 0 6px;
   margin-bottom: 1px;

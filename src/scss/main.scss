@@ -18,7 +18,7 @@
 @import "./components/breadcrumbs";
 @import "./components/phone";
 @import "./components/contacts";
-// @import "./components/custom-datepicker";
+@import "./components/custom-datepicker";
 
 @import "./components/footer";
 @import "./components/footer-top";
@@ -26,8 +26,10 @@
 @import "./components/footer-bottom";
 @import "./components/topbtn";
 @import "./components/modal";
+@import "./components/message";
 // @import "./components/form";
 @import "./components/form-field";
+@import "./components/password-difficulty";
 
 // подключения компонентов страницы Каталог
 @import "./components/catalog-content";
@@ -60,7 +62,7 @@
 @import "./components/account-exit";
 @import "./components/account-data";
 @import "./components/account-orders";
-@import "./components/order-info";
+@import "./components/orderinfo";
 @import "./components/account-purchases";
 @import "./components/password-change";
 
@@ -90,7 +92,7 @@
 @import "./components/custom-radio";
 @import "./components/category-content";
 @import "./components/nav-subcategories";
-@import "./components/category-config";
+@import "./components/panel-config";
 @import "./components/filter-btn";
 @import "./components/sort-options";
 @import "./components/view-options";
