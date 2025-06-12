@@ -3,37 +3,27 @@
   padding: 40px;
   max-width: 550px;
 
-		&__title {
-      margin: 0 0 16px;
-      font-weight: 700;
-      font-size: 20px;
-      line-height: 120%;
-      text-align: center;
-      color: var(--black);
-		}
-
-    &__form {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-		// .modal__btn
-
-		&__btn {
-		}
-}
-.graph-modal.is-open {
-  &:has(.account-exit) {
-    @include mobile {
-      top: 57px;
-      bottom: 73px;
-      z-index: 20;
-      padding: 0;
-      background-color: initial;
-    }
+  @include mobile {
+    padding: 16px;
   }
-  &:has(.modal--view-mobile) {
+
+  &__title {
+    margin: 0 0 16px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 120%;
+    text-align: center;
+    color: var(--black);
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+.graph-modal--view-mobile.is-open {
+//   &:has(.modal--view-mobile) {
     @include mobile {
       top: 57px;
       bottom: 73px;
@@ -41,7 +31,7 @@
       padding: 0;
       background-color: transparent;
     }
-  }
+//   }
 }
 
 .modal--view-mobile {

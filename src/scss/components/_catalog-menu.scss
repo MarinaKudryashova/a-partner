@@ -20,7 +20,7 @@
 
   @include small-tablet {
     --header-height: 56px;
-    height: calc(100vh - var(--header-height) - 74px);
+    height: calc(100vh - var(--header-height) - 73px);
   }
 
   &.is-open {
@@ -48,10 +48,11 @@
       padding: 24px var(--container-offset);
       max-width: var(--container-width);
 
-      // @include tablet {
+      @include small-tablet {
+        max-width: 100%;
       //   transform: translateX(0);
       //   transition: all 0.3s;
-      // }
+      }
 		}
 
 		&__item {
@@ -91,9 +92,10 @@
         }
 
       }
-
-      @include small-mobile {
-        min-width: unset;
+      
+      @include small-tablet {
+        justify-content: space-between;
+        min-width: 100%;
       }
 		}
 
@@ -123,6 +125,7 @@
 		}
 
     &__icon {
+      flex-shrink: 0;
       width: 16px;
       height: 16px;
       fill: currentColor;

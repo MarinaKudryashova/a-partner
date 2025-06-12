@@ -16,7 +16,7 @@ html {
 
 .page__body {
   margin: 0;
-  min-width: 375px;
+  min-width: 340px;
   min-height: 100%;
   font-size: 16px;
 }
@@ -45,6 +45,7 @@ a {
 
   @include small-tablet {
     padding-bottom: 73px;
+    overflow: hidden;
   }
 }
 
