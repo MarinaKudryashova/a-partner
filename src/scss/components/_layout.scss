@@ -35,12 +35,17 @@
 
     @include big-desktop {
       --offset: 8px;
+      gap: 16px var(--offset);
     }
+
     @include small-desktop {
       --numer-elem: 3;
+      --offset: 8px;
     }
+
     @include tablet {
       --numer-elem: 2;
+      --offset: 8px;
     }
   }
 
